@@ -310,7 +310,6 @@ html {
 
 html::-webkit-scrollbar {
   width: 8px;
-  height: 8px;
 }
 
 html::-webkit-scrollbar-track {
@@ -318,7 +317,6 @@ html::-webkit-scrollbar-track {
 }
 
 html::-webkit-scrollbar-thumb {
-  border-radius: 5px;
   background-color: #fd7e09;
 }
 
@@ -357,6 +355,11 @@ body.burger-lock {
   position: relative;
   z-index: 2;
   flex: 1 1 auto;
+}
+
+.main__body {
+  display: flex;
+  justify-content: space-between;
 }
 
 .ibg {
@@ -412,10 +415,6 @@ body.burger-lock {
   display: none;
 }
 
-.main__body {
-  display: flex;
-}
-
 .about {
   flex: 1 1 auto;
   min-width: 0;
@@ -467,6 +466,7 @@ body.burger-lock {
 }
 
 .about-swiper__image {
+  position: relative;
   padding: 0px 0px 60.7% 0px;
 }
 
@@ -632,11 +632,23 @@ body.burger-lock {
   width: 100%;
   height: 175px;
   margin: 0px 0px 10px 0px;
-  transition: all 0.4s ease 0s;
+  overflow: hidden;
+  position: relative;
 }
 
-.aside__news-img:hover {
-  box-shadow: 0px 0px 4px #fd7e09 inset;
+.aside__news-img img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.8s ease 0s;
+}
+
+.aside__news-img img:hover {
+  transform: scale(1.2);
 }
 
 .aside__news-text {
@@ -1025,6 +1037,265 @@ body.burger-lock {
   width: 40px;
 }
 
+.members__leaders {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.members__leader {
+  flex: 0 1 33.333%;
+  margin: 0px 0px 30px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.members__leader:nth-child(1) {
+  flex: 0 1 100%;
+}
+
+.members__leader:nth-child(2),
+.members__leader:nth-child(3) {
+  flex: 0 1 50%;
+}
+
+.members__avatar {
+  margin: 0px 0px 5px 0px;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: all 0.4s ease 0s;
+}
+
+.members__avatar img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.members__data {
+  font-size: 22px;
+  line-height: 130%;
+  text-align: center;
+}
+
+.members__data_nickname {
+  font-weight: 700;
+}
+
+.members__data_name {
+  display: none;
+}
+
+.clan {
+  margin: 0px 0px 40px 0px;
+}
+
+.clan__header {
+  background-color: #121212;
+  min-height: 70px;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  color: #fd7e09;
+}
+
+.clan__title {
+  font-size: 28px;
+}
+
+.clan__total-online {
+  font-size: 20px;
+}
+
+.clan__body {
+  max-height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-color: #fd7e09 transparent;
+  scrollbar-width: thin;
+}
+
+.clan__body::-webkit-scrollbar {
+  width: 4px;
+}
+
+.clan__body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.clan__body::-webkit-scrollbar-thumb {
+  background-color: #fd7e09;
+}
+
+.clan__body::-webkit-scrollbar-thumb:hover {
+  background-color: #ff5100;
+}
+
+.clan__body::-webkit-scrollbar-thumb:active {
+  background-color: #8b2f12;
+}
+
+.clan__list {
+  list-style: none;
+  counter-reset: item;
+}
+
+.clan__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  background: rgba(20, 20, 20, 0.65);
+  min-height: 60px;
+  padding: 10px 20px 10px 60px;
+  position: relative;
+  font-size: 20px;
+}
+
+.clan__item:not(:last-child) {
+  border-bottom: 1px solid #121212;
+}
+
+.clan__item::before {
+  content: counter(item) " ";
+  counter-increment: item;
+  position: absolute;
+  left: 20px;
+}
+
+.clan__info {
+  display: flex;
+  align-items: center;
+}
+
+.clan__data {
+  font-weight: 500;
+  line-height: 120%;
+  flex: 0 0 160px;
+}
+
+.clan__data:not(:last-child) {
+  margin: 0px 40px 0px 0px;
+}
+
+.clan__data_nickname {
+  font-weight: 700;
+  color: #fff;
+  transition: all 0.4s ease 0s;
+}
+
+.clan__online {
+  font-weight: 500;
+}
+
+.clan__online_on {
+  color: rgba(5, 255, 0, 0.67);
+}
+
+.clan__online_off {
+  color: #d9d9d9;
+}
+
+.contacts__title {
+  font-weight: 600;
+  font-size: 24px;
+  margin: 0px 0px 20px 0px;
+}
+
+.contacts__items > *:not(:last-child) {
+  margin: 0px 0px 10px 0px;
+}
+
+.contacts__item {
+  background: rgba(25, 25, 25, 0.65);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contacts__data {
+  display: flex;
+  align-items: center;
+  padding: 0px 10px 0px 0px;
+}
+
+.contacts__avatar {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s ease 0s;
+  margin: 0px 15px 0px 0px;
+}
+
+.contacts__avatar img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.contacts__info {
+  max-width: 150px;
+}
+
+.contacts__info > *:not(:last-child) {
+  margin: 0px 0px 5px 0px;
+}
+
+.contacts__nickname {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.contacts__name {
+  color: #727272;
+  font-size: 19px;
+  line-height: 120%;
+}
+
+.contacts__socials {
+  display: flex;
+  align-items: center;
+}
+
+.contacts__social {
+  font-size: 45px;
+  color: #fd7e09;
+  transition: all 0.4s ease 0s;
+}
+
+.contacts__social:not(:last-child) {
+  margin: 0px 20px 0px 0px;
+}
+
+.contacts__social:nth-child(1) {
+  font-size: 35px;
+}
+
+.contacts__social:nth-child(3) {
+  font-size: 55px;
+}
+
+.contacts__social:hover {
+  color: #ff5100;
+}
+
 .news {
   flex: 1 1 auto;
 }
@@ -1341,13 +1612,15 @@ body.burger-lock {
 
 .tables__table {
   flex: 0 1 50%;
+  display: flex;
+  flex-direction: column;
 }
 
 .tables__table:not(:last-child) {
   margin: 0px 50px 0px 0px;
 }
 
-.tables__table_tournaments {
+.tables__table_tournaments a.tables__name {
   justify-content: center;
 }
 
@@ -1363,12 +1636,35 @@ body.burger-lock {
   font-weight: 600;
   font-size: 26px;
   margin: 0px 0px 20px 0px;
+  flex: 1 1 auto;
 }
 
 .tables__body {
   overflow-y: auto;
-  max-height: 270px;
+  flex: 0 0 270px;
   padding: 0px 5px 0px 0px;
+  scrollbar-color: #fd7e09 transparent;
+  scrollbar-width: thin;
+}
+
+.tables__body::-webkit-scrollbar {
+  width: 4px;
+}
+
+.tables__body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.tables__body::-webkit-scrollbar-thumb {
+  background-color: #fd7e09;
+}
+
+.tables__body::-webkit-scrollbar-thumb:hover {
+  background-color: #ff5100;
+}
+
+.tables__body::-webkit-scrollbar-thumb:active {
+  background-color: #8b2f12;
 }
 
 .tables__item {
@@ -1398,7 +1694,7 @@ body.burger-lock {
   justify-content: space-between;
   text-align: center;
   flex: 1 1 auto;
-  padding: 15px;
+  padding: 10px;
   background-color: #181818;
   color: #fff;
   font-weight: 600;
@@ -1417,25 +1713,25 @@ body.burger-lock {
   align-items: flex-end;
 }
 
+.tables__btns > *:not(:last-child) {
+  margin: 0px 15px 0px 0px;
+}
+
 .tables__btn {
-  color: #41AD49;
+  color: #41ad49;
   font-size: 27px;
   transition: all 0.4s ease 0s;
+  background-color: transparent;
 }
 
 .tables__btn:hover {
   color: #1fe72c;
 }
 
-.tables__btn:not(:last-child) {
-  margin: 0px 15px 0px 0px;
-}
-
 .tables__btn_close {
   width: 30px;
   height: 30px;
   position: relative;
-  background-color: transparent;
 }
 
 .tables__btn_close:hover::after,
@@ -1449,7 +1745,7 @@ body.burger-lock {
   position: absolute;
   width: 100%;
   height: 4px;
-  background-color: #A00000;
+  background-color: #a00000;
   top: 50%;
   transform: translate(-50%, 0);
   left: 0;
@@ -1707,43 +2003,7 @@ body.burger-lock {
   margin: 0px 0px 0px 10px;
 }
 
-@media (min-width: 768px) {
-  .chat__content {
-    scrollbar-color: #fff transparent;
-    scrollbar-width: thin;
-  }
-
-  .chat__content::-webkit-scrollbar {
-    width: 6px;
-  }
-
-  .chat__content::-webkit-scrollbar-track {
-    background-color: transparent;
-  }
-
-  .chat__content::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    background-color: #fff;
-  }
-
-  .chat__content::-webkit-scrollbar-thumb:hover {
-    background-color: rgb(204, 204, 204);
-  }
-
-  .chat__content::-webkit-scrollbar-thumb:active {
-    background-color: rgb(122, 122, 122);
-  }
-}
-
 @media (min-width: 1024px) {
-  .menu__link:hover {
-    background-color: #fd7e09;
-  }
-
-  .menu__link.active {
-    background-color: #fd7e09;
-  }
-
   .footer__item {
     font-size: 18px;
   }
@@ -1780,12 +2040,62 @@ body.burger-lock {
     min-height: 60px;
   }
 
+  .menu__link:hover {
+    background-color: #fd7e09;
+  }
+
+  .menu__link.active {
+    background-color: #fd7e09;
+  }
+
   .btn:hover {
     background-color: #ff5100;
   }
 
   .btn:active {
     background-color: #703a07;
+  }
+
+  .chat__content {
+    scrollbar-color: #fff transparent;
+    scrollbar-width: thin;
+  }
+
+  .chat__content::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .chat__content::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  .chat__content::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #fff;
+  }
+
+  .chat__content::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(204, 204, 204);
+  }
+
+  .chat__content::-webkit-scrollbar-thumb:active {
+    background-color: rgb(122, 122, 122);
+  }
+
+  .members__avatar:hover {
+    filter: brightness(1.5);
+  }
+
+  .members__data_name {
+    display: block;
+  }
+
+  .clan__data_nickname:hover {
+    color: #fd7e09;
+  }
+
+  .contacts__avatar:hover {
+    filter: brightness(1.5);
   }
 
   .news__items.active {
@@ -1813,32 +2123,6 @@ body.burger-lock {
 
   .current-news__image:hover {
     box-shadow: 0px 0px 4px #fd7e09 inset;
-  }
-
-  .tables__body {
-    scrollbar-color: #fff transparent;
-    scrollbar-width: thin;
-  }
-
-  .tables__body::-webkit-scrollbar {
-    width: 4px;
-  }
-
-  .tables__body::-webkit-scrollbar-track {
-    background-color: transparent;
-  }
-
-  .tables__body::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    background-color: #fff;
-  }
-
-  .tables__body::-webkit-scrollbar-thumb:hover {
-    background-color: rgb(204, 204, 204);
-  }
-
-  .tables__body::-webkit-scrollbar-thumb:active {
-    background-color: rgb(122, 122, 122);
   }
 }
 
@@ -1900,6 +2184,31 @@ body.burger-lock {
 
   .chat__input {
     font-size: 22px;
+  }
+
+  .members__avatar {
+    width: 130px;
+    height: 130px;
+  }
+
+  .members__data {
+    font-size: 20px;
+  }
+
+  .clan__title {
+    font-size: 24px;
+  }
+
+  .clan__total-online {
+    font-size: 18px;
+  }
+
+  .clan__item {
+    font-size: 18px;
+  }
+
+  .clan__data:not(:last-child) {
+    margin: 0px 20px 0px 0px;
   }
 
   .news__title {
@@ -2261,7 +2570,7 @@ body.burger-lock {
     font-size: 40px;
     color: #fff;
     position: fixed;
-    bottom: 10%;
+    bottom: 7.5%;
     right: 20px;
     z-index: 9;
     opacity: 0;
@@ -2355,6 +2664,36 @@ body.burger-lock {
   .chat__btn img {
     height: 35px;
     width: 35px;
+  }
+
+  .members__leader {
+    margin: 0px 0px 25px 0px;
+  }
+
+  .clan {
+    margin: 0px 0px 25px 0px;
+  }
+
+  .clan__header {
+    min-height: 60px;
+    padding: 0px 15px;
+  }
+
+  .clan__body {
+    max-height: 250px;
+  }
+
+  .clan__item {
+    padding: 10px 15px 10px 50px;
+    min-height: 50px;
+  }
+
+  .clan__item::before {
+    left: 15px;
+  }
+
+  .contacts__item {
+    padding: 10px 15px;
   }
 
   .news__title {
@@ -2613,6 +2952,88 @@ body.burger-lock {
     height: 30px;
   }
 
+  .members__leader {
+    margin: 0px 0px 15px 0px;
+    flex: 0 1 25%;
+  }
+
+  .members__leader:nth-child(2),
+  .members__leader:nth-child(3) {
+    flex: 0 1 25%;
+  }
+
+  .members__avatar {
+    width: 110px;
+    height: 110px;
+  }
+
+  .members__data {
+    font-size: 16px;
+  }
+
+  .clan {
+    margin: 0px 0px 15px 0px;
+  }
+
+  .clan__title {
+    font-size: 20px;
+  }
+
+  .clan__total-online {
+    font-size: 16px;
+  }
+
+  .clan__item {
+    font-size: 16px;
+  }
+
+  .clan__data {
+    flex: 0 0 140px;
+  }
+
+  .contacts__title {
+    font-size: 20px;
+    margin: 0px 0px 10px 0px;
+  }
+
+  .contacts__item {
+    padding: 10px;
+  }
+
+  .contacts__avatar {
+    width: 60px;
+    height: 60px;
+    margin: 0px 10px 0px 0px;
+  }
+
+  .contacts__info {
+    max-width: 120px;
+  }
+
+  .contacts__nickname {
+    font-size: 18px;
+  }
+
+  .contacts__name {
+    font-size: 16px;
+  }
+
+  .contacts__social {
+    font-size: 40px;
+  }
+
+  .contacts__social:nth-child(1) {
+    font-size: 30px;
+  }
+
+  .contacts__social:nth-child(3) {
+    font-size: 50px;
+  }
+
+  .contacts__social:not(:last-child) {
+    margin: 0px 10px 0px 0px;
+  }
+
   .news__items {
     margin: 0px 0px 20px 0px;
   }
@@ -2833,6 +3254,19 @@ body.burger-lock {
     height: 25px;
   }
 
+  .members__avatar {
+    width: 85px;
+    height: 85px;
+  }
+
+  .members__data {
+    font-size: 14px;
+  }
+
+  .clan__data_name {
+    display: none;
+  }
+
   .current-news__title {
     margin: 0px 0px 5px 0px;
     font-size: 24px;
@@ -2890,7 +3324,7 @@ body.burger-lock {
 @media (max-width: 479px) {
   .header {
     padding: 10px 0px 0px 0px;
-    margin: 0px 0px 10px 0px;
+    margin: 0px 0px 15px 0px;
   }
 
   .header__top {
@@ -3006,6 +3440,94 @@ body.burger-lock {
   .chat__btn {
     flex: 0 0 49px;
     height: 49px;
+  }
+
+  .members__leader {
+    margin: 0px 0px 10px 0px;
+    flex: 0 1 50%;
+  }
+
+  .members__leader:nth-child(2),
+  .members__leader:nth-child(3) {
+    flex: 0 1 50%;
+  }
+
+  .members__avatar {
+    height: 70px;
+    width: 70px;
+  }
+
+  .clan__header {
+    min-height: 50px;
+    padding: 0px 10px;
+  }
+
+  .clan__title {
+    font-size: 16px;
+  }
+
+  .clan__total-online {
+    font-size: 14px;
+  }
+
+  .clan__body {
+    max-height: 200px;
+  }
+
+  .clan__item {
+    min-height: 40px;
+    padding: 10px 10px 10px 30px;
+    font-size: 14px;
+  }
+
+  .clan__item::before {
+    left: 10px;
+  }
+
+  .clan__data {
+    flex: 0 0 120px;
+  }
+
+  .clan__data:not(:last-child) {
+    margin: 0px 10px 0px 0px;
+  }
+
+  .contacts__title {
+    font-size: 16px;
+  }
+
+  .contacts__avatar {
+    width: 50px;
+    height: 50px;
+    margin: 0px 5px 0px 0px;
+  }
+
+  .contacts__info {
+    max-width: 100px;
+  }
+
+  .contacts__nickname {
+    font-size: 16px;
+  }
+
+  .contacts__name {
+    font-size: 14px;
+  }
+
+  .contacts__social {
+    font-size: 30px;
+  }
+
+  .contacts__social:nth-child(1) {
+    font-size: 20px;
+  }
+
+  .contacts__social:nth-child(3) {
+    font-size: 40px;
+  }
+
+  .contacts__social:not(:last-child) {
+    margin: 0px 5px 0px 0px;
   }
 
   .news__title {
@@ -3176,6 +3698,45 @@ body.burger-lock {
   }
 }
 
+@media (max-width: 360px) {
+  .contacts__item {
+    padding: 10px 5px;
+  }
+
+  .contacts__avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .contacts__info {
+    max-width: 90px;
+  }
+
+  .contacts__info > *:not(:last-child) {
+    margin: 0px 0px 0px 0px;
+  }
+
+  .contacts__nickname {
+    font-size: 14px;
+  }
+
+  .contacts__name {
+    font-size: 12px;
+  }
+
+  .contacts__social {
+    font-size: 25px;
+  }
+
+  .contacts__social:nth-child(1) {
+    font-size: 17px;
+  }
+
+  .contacts__social:nth-child(3) {
+    font-size: 30px;
+  }
+}
+
 @media (max-width: 350px) {
   .popup__item_password {
     font-size: 15px;
@@ -3186,5 +3747,21 @@ body.burger-lock {
   .header__btn {
     min-width: 70px;
     font-size: 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .clan__item {
+    font-size: 12px;
+  }
+
+  .clan__data {
+    flex: 0 0 100px;
+  }
+}
+
+@media (max-width: 290px) {
+  .contacts__info {
+    max-width: 80px;
   }
 }
