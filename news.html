@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20220710031303" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20220710031303">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20220711142814" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20220711142814">
 	<link rel="shortcut icon" href="img/favicon.ico">
 	<title>Новости</title>
 </head>
@@ -23,11 +23,11 @@
 			</a>
 			<a href="index.html" class="header__name">Platinum Dragons</a>
 			<div class="header__buttons">
-				<a href="#mainPopup" class="header__btn header__btn_in popup-link">Вход</a>
-				<a href="#mainPopup" class="header__btn header__btn_up popup-link">Вступить</a>
 				<a href="profile.html" class="header__avatar">
 					<picture><source srcset="img/header/profile.webp" type="image/webp"><img src="img/header/profile.png" alt=""></picture>
 				</a>
+				<a href="#mainPopup" class="header__btn header__btn_in popup-link">Вход</a>
+				<a href="#mainPopup" class="header__btn header__btn_up popup-link">Вступить</a>
 			</div>
 			<div class="header__icon icon-header">
 				<span></span>
@@ -39,7 +39,8 @@
 					<li><a href="index.html" class="menu__link active">О клане</a></li>
 					<li><a href="members.html" class="menu__link">Состав</a></li>
 					<li><a href="news.html" class="menu__link">Новости</a></li>
-					<li><a href="profile.html" class="menu__link">Турниры</a></li>
+					<li><a href="tournaments.html" class="menu__link">Турниры</a></li>
+					<li><a href="chat.html" class="menu__link">Чат</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -49,28 +50,35 @@
 			<div class="container">
 				<div class="main__body">
 					<section class="news">
-						<div class="news__items">
-							<div class="news__item">
-								<div class="news__image ibg"><picture><source srcset="img/aside/01.webp" type="image/webp"><img src="img/aside/01.jpg" alt=""></picture></div>
-								<h2><a href="currentNews.html" class="news__title">Королевская битва. Новый Сезон.</a></h2>
-							</div>
-							<div class="news__item">
-								<div class="news__image ibg"><picture><source srcset="img/aside/01.webp" type="image/webp"><img src="img/aside/01.jpg" alt=""></picture></div>
-								<h2><a href="currentNews.html" class="news__title">Турнир. Убей или умри. 12.05.22</a></h2>
-							</div>
-						</div>
-						<div class="news__items">
-							<div class="news__item">
-								<div class="news__image ibg"><picture><source srcset="img/aside/01.webp" type="image/webp"><img src="img/aside/01.jpg" alt=""></picture></div>
-								<h2><a href="currentNews.html"  class="news__title">Call of Duty Mobile релиз нового режима. Королевский таракан</a></h2>
-							</div>
-							<div class="news__item">
-								<div class="news__image ibg"><picture><source srcset="img/aside/01.webp" type="image/webp"><img src="img/aside/01.jpg" alt=""></picture></div>
-								<h2><a href="currentNews.html" class="news__title">Турнир. Убей или умри. 12.05.22</a></h2>
-							</div>
+						<div class="news__articles articles">
+							<article class="articles__item">
+								<div class="articles__image"><picture><source srcset="img/aside/01.webp" type="image/webp"><img src="img/aside/01.jpg" alt=""></picture>
+									<time class="articles__data">Сегодня</time>
+								</div>
+								<h2><a href="currentNews.html" class="articles__title">Королевская битва. Новый Сезон.</a></h2>
+							</article>
+							<article class="articles__item">
+								<div class="articles__image"><picture><source srcset="img/aside/01.webp" type="image/webp"><img src="img/aside/01.jpg" alt=""></picture>
+									<time class="articles__data">Вчера</time>
+								</div>
+								<h2><a href="currentNews.html" class="articles__title">Турнир. Убей или умри. 12.05.22</a></h2>
+							</article>
+							<article class="articles__item">
+								<div class="articles__image"><picture><source srcset="img/aside/01.webp" type="image/webp"><img src="img/aside/01.jpg" alt=""></picture>
+									<time class="articles__data">Завтра</time>
+								</div>
+								<h2><a href="currentNews.html" class="articles__title">Call of Duty Mobile релиз нового режима. Королевский таракан</a></h2>
+							</article>
+							<article class="articles__item">
+								<div class="articles__image"><picture><source srcset="img/aside/01.webp" type="image/webp"><img src="img/aside/01.jpg" alt=""></picture>
+									<time class="articles__data">17 апреля</time>
+								</div>
+								<h2><a href="currentNews.html" class="articles__title">Турнир. Убей или умри. 12.05.22</a></h2>
+							</article>
 						</div>
 						<div class="news__pagination pagination">
-							<a href="#" class="pagination__btn _icon-left-arrow"></a>
+							<button type="button" class="pagination__btn pagination__btn_disabled _icon-left-arrow"></button>
+							<a href="#" class="pagination__btn pagination__btn_active _icon-left-arrow"></a>
 							<ul class="pagination__list">
 								<li class="pagination__numb"><a href="#">1</a></li>
 								<li class="pagination__dots"><span>...</span></li>
@@ -80,7 +88,8 @@
 								<li class="pagination__dots"><span>...</span></li>
 								<li class="pagination__numb"><a href="#">7</a></li>
 							</ul>
-							<a href="#" class="pagination__btn _icon-right-arrow"></a>
+							<button type="button" class="pagination__btn pagination__btn_disabled _icon-right-arrow"></button>
+							<a href="#" class="pagination__btn pagination__btn_active _icon-right-arrow"></a>
 						</div>
 					</section>
 					<aside class="aside">
@@ -105,7 +114,7 @@
 		</button>
 		<div class="aside__content">
 			<article class="aside__tournaments">
-				<a href="" class="aside__tournaments-title title-aside">Турниры</a>
+				<h3><a href="" class="aside__tournaments-title title-aside">Турниры</a></h3>
 				<div class="aside__tournaments-body">
 					<div class="aside__tournaments-item">
 						<div class="aside__tournaments-type">П</div>
@@ -138,7 +147,7 @@
 				</div>
 			</article>
 			<div class="aside__chat chat-aside">
-				<a href="chat.html" class="chat-aside__title title-aside">Чатик</a>
+				<h3><a href="chat.html" class="chat-aside__title title-aside">Чатик</a></h3>
 				<div class="chat-aside__body">
 					<div class="chat-aside__content">
 						<div class="chat-aside__user">
@@ -446,8 +455,8 @@
 		</div>
 	</div>
 </div>
-	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js?_v=20220710031303"></script>
-	<script src="js/app.min.js?_v=20220710031303"></script>
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js?_v=20220711142814"></script>
+	<script src="js/app.min.js?_v=20220711142814"></script>
 </body>
 
 </html>

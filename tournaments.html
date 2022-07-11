@@ -7,12 +7,11 @@
 	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20220711142814" />
 	<link rel="stylesheet" href="css/style.min.css?_v=20220711142814">
 	<link rel="shortcut icon" href="img/favicon.ico">
-	<title>О клане</title>
+	<title>Новости</title>
 </head>
 
 <body>
 	<div class="wrapper">
-		<div class="bg"><picture><source srcset="img/bg.webp" type="image/webp"><img src="img/bg.png" alt=""></picture></div>
 		<header class="header">
 	<div class="container">
 		<div class="header__top">
@@ -50,68 +49,48 @@
 		<main class="main">
 			<div class="container">
 				<div class="main__body">
-					<section class="about">
-						<div class="about-swiper swiper">
-	<div class="about-swiper__wrapper swiper-wrapper">
-		<div class="about-swiper__slide swiper-slide">
-			<div class="about-swiper__image ibg">
-				<picture><source srcset="img/video/preview-video.webp" type="image/webp"><img src="img/video/preview-video.jpg" alt=""></picture>
-			</div>		
-		</div>
-		<div class="about-swiper__slide swiper-slide">
-			<div class="about-swiper__image ibg">
-				<picture><source srcset="img/about/02.webp" type="image/webp"><img src="img/about/02.jpg" alt=""></picture>
-			</div>
-		</div>
-		<div class="about-swiper__slide swiper-slide">
-			<div class="about-swiper__image ibg">
-				<picture><source srcset="img/about/03.webp" type="image/webp"><img src="img/about/03.jpg" alt=""></picture>
-			</div>
-		</div>
-		<div data-swiper-autoplay="5000" class="about-swiper__slide swiper-slide">
-			<div class="about-swiper__image">
-				<video autoplay preload="auto" muted controls poster="img/video/preview-video.jpg" class="about__item">
-					<source src="img/video/preview.webm" type="video/webm">
-					<source src="img/video/preview.mp4" type="video/mp4">
-				</video>
-			</div>
-		</div>
-		<div class="about-swiper__slide swiper-slide">
-			<div class="about-swiper__image ibg">
-				<picture><source srcset="img/about/04.webp" type="image/webp"><img src="img/about/04.jpg" alt=""></picture>
-			</div>
-		</div>
-		<div class="about-swiper__slide swiper-slide">
-			<div class="about-swiper__image ibg">
-				<picture><source srcset="img/about/05.webp" type="image/webp"><img src="img/about/05.jpg" alt=""></picture>
-			</div>
-		</div>
-		<div class="about-swiper__slide swiper-slide">
-			<div class="about-swiper__image ibg">
-				<picture><source srcset="img/about/06.webp" type="image/webp"><img src="img/about/06.jpg" alt=""></picture>
-				<!-- <img data-srcset="img/about/07.jpg" class="swiper-lazy" alt="">
-				<div class="swiper-lazy-preloader"></div> -->
-			</div>
-		</div>
-	</div>
-	<div class="swiper-pagination"></div>
-</div>	
-						<div class="about__content">
-							<h1 class="about__title">Немного о нас</h1>
-							<div class="about__info">
-								<p>
-									Клан Platinum Dragons, в прошлом SteelLegion, был основан в 2018 году, тройкой друзей, которые
-									горели одним делом, нашим девизом всегда было, «Верность и семейная атмосфера, залог успешного
-									сообщества»
-								</p>
-								<p>
-									Мы хотим, что бы игроки CODM могли найти для себя место, где каждому рады, все готовы выслушать
-									и помочь, какая бы ситуация не была. У нас вы найдёте атмосферу теплоты и уюта, будущих друзей и
-									вам никогда не будет скучно )
-								</p>							
-							</div>
+					<section class="tournaments">
+						<div class="tournaments__articles articles">
+							<article class="articles__item">
+								<div class="articles__image"><picture><source srcset="img/aside/01.webp" type="image/webp"><img src="img/aside/01.jpg" alt=""></picture>
+									<time class="articles__data"><span>КБ</span> 17.06.2022 - 21.06.2022</time>
+								</div>
+								<h2><a href="currentNews.html" class="articles__title">Королевская битва. Новый Сезон.</a></h2>
+							</article>
+							<article class="articles__item">
+								<div class="articles__image"><picture><source srcset="img/aside/01.webp" type="image/webp"><img src="img/aside/01.jpg" alt=""></picture>
+									<time class="articles__data"><span>П</span> 24.06.2022 - 27.06.2022</time>
+								</div>
+								<h2><a href="currentNews.html" class="articles__title">Королевская битва. Новый Сезон.</a></h2>
+							</article>
+							<article class="articles__item">
+								<div class="articles__image"><picture><source srcset="img/aside/01.webp" type="image/webp"><img src="img/aside/01.jpg" alt=""></picture>
+									<time class="articles__data"><span>КБД</span> 30.06.2022 - 03.07.2022</time>
+								</div>
+								<h2><a href="currentNews.html" class="articles__title">Королевская битва. Новый Сезон.</a></h2>
+							</article>
+							<article class="articles__item">
+								<div class="articles__image"><picture><source srcset="img/aside/01.webp" type="image/webp"><img src="img/aside/01.jpg" alt=""></picture>
+									<time class="articles__data"><span>КБ</span> 03.06.2022 - 07.07.2022</time>
+								</div>
+								<h2><a href="currentNews.html" class="articles__title">Королевская битва. Новый Сезон.</a></h2>
+							</article>
 						</div>
-						<a href="#mainPopup" class="about__btn btn popup-link">Присоединяйся</a>
+						<div class="tournaments__pagination pagination">
+							<button type="button" class="pagination__btn pagination__btn_disabled _icon-left-arrow"></button>
+							<a href="#" class="pagination__btn pagination__btn_active _icon-left-arrow"></a>
+							<ul class="pagination__list">
+								<li class="pagination__numb"><a href="#">1</a></li>
+								<li class="pagination__dots"><span>...</span></li>
+								<li class="pagination__numb"><a href="#">3</a></li>
+								<li class="pagination__numb active"><a href="#">4</a></li>
+								<li class="pagination__numb"><a href="#">5</a></li>
+								<li class="pagination__dots"><span>...</span></li>
+								<li class="pagination__numb"><a href="#">7</a></li>
+							</ul>
+							<button type="button" class="pagination__btn pagination__btn_disabled _icon-right-arrow"></button>
+							<a href="#" class="pagination__btn pagination__btn_active _icon-right-arrow"></a>
+						</div>
 					</section>
 					<aside class="aside">
 	<div class="aside__body">
