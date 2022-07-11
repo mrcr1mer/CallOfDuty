@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20220711183529" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20220711183529">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20220711222818" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20220711222818">
 	<link rel="shortcut icon" href="img/favicon.ico">
 	<title>О клане</title>
 </head>
@@ -52,12 +52,57 @@
 				<div class="main__body">
 					<section class="edit-profile">
 						<form action="#" class="edit-profile__form">
-							<div class="edit-profile__items">
+							<div class="edit-profile__body">
 								<div class="edit-profile__avatar">
-									
+									<div class="edit-profile__image">
+										<picture><source srcset="img/aside/01.webp" type="image/webp"><img src="img/aside/01.jpg" alt=""></picture>
+										<div class="edit-profile__item">
+											<input accept=".jpg, .jpeg, .png" type="file" name="profileImage"
+												class="edit-profile__file" id="profileImage">
+											<label for="profileImage" class="edit-profile__icon-photo _icon-photo"></label>
+										</div>
+									</div>
 								</div>
 								<div class="edit-profile__content">
-									
+									<div class="edit-profile__data">
+										<label class="edit-profile__label" for="profileNickname">Ник:</label>
+										<input type="text" id="profileNickname" name="profileNickname"
+											placeholder="Введите ваш ник" class="edit-profile__input">
+									</div>
+									<div class="edit-profile__data">
+										<label class="edit-profile__label" for="profileName">Имя:</label>
+										<input type="text" id="profileName" name="profileName" placeholder="Введите ваше имя"
+											class="edit-profile__input">
+									</div>
+									<div class="edit-profile__data">
+										<label class="edit-profile__label" for="profileEmail">Email:</label>
+										<input type="email" id="profileEmail" name="profileEmail" placeholder="Введите ваш email"
+											class="edit-profile__input">
+									</div>
+									<div class="edit-profile__data">
+										<label class="edit-profile__label" for="profilePhone">Телефон:</label>
+										<input type="number" id="profilePhone" name="profilePhone"
+											placeholder="Введите ваш Телефон" class="edit-profile__input">
+									</div>
+									<div class="edit-profile__data">
+										<textarea class="edit-profile__input" name="profileDescribe"
+											placeholder="Описание"></textarea>
+									</div>
+									<div class="edit-profile__data">
+										<div class="edit-profile__social edit-profile__social_tg _icon-tg"></div>
+										<input type="url" name="profileNickname" placeholder="Ссылка на телеграм"
+											class="edit-profile__input">
+									</div>
+									<div class="edit-profile__data">
+										<div class="edit-profile__social edit-profile__social_insta _icon-insta"></div>
+										<input type="url" name="profileNickname" placeholder="Ссылка на телеграм"
+											class="edit-profile__input">
+									</div>
+									<div class="edit-profile__data">
+										<div class="edit-profile__social edit-profile__social_vk _icon-vk"></div>
+										<input type="url" name="profileNickname" placeholder="Ссылка на телеграм"
+											class="edit-profile__input">
+									</div>
 								</div>
 							</div>
 							<div class="edit-profile__buttons buttons">
@@ -409,8 +454,8 @@
 		</div>
 	</div>
 </div>
-	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js?_v=20220711183529"></script>
-	<script src="js/app.min.js?_v=20220711183529"></script>
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js?_v=20220711222818"></script>
+	<script src="js/app.min.js?_v=20220711222818"></script>
 </body>
 
 </html>
