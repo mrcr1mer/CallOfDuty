@@ -2864,8 +2864,8 @@ textarea:focus {
 
   .popup__content {
     padding: 20px;
-    min-height: 100vh;
-    min-height: calc(var(--vh, 1vh) * 100);
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     flex: 0 0 100%;
   }
 
@@ -3797,26 +3797,6 @@ textarea:focus {
 
   .popup__btn {
     font-size: 18px;
-  }
-
-  .popup__buttons {
-    flex-wrap: wrap;
-  }
-
-  .popup__button {
-    flex: 0 1 100%;
-  }
-
-  .popup__button:first-child {
-    margin: 0px 0px 0px 0px;
-  }
-
-  .popup__button:last-child {
-    margin: 0px 0px 0px 0px;
-  }
-
-  .popup__button:not(:last-child) {
-    margin: 0px 0px 20px 0px;
   }
 
   .members__leader {
