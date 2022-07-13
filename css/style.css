@@ -1072,43 +1072,6 @@ h6 {
   justify-content: space-between;
 }
 
-.chat__scroll {
-  position: absolute;
-  bottom: 15%;
-  right: 30px;
-  width: 50px;
-  height: 50px;
-  background-color: #191919;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: all 0.4s ease 0s;
-}
-
-.chat__scroll:hover {
-  background-color: #252525;
-}
-
-.chat__scroll span::before,
-.chat__scroll span::after {
-  content: "";
-  position: absolute;
-  width: 20px;
-  background-color: #fff;
-  height: 3px;
-  top: 50%;
-  transform: translate(0%, -50%);
-}
-
-.chat__scroll span::before {
-  left: 9px;
-  transform: translate(0%, -50%) rotate(45deg);
-}
-
-.chat__scroll span::after {
-  right: 9px;
-  transform: translate(0%, -50%) rotate(-45deg);
-}
-
 .chat__header {
   width: 100%;
   height: 55px;
@@ -1161,13 +1124,13 @@ h6 {
   display: flex;
   align-items: flex-start;
   transition: all 0.2s ease 0s;
-  transform: scale(0);
+  transform: scale(0) translate(0, 150%);
   opacity: 0;
   visibility: hidden;
 }
 
 .chat__user.send {
-  transform: scale(1);
+  transform: scale(1) translate(0, 0%);
   opacity: 1;
   visibility: visible;
 }
@@ -1248,7 +1211,7 @@ h6 {
 .chat__msg {
   font-weight: 600;
   font-size: 20px;
-  line-height: 120%;
+  line-height: 125%;
 }
 
 .chat__time {
@@ -1263,6 +1226,40 @@ h6 {
   margin: 10px 0px 0px 0px;
   display: flex;
   align-items: center;
+  position: relative;
+}
+
+.chat__scroll {
+  position: absolute;
+  top: -65px;
+  right: 0px;
+  width: 50px;
+  height: 50px;
+  background-color: #252525;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.4s ease 0s;
+}
+
+.chat__scroll span::before,
+.chat__scroll span::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  background-color: #fff;
+  height: 3px;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+
+.chat__scroll span::before {
+  left: 9px;
+  transform: translate(0%, -50%) rotate(45deg);
+}
+
+.chat__scroll span::after {
+  right: 9px;
+  transform: translate(0%, -50%) rotate(-45deg);
 }
 
 .chat__input {
@@ -2339,6 +2336,14 @@ textarea:focus {
     filter: brightness(1.5);
   }
 
+  .chat__scroll {
+    background-color: #191919;
+  }
+
+  .chat__scroll:hover {
+    background-color: #252525;
+  }
+
   .chat__btn:hover {
     background: #0f0f0f;
   }
@@ -2884,7 +2889,7 @@ textarea:focus {
   }
 
   .about__content {
-    margin: 0px 0px 30px 0px;
+    margin: 0px 0px 50px 0px;
   }
 
   .about__title {
@@ -2892,7 +2897,7 @@ textarea:focus {
   }
 
   .about__info {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .about__btn {
@@ -2912,33 +2917,8 @@ textarea:focus {
     bottom: 0px;
   }
 
-  .about-swiper .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-  }
-
   .chat__body {
     padding: 70px 0px 15px;
-  }
-
-  .chat__scroll {
-    right: 20px;
-    width: 45px;
-    height: 45px;
-  }
-
-  .chat__scroll span::before,
-  .chat__scroll span::after {
-    width: 15px;
-    height: 3px;
-  }
-
-  .chat__scroll span::before {
-    left: 11px;
-  }
-
-  .chat__scroll span::after {
-    right: 10px;
   }
 
   .chat__header {
@@ -2977,6 +2957,26 @@ textarea:focus {
 
   .chat__time {
     font-size: 12px;
+  }
+
+  .chat__scroll {
+    top: -55px;
+    width: 45px;
+    height: 45px;
+  }
+
+  .chat__scroll span::before,
+  .chat__scroll span::after {
+    width: 15px;
+    height: 3px;
+  }
+
+  .chat__scroll span::before {
+    left: 11px;
+  }
+
+  .chat__scroll span::after {
+    right: 10px;
   }
 
   .chat__input {
@@ -3342,7 +3342,7 @@ textarea:focus {
   }
 
   .about__content {
-    margin: 0px 0px 20px 0px;
+    margin: 0px 0px 40px 0px;
   }
 
   .about__title {
@@ -3351,11 +3351,15 @@ textarea:focus {
   }
 
   .about__info {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .about__btn {
     font-size: 22px;
+  }
+
+  .about-swiper {
+    margin: 0px 0px 20px 0px;
   }
 
   .about-swiper__wrapper {
@@ -3366,27 +3370,13 @@ textarea:focus {
     bottom: 20px;
   }
 
+  .about-swiper .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+  }
+
   .chat__body {
     padding: 60px 0px 10px;
-  }
-
-  .chat__scroll {
-    width: 40px;
-    height: 40px;
-  }
-
-  .chat__scroll span::before,
-  .chat__scroll span::after {
-    width: 13px;
-    height: 2px;
-  }
-
-  .chat__scroll span::before {
-    left: 10px;
-  }
-
-  .chat__scroll span::after {
-    right: 9px;
   }
 
   .chat__header {
@@ -3423,6 +3413,26 @@ textarea:focus {
 
   .chat__time {
     font-size: 11px;
+  }
+
+  .chat__scroll {
+    top: -50px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .chat__scroll span::before,
+  .chat__scroll span::after {
+    width: 13px;
+    height: 2px;
+  }
+
+  .chat__scroll span::before {
+    left: 10px;
+  }
+
+  .chat__scroll span::after {
+    right: 9px;
   }
 
   .chat__input {
@@ -3836,29 +3846,20 @@ textarea:focus {
   }
 
   .about__content {
-    margin: 0px 0px 15px 0px;
-  }
-
-  .about__title {
-    font-size: 22px;
-  }
-
-  .about__info p:not(:last-child) {
-    margin: 0px 0px 5px 0px;
+    margin: 0px 0px 30px 0px;
   }
 
   .about__info {
-    font-size: 15px;
+    font-size: 18px;
   }
 
   .about__btn {
-    font-size: 18px;
+    font-size: 20px;
     padding: 15px 20px;
   }
 
-  .about-swiper .swiper-pagination-bullet {
-    width: 10px;
-    height: 10px;
+  .about-swiper .swiper-pagination {
+    bottom: 10px;
   }
 
   .chat .container {
@@ -3867,25 +3868,6 @@ textarea:focus {
 
   .chat__body {
     padding: 55px 0px 10px;
-  }
-
-  .chat__scroll {
-    width: 35px;
-    height: 35px;
-  }
-
-  .chat__scroll span::before,
-  .chat__scroll span::after {
-    width: 10px;
-    height: 2px;
-  }
-
-  .chat__scroll span::before {
-    left: 10px;
-  }
-
-  .chat__scroll span::after {
-    right: 9px;
   }
 
   .chat__header {
@@ -3915,11 +3897,27 @@ textarea:focus {
   }
 
   .chat__msg {
-    font-size: 12px;
+    font-size: 13px;
   }
 
-  .chat__time {
-    font-size: 10px;
+  .chat__scroll {
+    top: -45px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .chat__scroll span::before,
+  .chat__scroll span::after {
+    width: 10px;
+    height: 2px;
+  }
+
+  .chat__scroll span::before {
+    left: 10px;
+  }
+
+  .chat__scroll span::after {
+    right: 9px;
   }
 
   .chat__input {
@@ -4248,7 +4246,11 @@ textarea:focus {
   }
 
   .chat__msg {
-    font-size: 11px;
+    font-size: 12px;
+  }
+
+  .chat__time {
+    font-size: 10px;
   }
 
   .chat__input {
