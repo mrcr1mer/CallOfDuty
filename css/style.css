@@ -1127,6 +1127,7 @@ h6 {
   transform: scale(0) translate(0, 150%);
   opacity: 0;
   visibility: hidden;
+  margin: 0px 0px 25px 0px;
 }
 
 .chat__user.send {
@@ -1135,25 +1136,17 @@ h6 {
   visibility: visible;
 }
 
-.chat__user:not(:last-child) {
-  margin: 0px 0px 25px 0px;
-}
-
 .chat__user_me {
   flex-direction: row-reverse;
 }
 
 .chat__user_me .chat__user-data {
-  flex-direction: row-reverse;
-}
-
-.chat__user_me .chat__user-items {
-  text-align: right;
-  padding: 0px 10px 0px 0px;
+  display: none;
 }
 
 .chat__user_me .chat__user-msg {
-  margin: 0px 10px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  background: #4e4e4e;
 }
 
 .chat__user-data {
@@ -1223,7 +1216,6 @@ h6 {
 }
 
 .chat__form {
-  margin: 10px 0px 0px 0px;
   display: flex;
   align-items: center;
   position: relative;
@@ -2934,7 +2926,7 @@ textarea:focus {
     height: 25px;
   }
 
-  .chat__user:not(:last-child) {
+  .chat__user {
     margin: 0px 0px 15px 0px;
   }
 
@@ -3391,10 +3383,6 @@ textarea:focus {
   .chat__header-icon {
     width: 23px;
     height: 23px;
-  }
-
-  .chat__user_me .chat__user-msg {
-    margin: 0px 5px 0px 0px;
   }
 
   .chat__user-avatar {
@@ -3883,7 +3871,7 @@ textarea:focus {
     height: 20px;
   }
 
-  .chat__user:not(:last-child) {
+  .chat__user {
     margin: 0px 0px 10px 0px;
   }
 
