@@ -50,211 +50,34 @@
 		<main class="main">
 			<div class="container">
 				<div class="main__body">
-					<section class="profile">
-						<div class="profile__items">
-							<div class="profile__avatar">
-								<div class="profile__image">
-									<picture><source srcset="img/aside/01.webp" type="image/webp"><img src="img/aside/01.jpg" alt=""></picture>
-									<div class="profile__image-icon _icon-win">
-										<span>65</span>
+					<section class="create-team">
+						<form action="#" class="create-team__form">
+							<div class="create-team__body">
+								<div class="create-team__clan clan">
+									<div class="clan__header">
+										<div class="clan__searh">
+											<label class="clan__label-search" for="searchPlayers">Поиск по имени</label>
+											<input type="text" id="searchPlayers" name="search" class="clan__input-searh">
+										</div>
+										<div class="clan__icon _icon-search"></div>
 									</div>
+									<ul class="clan__body">
+										<li class="clan__item">
+											<input type="checkbox" id="clanChexbox" class="clan__checkbox" name="clanPlayers" value="player">
+											<label class="clan__label-checkbox" for="clanChexbox">CrispySmasher</label>
+										</li>
+									</ul>
 								</div>
 							</div>
-							<div class="profile__content">
-								<div class="profile__data">Ник: <span>CrispySmasher</span></div>
-								<div class="profile__data">Имя: <span>Илья Стебель</span></div>
-								<div class="profile__data">Должность: <span>Глава</span></div>
-								<div class="profile__describe">
-									Описание описание тексты Описание описание тексты Описание описание тексты Описание описание
-									тексты Описание описание тексты
+							<div class="create-team__buttons buttons">
+								<div class="buttons__column">
+									<a href="profile.html" class="buttons__button">Вернуться в профиль</a>
 								</div>
-								<div class="profile__admin">
-									<div class="profile__distribute">
-										<div class="profile__distribute-icon _icon-check"></div>
-										<div class="profile__distribute-post">распределяет по кланам</div>
-									</div>
-								</div>
-								<div class="profile__socials">
-									<a href="" class="profile__social _icon-tel"></a>
-									<a href="" class="profile__social _icon-tg"></a>
-									<a href="" class="profile__social _icon-vk"></a>
-									<a href="" class="profile__social _icon-insta"></a>
+								<div class="buttons__column">
+									<button type="submit" class="buttons__button">Создать команду</button>
 								</div>
 							</div>
-						</div>
-						<div class="profile__tables tables">
-							<div class="tables__table tables__table_tournaments">
-								<h3 class="tables__title">Участие в турнирах</h3>
-								<ul class="tables__body">
-									<div class="tables__item">
-										<div class="tables__type">КБ</div>
-										<a href="" class="tables__name">Название турнира</a>
-									</div>
-									<div class="tables__item">
-										<div class="tables__type">КБ</div>
-										<a href="" class="tables__name">Название турнира</a>
-									</div>
-									<div class="tables__item">
-										<div class="tables__type">П</div>
-										<a href="" class="tables__name">Название турнира</a>
-									</div>
-									<div class="tables__item">
-										<div class="tables__type">КБД</div>
-										<a href="" class="tables__name">Название турнира</a>
-									</div>
-									<div class="tables__item">
-										<div class="tables__type">КБ</div>
-										<a href="" class="tables__name">Название турнира</a>
-									</div>
-									<div class="tables__item">
-										<div class="tables__type">П</div>
-										<a href="" class="tables__name">Название турнира</a>
-									</div>
-									<div class="tables__item">
-										<div class="tables__type">П</div>
-										<a href="" class="tables__name">Название турнира</a>
-									</div>
-								</ul>
-							</div>
-							<div class="tables__table tables__table_team">
-								<h3 class="tables__title">Ваша команда (Название)</h3>
-								<ol class="tables__body">
-									<div class="tables__item">
-										<li class="tables__type"></li>
-										<a href="" class="tables__name">CrispySmasher<span>Л</span></a>
-									</div>
-									<div class="tables__item">
-										<li class="tables__type"></li>
-										<a href="" class="tables__name">CrispySmasher</a>
-									</div>
-									<div class="tables__item">
-										<li class="tables__type"></li>
-										<a href="" class="tables__name">CrispySmasher</a>
-									</div>
-									<div class="tables__item">
-										<li class="tables__type"></li>
-										<a href="" class="tables__name">CrispySmasher</a>
-									</div>
-									<div class="tables__item">
-										<li class="tables__type"></li>
-										<a href="" class="tables__name">CrispySmasher</a>
-									</div>
-									<div class="tables__item">
-										<li class="tables__type"></li>
-										<a href="" class="tables__name">CrispySmasher</a>
-									</div>
-									<div class="tables__item">
-										<li class="tables__type"></li>
-										<a href="" class="tables__name">CrispySmasher</a>
-									</div>
-									<div class="tables__item">
-										<li class="tables__type"></li>
-										<a href="" class="tables__name">CrispySmasher</a>
-									</div>
-								</ol>
-							</div>
-							<div class="tables__table tables__table_invite">
-								<h3 class="tables__title">Приглашения в команду</h3>
-								<ul class="tables__body">
-									<div class="tables__item">
-										<div class="tables__name">
-											Dangeon Masters
-											<div class="tables__btns">
-												<form action="#" class="tables__form">
-													<input type="hidden">
-													<button type="submit" class="tables__btn _icon-check"></button>
-												</form>
-												<button type="button" class="tables__btn tables__btn_close"></button>
-											</div>
-										</div>
-									</div>
-									<div class="tables__item">
-										<div class="tables__name">
-											Dangeon Masters
-											<div class="tables__btns">
-												<form action="#" class="tables__form">
-													<input type="hidden">
-													<button type="submit" class="tables__btn _icon-check"></button>
-												</form>
-												<button type="button" class="tables__btn tables__btn_close"></button>
-											</div>
-										</div>
-									</div>
-									<div class="tables__item">
-										<div class="tables__name">
-											Dangeon Masters
-											<div class="tables__btns">
-												<form action="#" class="tables__form">
-													<input type="hidden">
-													<button type="submit" class="tables__btn _icon-check"></button>
-												</form>
-												<button type="button" class="tables__btn tables__btn_close"></button>
-											</div>
-										</div>
-									</div>
-									<div class="tables__item">
-										<div class="tables__name">
-											Dangeon Masters
-											<div class="tables__btns">
-												<form action="#" class="tables__form">
-													<input type="hidden">
-													<button type="submit" class="tables__btn _icon-check"></button>
-												</form>
-												<button type="button" class="tables__btn tables__btn_close"></button>
-											</div>
-										</div>
-									</div>
-									<div class="tables__item">
-										<div class="tables__name">
-											Dangeon Masters
-											<div class="tables__btns">
-												<form action="#" class="tables__form">
-													<input type="hidden">
-													<button type="submit" class="tables__btn _icon-check"></button>
-												</form>
-												<button type="button" class="tables__btn tables__btn_close"></button>
-											</div>
-										</div>
-									</div>
-									<div class="tables__item">
-										<div class="tables__name">
-											Dangeon Masters
-											<div class="tables__btns">
-												<form action="#" class="tables__form">
-													<input type="hidden">
-													<button type="submit" class="tables__btn _icon-check"></button>
-												</form>
-												<button type="button" class="tables__btn tables__btn_close"></button>
-											</div>
-										</div>
-									</div>
-									<div class="tables__item">
-										<div class="tables__name">
-											Dangeon Masters
-											<div class="tables__btns">
-												<form action="#" class="tables__form">
-													<input type="hidden">
-													<button type="submit" class="tables__btn _icon-check"></button>
-												</form>
-												<button type="button" class="tables__btn tables__btn_close"></button>
-											</div>
-										</div>
-									</div>
-								</ul>
-							</div>
-						</div>
-						<div class="profile__buttons buttons">
-							<div class="buttons__column">
-								<a href="editProfile.html" class="buttons__button">Редактировать профиль</a>
-								<a href="#confirmExitProfilePopup" class="buttons__button popup-link">Выйти</a>
-								<a href="" class="buttons__button">Войти в админку</a>
-							</div>
-							<div class="buttons__column">
-								<a href="createTeam.html" class="buttons__button">Создать команду</a>
-								<a href="editTeam.html" class="buttons__button">Редактировать команду</a>
-								<a href="#confirmExitTeamPopup" class="buttons__button  popup-link">Покинуть команду</a>
-							</div>
-						</div>
+						</form>
 					</section>
 					<aside class="aside">
 	<div class="aside__body">

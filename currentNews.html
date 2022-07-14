@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20220713142623" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20220713142623">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20220715004617" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20220715004617">
 	<link rel="shortcut icon" href="img/favicon.ico">
 	<title>Новости</title>
 </head>
@@ -30,9 +30,9 @@
 				<a href="#mainPopup" class="header__btn header__btn_in popup-link">Вход</a>
 				<a href="#mainPopup" class="header__btn header__btn_up popup-link">Вступить</a>
 			</div>
-			<div class="header__icon icon-header">
+			<button type="button" class="header__icon icon-header">
 				<span></span>
-			</div>
+			</button>
 		</div>
 		<div class="header__bottom">
 			<nav class="header__menu menu">
@@ -386,7 +386,7 @@
 		</div>
 	</div>
 </div>
-<div class="popup" id="confirmExitPopup">
+<div class="popup" id="confirmExitProfilePopup">
 	<div class="popup__body">
 		<div class="popup__content">
 			<a href="" class="popup__close close-popup"></a>
@@ -407,14 +407,14 @@
 		</div>
 	</div>
 </div>
-<div class="popup" id="confirmRemovePopup">
+<div class="popup" id="confirmExitTeamPopup">
 	<div class="popup__body">
 		<div class="popup__content">
 			<a href="" class="popup__close close-popup"></a>
 			<div class="popup__title">Уведомление</div>
 			<form action="#" class="popup__form">
 				<div class="popup__items">
-					<p>Вы уверены что хотите удалить (профиль. команду)?</p>
+					<p>Вы уверены что хотите покинуть команду?</p>
 				</div>
 				<div class="popup__buttons">
 					<div class="popup__button">
@@ -428,8 +428,29 @@
 		</div>
 	</div>
 </div>
-	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js?_v=20220713142623"></script>
-	<script src="js/app.min.js?_v=20220713142623"></script>
+<div class="popup" id="confirmRemovePopup">
+	<div class="popup__body">
+		<div class="popup__content">
+			<a href="" class="popup__close close-popup"></a>
+			<div class="popup__title">Уведомление</div>
+			<form action="#" class="popup__form">
+				<div class="popup__items">
+					<p>Вы уверены что хотите удалить команду?</p>
+				</div>
+				<div class="popup__buttons">
+					<div class="popup__button">
+						<button type="submit" class="popup__btn btn">ДА</button>
+					</div>
+					<div class="popup__button">
+						<button type="button" class="popup__btn btn close-popup">НЕТ</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js?_v=20220715004617"></script>
+	<script src="js/app.min.js?_v=20220715004617"></script>
 </body>
 
 </html>
