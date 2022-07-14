@@ -1466,7 +1466,7 @@ textarea:focus {
 .chat__input {
   flex: 1 1 auto;
   margin: 0px 10px 0px 0px;
-  background-color: #202020;
+  background-color: #252525;
   border-radius: 15px;
   padding: 20px;
   font-size: 24px;
@@ -1491,7 +1491,7 @@ textarea:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #202020;
+  background-color: #252525;
   flex: 0 0 67px;
   height: 100%;
   border-radius: 50%;
@@ -2343,7 +2343,7 @@ textarea:focus {
   }
 
   .chat__header:hover {
-    background-color: #191919;
+    background-color: #252525;
   }
 
   .chat__content {
@@ -2376,16 +2376,12 @@ textarea:focus {
     filter: brightness(1.5);
   }
 
-  .chat__scroll {
+  .chat__scroll:hover {
     background-color: #191919;
   }
 
-  .chat__scroll:hover {
-    background-color: #252525;
-  }
-
   .chat__btn:hover {
-    background: #0f0f0f;
+    background: #191919;
   }
 
   .members__avatar:hover {
@@ -2601,7 +2597,7 @@ textarea:focus {
 
   .header__top::before {
     content: "";
-    background-color: #131313;
+    background-color: #191919;
     width: 100%;
     position: fixed;
     top: 0px;
@@ -3232,14 +3228,17 @@ textarea:focus {
 
 @media (max-width: 1024px) and (max-width: 767px) {
   .icon-chat {
-    width: 50px;
-    height: 50px;
-    font-size: 30px;
+    width: 55px;
+    height: 55px;
+    font-size: 35px;
   }
 }
 
 @media (max-width: 1024px) and (max-width: 479px) {
   .icon-chat {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
     right: 10px;
   }
 }
@@ -4230,12 +4229,6 @@ textarea:focus {
   }
 }
 
-@media (max-width: 400px) {
-  .chat__user-msg {
-    max-width: 100%;
-  }
-}
-
 @media (max-width: 360px) {
   .contacts__item {
     padding: 10px 5px;
@@ -4274,6 +4267,12 @@ textarea:focus {
 @media (max-width: 350px) {
   .popup__item_password {
     font-size: 15px;
+  }
+}
+
+@media (max-width: 349px) {
+  .chat__user-msg {
+    max-width: 100%;
   }
 }
 
