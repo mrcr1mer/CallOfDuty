@@ -279,8 +279,9 @@ textarea:focus {
 }
 
 .btn {
-  font-weight: 800;
+  font-weight: 700;
   width: 100%;
+  letter-spacing: 0.04em;
   background-color: #fd7e09;
   color: #fff;
   display: flex;
@@ -443,7 +444,7 @@ textarea:focus {
 .footer__item {
   transition: all 0.4s ease 0s;
   color: #fd7e09;
-  margin: 0px 0px 20px;
+  margin: 0px 0px 15px;
   line-height: 120%;
   display: block;
 }
@@ -1304,7 +1305,7 @@ textarea:focus {
 }
 
 .about__info {
-  font-weight: 700;
+  font-weight: 500;
   font-size: 24px;
   line-height: 120%;
 }
@@ -1534,7 +1535,7 @@ textarea:focus {
 
 .chat__scroll {
   position: absolute;
-  top: -65px;
+  top: -75px;
   right: 0px;
   width: 50px;
   height: 50px;
@@ -1544,7 +1545,7 @@ textarea:focus {
   transition: all 0.3s ease 0s;
   opacity: 0;
   visibility: hidden;
-  transform: translate(0, 100%);
+  transform: translate(0, 120%);
 }
 
 .chat__scroll span::before,
@@ -1957,7 +1958,7 @@ textarea:focus {
 }
 
 .current-news__info {
-  padding: 25px;
+  padding: 20px 25px;
 }
 
 .current-news__image {
@@ -1983,16 +1984,16 @@ textarea:focus {
 
 .current-news__title {
   font-weight: 700;
-  font-size: 32px;
-  line-height: 125%;
+  font-size: 30px;
+  line-height: 120%;
   color: #fd7e09;
   margin: 0px 0px 10px 0px;
 }
 
 .current-news__text {
   font-weight: 500;
-  font-size: 26px;
-  line-height: 125%;
+  font-size: 24px;
+  line-height: 120%;
   margin: 0px 0px 20px 0px;
 }
 
@@ -2007,19 +2008,19 @@ textarea:focus {
 
 .current-news__file {
   display: inline-flex;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 125%;
+  cursor: pointer;
   color: #fd7e09;
+  transition: all 0.4s ease 0s;
 }
 
-.current-news__file:hover .current-news__icon,
-.current-news__file:hover .current-news__file-link {
+.current-news__file:hover {
   color: #ff5100;
 }
 
-.current-news__icon {
-  cursor: pointer;
-  transition: all 0.4s ease 0s;
+.current-news__file:hover .current-news__file-link {
+  color: #ff5100;
 }
 
 .current-news__file-link {
@@ -2650,18 +2651,6 @@ textarea:focus {
     margin: 0px 20px 0px 0px;
   }
 
-  .current-news__title {
-    font-size: 30px;
-  }
-
-  .current-news__text {
-    font-size: 24px;
-  }
-
-  .current-news__file {
-    font-size: 22px;
-  }
-
   .profile__content {
     font-size: 20px;
   }
@@ -2697,7 +2686,7 @@ textarea:focus {
     z-index: 3;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s ease 0s;
+    transition: all 0.4s ease 0s;
   }
 
   .header {
@@ -2771,7 +2760,7 @@ textarea:focus {
     left: -100%;
     width: 100%;
     height: 100%;
-    background-color: #252525;
+    background-color: #202020;
     transition: left 0.5s ease 0s;
     overflow: auto;
     padding: 180px 20px 20px;
@@ -3143,7 +3132,7 @@ textarea:focus {
   }
 
   .chat__scroll {
-    top: -65px;
+    top: -70px;
     width: 50px;
     height: 50px;
   }
@@ -3269,15 +3258,15 @@ textarea:focus {
   }
 
   .current-news__info {
-    padding: 20px;
+    padding: 15px 20px;
   }
 
   .current-news__title {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   .current-news__text {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .current-news__file {
@@ -3426,10 +3415,6 @@ textarea:focus {
 
   .footer__body {
     padding: 15px;
-  }
-
-  .footer__item {
-    margin: 0px 0px 15px 0px;
   }
 
   .popup__content {
@@ -3607,7 +3592,7 @@ textarea:focus {
   }
 
   .chat__scroll {
-    top: -60px;
+    top: -65px;
     width: 45px;
     height: 45px;
   }
@@ -3741,11 +3726,11 @@ textarea:focus {
   }
 
   .current-news__title {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .current-news__text {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .current-news__file {
@@ -3854,16 +3839,6 @@ textarea:focus {
 
   .clan__data_name {
     display: none;
-  }
-
-  .current-news__title {
-    margin: 0px 0px 5px 0px;
-    font-size: 24px;
-  }
-
-  .current-news__text {
-    margin: 0px 0px 10px 0px;
-    font-size: 18px;
   }
 }
 
@@ -4041,7 +4016,7 @@ textarea:focus {
   }
 
   .about__title {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   .about__info {
@@ -4100,7 +4075,7 @@ textarea:focus {
   }
 
   .chat__scroll {
-    top: -55px;
+    top: -60px;
     width: 40px;
     height: 40px;
   }
@@ -4234,10 +4209,12 @@ textarea:focus {
   }
 
   .current-news__title {
+    margin: 0px 0px 5px 0px;
     font-size: 20px;
   }
 
   .current-news__text {
+    margin: 0px 0px 10px 0px;
     font-size: 16px;
   }
 
