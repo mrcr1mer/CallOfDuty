@@ -302,7 +302,7 @@ textarea:focus {
   align-items: center;
   margin: 0px 0px 20px 0px;
   position: relative;
-  z-index: 2;
+  z-index: 5;
   min-height: 100px;
   padding: 30px 0px 0px 0px;
 }
@@ -344,7 +344,7 @@ textarea:focus {
 
 .header__buttons {
   position: relative;
-  z-index: 2;
+  z-index: 5;
 }
 
 .header__btn {
@@ -456,13 +456,13 @@ textarea:focus {
   margin: 0px 0px 0px 45px;
   flex: 0 0 60px;
   border-left: 5px solid #fd7e09;
-  padding: 10px 0px 10px 10px;
-  transition: all 1s ease 0s;
+  padding: 10px 0px 10px 5px;
+  transition: all 0.9s ease 0s;
 }
 
 .aside.active {
   flex: 0 0 300px;
-  padding: 10px 0px 10px 25px;
+  padding: 10px 0px 10px 20px;
   margin: 0px 0px 0px 30px;
 }
 
@@ -476,12 +476,7 @@ textarea:focus {
 }
 
 .aside.active .aside__dots {
-  visibility: visible;
   opacity: 1;
-}
-
-.aside.active .aside__arrows {
-  width: 30px;
 }
 
 .aside.active .aside__arrows .arrow:nth-child(1)::before {
@@ -492,15 +487,27 @@ textarea:focus {
   transform: rotate(-45deg);
 }
 
+.aside.active .aside__arrows .arrow:nth-child(1)::after,
+.aside.active .aside__arrows .arrow:nth-child(1)::before {
+  left: 0px;
+  opacity: 1;
+  -webkit-animation-name: none;
+          animation-name: none;
+}
+
 .aside.active .aside__arrows .arrow:nth-child(3)::before,
 .aside.active .aside__arrows .arrow:nth-child(3)::after {
-  left: 11px;
+  opacity: 1;
+  left: 12px;
+  -webkit-animation-name: none;
+          animation-name: none;
 }
 
 .aside.active .aside__arrows .arrow:nth-child(2)::before,
 .aside.active .aside__arrows .arrow:nth-child(2)::after {
   opacity: 0;
-  visibility: hidden;
+  -webkit-animation-name: none;
+          animation-name: none;
 }
 
 .aside.active .aside__icon-chat {
@@ -533,47 +540,142 @@ textarea:focus {
 .aside__arrows .arrow::after {
   content: "";
   position: absolute;
-  width: 18px;
+  width: 20px;
   height: 3px;
   background-color: #fd7e09;
-  left: 0px;
-  transition: all 0.4s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 
 .aside__arrows .arrow::before {
   transform: rotate(-45deg);
-  top: 8px;
+  top: 7px;
 }
 
 .aside__arrows .arrow::after {
   transform: rotate(45deg);
-  bottom: 8px;
+  bottom: 7px;
 }
 
 .aside__arrows .arrow:nth-child(1)::before,
 .aside__arrows .arrow:nth-child(1)::after {
-  -webkit-animation: animArrows1 1s ease infinite;
-          animation: animArrows1 1s ease infinite;
+  left: 0px;
+  -webkit-animation: animArrows1 1.3s ease-out 0s infinite;
+          animation: animArrows1 1.3s ease-out 0s infinite;
+}
+
+@-webkit-keyframes animArrows1 {
+  0% {
+    left: 12px;
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 0px;
+    opacity: 0;
+  }
+}
+
+@keyframes animArrows1 {
+  0% {
+    left: 12px;
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 0px;
+    opacity: 0;
+  }
 }
 
 .aside__arrows .arrow:nth-child(2)::before,
 .aside__arrows .arrow:nth-child(2)::after {
   left: 12px;
-  -webkit-animation: animArrows2 1s ease 0.2s infinite;
-          animation: animArrows2 1s ease 0.2s infinite;
+  -webkit-animation: animArrows2 1.3s ease-out 0.2s infinite;
+          animation: animArrows2 1.3s ease-out 0.2s infinite;
+}
+
+@-webkit-keyframes animArrows2 {
+  0% {
+    left: 24px;
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 12px;
+    opacity: 0;
+  }
+}
+
+@keyframes animArrows2 {
+  0% {
+    left: 24px;
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 12px;
+    opacity: 0;
+  }
 }
 
 .aside__arrows .arrow:nth-child(3)::before,
 .aside__arrows .arrow:nth-child(3)::after {
   left: 24px;
-  -webkit-animation: animArrows3 1s ease 1s infinite;
-          animation: animArrows3 1s ease 1s infinite;
+  -webkit-animation: animArrows3 1.3s ease-out 0.4s infinite;
+          animation: animArrows3 1.3s ease-out 0.4s infinite;
+}
+
+@-webkit-keyframes animArrows3 {
+  0% {
+    left: 36px;
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 24px;
+    opacity: 0;
+  }
+}
+
+@keyframes animArrows3 {
+  0% {
+    left: 36px;
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 24px;
+    opacity: 0;
+  }
 }
 
 .aside__dots {
   opacity: 0;
-  visibility: hidden;
-  transition: all 1s ease 0s;
+  transition: all 0.9s ease 0s;
   display: flex;
   position: absolute;
   top: 12px;
@@ -595,7 +697,7 @@ textarea:focus {
   max-width: 0;
   max-height: 0;
   overflow: hidden;
-  transition: all 1s ease 0s;
+  transition: all 0.9s ease 0s;
 }
 
 .aside__news {
@@ -645,7 +747,7 @@ textarea:focus {
 
 .aside__icon-chat {
   display: inline-block;
-  margin: 20px 0px 0px 0px;
+  margin: 20px 0px 0px 5px;
   color: #fd7e09;
   font-size: 40px;
   transition: all 0.4s ease 0s;
@@ -1439,7 +1541,10 @@ textarea:focus {
   background-color: #252525;
   border-radius: 50%;
   cursor: pointer;
-  transition: all 0.4s ease 0s;
+  transition: all 0.3s ease 0s;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, 100%);
 }
 
 .chat__scroll span::before,
@@ -1838,6 +1943,15 @@ textarea:focus {
   transition: all 0.4s ease 0s;
 }
 
+.current-news {
+  padding: 0px 115px;
+  transition: all 0.7s ease 0s;
+}
+
+.current-news.active {
+  padding: 0px 0px;
+}
+
 .current-news__body {
   background: rgba(15, 15, 15, 0.5);
 }
@@ -1847,7 +1961,7 @@ textarea:focus {
 }
 
 .current-news__image {
-  padding: 0px 0px 50% 0px;
+  padding: 0px 0px 61% 0px;
   position: relative;
   overflow: hidden;
 }
@@ -2580,9 +2694,10 @@ textarea:focus {
     position: fixed;
     bottom: 7.5%;
     right: 20px;
-    z-index: 9;
+    z-index: 3;
     opacity: 0;
     visibility: hidden;
+    transition: all 0.3s ease 0s;
   }
 
   .header {
@@ -2603,7 +2718,7 @@ textarea:focus {
     top: 0px;
     left: -100%;
     height: 130px;
-    transition: all 0.4s ease 0s;
+    transition: all 0.5s ease 0s;
   }
 
   .header__top.active::before {
@@ -2657,10 +2772,10 @@ textarea:focus {
     width: 100%;
     height: 100%;
     background-color: #252525;
-    transition: left 0.4s ease 0s;
+    transition: left 0.5s ease 0s;
     overflow: auto;
-    padding: 160px 20px 20px;
-    z-index: 1;
+    padding: 180px 20px 20px;
+    z-index: 4;
   }
 
   .menu.active {
@@ -2686,7 +2801,7 @@ textarea:focus {
     display: block;
     background-color: transparent;
     position: relative;
-    z-index: 2;
+    z-index: 5;
     width: 40px;
     height: 30px;
     cursor: pointer;
@@ -3150,7 +3265,7 @@ textarea:focus {
   }
 
   .current-news {
-    padding: 0px 70px;
+    padding: 0px 95px;
   }
 
   .current-news__info {
@@ -3249,6 +3364,12 @@ textarea:focus {
   }
 }
 
+@media (max-width: 900px) {
+  .current-news {
+    padding: 0px 70px;
+  }
+}
+
 @media (max-width: 840px) {
   .articles__item {
     margin: 0px 0px 30px 0px;
@@ -3291,7 +3412,7 @@ textarea:focus {
   }
 
   .menu {
-    padding: 140px 20px 20px;
+    padding: 150px 20px 20px;
   }
 
   .menu__link {
@@ -4188,7 +4309,7 @@ textarea:focus {
   }
 
   .tables__table:not(:last-child) {
-    margin: 0px 0px 10px 0px;
+    margin: 0px 0px 15px 0px;
   }
 
   .tables__title {
