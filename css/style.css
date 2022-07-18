@@ -857,6 +857,7 @@ textarea:focus {
   left: 0%;
   background-color: #101010;
   z-index: 2;
+  box-shadow: 0px 0px 10px #fff inset;
 }
 
 .chat-aside__body.blocked::after {
