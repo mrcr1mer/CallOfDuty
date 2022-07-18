@@ -831,9 +831,21 @@ textarea:focus {
 
 .chat-aside__body.blocked {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  cursor: pointer;
+}
+
+.chat-aside__body.blocked > span {
+  position: absolute;
+  z-index: 3;
+  font-size: 20px;
+  letter-spacing: 1px;
+  width: 60%;
+  font-weight: 700;
+  text-align: center;
+  line-height: 120%;
+  bottom: 38%;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .chat-aside__body.blocked::before {
@@ -843,12 +855,117 @@ textarea:focus {
   height: 100%;
   top: 0%;
   left: 0%;
-  background-color: #111111;
-  z-index: 5;
+  background-color: #101010;
+  z-index: 2;
 }
 
-.chat-aside__body.blocked .chat-aside__content {
-  overflow-y: hidden;
+.chat-aside__body.blocked::after {
+  content: "";
+  background: url("../img/icons/block.svg") center/cover no-repeat;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  z-index: 3;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.chat-aside__body.blocked.active::after {
+  -webkit-animation: blockedAnim 1s ease;
+          animation: blockedAnim 1s ease;
+}
+
+@-webkit-keyframes blockedAnim {
+  0% {
+    transform: translate(-50%, 0%) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(-50%, 0%) rotate(10deg);
+  }
+
+  20% {
+    transform: translate(-50%, 0%) rotate(-10deg);
+  }
+
+  30% {
+    transform: translate(-50%, 0%) rotate(10deg);
+  }
+
+  40% {
+    transform: translate(-50%, 0%) rotate(-10deg);
+  }
+
+  50% {
+    transform: translate(-50%, 0%) rotate(10deg);
+  }
+
+  60% {
+    transform: translate(-50%, 0%) rotate(-10deg);
+  }
+
+  70% {
+    transform: translate(-50%, 0%) rotate(10deg);
+  }
+
+  80% {
+    transform: translate(-50%, 0%) rotate(-10deg);
+  }
+
+  90% {
+    transform: translate(-50%, 0%) rotate(10deg);
+  }
+
+  100% {
+    transform: translate(-50%, 0%) rotate(0deg);
+  }
+}
+
+@keyframes blockedAnim {
+  0% {
+    transform: translate(-50%, 0%) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(-50%, 0%) rotate(10deg);
+  }
+
+  20% {
+    transform: translate(-50%, 0%) rotate(-10deg);
+  }
+
+  30% {
+    transform: translate(-50%, 0%) rotate(10deg);
+  }
+
+  40% {
+    transform: translate(-50%, 0%) rotate(-10deg);
+  }
+
+  50% {
+    transform: translate(-50%, 0%) rotate(10deg);
+  }
+
+  60% {
+    transform: translate(-50%, 0%) rotate(-10deg);
+  }
+
+  70% {
+    transform: translate(-50%, 0%) rotate(10deg);
+  }
+
+  80% {
+    transform: translate(-50%, 0%) rotate(-10deg);
+  }
+
+  90% {
+    transform: translate(-50%, 0%) rotate(10deg);
+  }
+
+  100% {
+    transform: translate(-50%, 0%) rotate(0deg);
+  }
 }
 
 .chat-aside__content {
@@ -885,13 +1002,11 @@ textarea:focus {
   transition: all 0.2s ease 0s;
   transform: scale(1) translate(0, 120%);
   opacity: 0;
-  visibility: hidden;
 }
 
 .chat-aside__user.send {
   transform: scale(1) translate(0, 0%);
   opacity: 1;
-  visibility: visible;
 }
 
 .chat-aside__user_me .chat-aside__user-data {
@@ -1449,7 +1564,7 @@ textarea:focus {
 
 .about-swiper .swiper-slide-prev,
 .about-swiper .swiper-slide-next {
-  filter: blur(2px);
+  filter: blur(1px);
 }
 
 .bg-chat {
@@ -1522,16 +1637,14 @@ textarea:focus {
 .chat__user {
   display: flex;
   transition: all 0.2s ease 0s;
+  margin: 0px 0px 15px 0px;
   transform: scale(1) translate(0, 120%);
   opacity: 0;
-  visibility: hidden;
-  margin: 0px 0px 15px 0px;
 }
 
 .chat__user.send {
   transform: scale(1) translate(0, 0%);
   opacity: 1;
-  visibility: visible;
 }
 
 .chat__user_me {
@@ -3140,7 +3253,6 @@ textarea:focus {
 
   .popup__btn {
     font-size: 22px;
-    padding: 15px;
   }
 
   .pagination__btn {
@@ -3563,6 +3675,10 @@ textarea:focus {
     align-items: flex-start;
   }
 
+  .popup__items > *:not(:last-child) {
+    margin: 0px 0px 20px 0px;
+  }
+
   .popup__items > p {
     font-size: 24px;
   }
@@ -3581,7 +3697,7 @@ textarea:focus {
   }
 
   .popup__btn {
-    padding: 10px;
+    padding: 15px;
     font-size: 20px;
   }
 
@@ -4545,5 +4661,12 @@ textarea:focus {
 @media (max-width: 290px) {
   .contacts__info {
     max-width: 80px;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .about-swiper .swiper-slide-prev,
+  .about-swiper .swiper-slide-next {
+    filter: blur(2px);
   }
 }
