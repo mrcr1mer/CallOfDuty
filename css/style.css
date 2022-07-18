@@ -454,17 +454,21 @@ textarea:focus {
 }
 
 .aside {
-  margin: 0px 0px 0px 45px;
+  margin: 0px 0px 0px 30px;
   flex: 0 0 60px;
   border-left: 5px solid #fd7e09;
   padding: 10px 0px 10px 5px;
   transition: all 0.9s ease 0s;
+  min-height: 950px;
+}
+
+.aside_big {
+  min-height: 985px;
 }
 
 .aside.active {
   flex: 0 0 300px;
   padding: 10px 0px 10px 20px;
-  margin: 0px 0px 0px 30px;
 }
 
 .aside.active .aside__body {
@@ -472,8 +476,8 @@ textarea:focus {
 }
 
 .aside.active .aside__content {
-  max-width: 300px;
-  max-height: 3000px;
+  visibility: visible;
+  opacity: 1;
 }
 
 .aside.active .aside__dots {
@@ -676,7 +680,7 @@ textarea:focus {
 
 .aside__dots {
   opacity: 0;
-  transition: all 0.9s ease 0s;
+  transition: all 0.7s ease 0s;
   display: flex;
   position: absolute;
   top: 12px;
@@ -695,18 +699,18 @@ textarea:focus {
 }
 
 .aside__content {
-  max-width: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.9s ease 0s;
+  transition: opacity 0.7s ease 0s;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  height: 100%;
+  width: 275px;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .aside__news {
-  margin: 0px 0px 50px 0px;
-}
-
-.aside__news-title {
-  margin: 0px 0px 15px 0px;
+  margin: 0px 0px 30px 0px;
 }
 
 .aside__news-img {
@@ -764,6 +768,7 @@ textarea:focus {
   display: block;
   color: #fff;
   transition: all 0.4s ease 0s;
+  margin: 0px 0px 10px 0px;
 }
 
 .title-aside:hover {
@@ -771,15 +776,11 @@ textarea:focus {
 }
 
 .aside__tournaments {
-  margin: 0px 0px 50px 0px;
-}
-
-.aside__tournaments-title {
-  margin: 0px 0px 15px 0px;
+  margin: 0px 0px 30px 0px;
 }
 
 .aside__tournaments-body > *:not(:last-child) {
-  margin: 0px 0px 15px 0px;
+  margin: 0px 0px 10px 0px;
 }
 
 .aside__tournaments-item {
@@ -794,8 +795,8 @@ textarea:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  line-height: 110%;
   text-align: center;
+  line-height: 110%;
   padding: 10px;
   flex: 0 0 60px;
   background-color: #191919;
@@ -804,7 +805,7 @@ textarea:focus {
 .aside__tournaments-name {
   padding: 10px;
   color: #fff;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 16px;
   line-height: 110%;
   letter-spacing: 0.05em;
@@ -821,23 +822,40 @@ textarea:focus {
   background-color: #ff5100;
 }
 
-.chat-aside__title {
-  margin: 0px 0px 15px 0px;
-}
-
 .chat-aside__body {
-  padding: 10px;
   background-color: rgba(5, 6, 6, 0.7);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  height: 540px;
+}
+
+.chat-aside__body.blocked {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat-aside__body.blocked::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  background-color: #111111;
+  z-index: 5;
+}
+
+.chat-aside__body.blocked .chat-aside__content {
+  overflow-y: hidden;
 }
 
 .chat-aside__content {
   flex: 1 1 auto;
   overflow-y: auto;
-  padding: 0px 10px 0px 0px;
+  padding: 10px;
+  max-height: 460px;
   scrollbar-color: #fff transparent;
   scrollbar-width: thin;
 }
@@ -851,7 +869,6 @@ textarea:focus {
 }
 
 .chat-aside__content::-webkit-scrollbar-thumb {
-  border-radius: 5px;
   background-color: #fff;
 }
 
@@ -864,90 +881,106 @@ textarea:focus {
 }
 
 .chat-aside__user {
-  margin: 0px 0px 28px 0px;
+  margin: 0px 0px 15px 0px;
+  transition: all 0.2s ease 0s;
+  transform: scale(1) translate(0, 120%);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.chat-aside__user.send {
+  transform: scale(1) translate(0, 0%);
+  opacity: 1;
+  visibility: visible;
 }
 
 .chat-aside__user_me .chat-aside__user-data {
-  flex-direction: row-reverse;
-}
-
-.chat-aside__user_me .chat-aside__user-items {
-  padding: 0px 10px 0px 0px;
-  text-align: right;
-}
-
-.chat-aside__user_me .chat-aside__post {
-  color: #ff0000;
+  display: none;
 }
 
 .chat-aside__user_me .chat-aside__user-msg {
-  border-radius: 10px 0px 10px 10px;
+  background-color: #725afd;
+  border-radius: 20px 10px 0px 20px;
 }
 
 .chat-aside__user-data {
   display: flex;
   align-items: center;
-  margin: 0px 0px 10px 0px;
-}
-
-.chat-aside__user-avatar {
-  width: 50px;
-  height: 50px;
-  display: block;
-}
-
-.chat-aside__user-avatar img {
-  width: 100%;
-  height: 100%;
-}
-
-.chat-aside__user-items {
-  flex: 1 1 auto;
-  padding: 0px 0px 0px 10px;
-}
-
-.chat-aside__nickname {
-  font-weight: 700;
-  font-size: 18px;
   margin: 0px 0px 5px 0px;
 }
 
-.chat-aside__post {
-  font-weight: 600;
+.chat-aside__user-avatar {
+  width: 55px;
+  height: 55px;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease 0s;
+}
+
+.chat-aside__user-avatar:hover {
+  filter: brightness(1.5);
+}
+
+.chat-aside__user-avatar img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.chat-aside__user-items {
+  padding: 0px 0px 0px 5px;
+}
+
+.chat-aside__user-item {
   font-size: 16px;
-  color: #05ff00;
+}
+
+.chat-aside__user-item_nickname {
+  font-weight: 700;
+  margin: 0px 0px 5px 0px;
+}
+
+.chat-aside__user-item_post {
+  font-weight: 600;
 }
 
 .chat-aside__user-msg {
   background: #191919;
-  border-radius: 0px 10px 10px 10px;
+  border-radius: 0px 20px 20px 10px;
   padding: 10px;
+  display: flex;
 }
 
-.chat-aside__msg-time {
+.chat-aside__time {
   font-size: 11px;
-  letter-spacing: 0.02em;
-  color: #626262;
-  margin: 0px 0px 5px 0px;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.4);
+  align-self: flex-end;
 }
 
 .chat-aside__msg {
   font-weight: 500;
   font-size: 13px;
-  line-height: 16px;
+  line-height: 125%;
   letter-spacing: 0.02em;
 }
 
 .chat-aside__form {
-  padding: 0px 5px 0px 0px;
+  padding: 0px 5px 5px;
   display: flex;
   align-items: center;
-  margin: 10px 0px 0px 0px;
+  position: relative;
 }
 
 .chat-aside__input {
   flex: 1 1 auto;
-  border-radius: 10px;
+  border-radius: 20px;
   margin: 0px 5px 0px 0px;
   background-color: #05080a;
   padding: 15px 10px;
@@ -971,6 +1004,60 @@ textarea:focus {
 
 .chat-aside__btn {
   background-color: transparent;
+  width: 35px;
+  height: 35px;
+  position: relative;
+  overflow: hidden;
+}
+
+.chat-aside__btn img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.chat-aside__scroll-button {
+  position: absolute;
+  top: -50px;
+  right: 10px;
+  width: 35px;
+  height: 35px;
+  background-color: #252525;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, 150%);
+}
+
+.chat-aside__scroll-button:hover {
+  background-color: #191919;
+}
+
+.chat-aside__scroll-button span::before,
+.chat-aside__scroll-button span::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  background-color: #fff;
+  height: 2px;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+
+.chat-aside__scroll-button span::before {
+  left: 8px;
+  transform: translate(0%, -50%) rotate(45deg);
+}
+
+.chat-aside__scroll-button span::after {
+  right: 8px;
+  transform: translate(0%, -50%) rotate(-45deg);
 }
 
 .popup {
@@ -1316,7 +1403,7 @@ textarea:focus {
 
 .about__btn {
   font-size: 28px;
-  padding: 25px 20px;
+  padding: 20px;
 }
 
 .about-swiper {
@@ -1385,7 +1472,7 @@ textarea:focus {
   height: calc(var(--vh, 1vh) * 100);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .chat__header {
@@ -1434,12 +1521,11 @@ textarea:focus {
 
 .chat__user {
   display: flex;
-  align-items: flex-start;
   transition: all 0.2s ease 0s;
-  transform: scale(0) translate(0, 150%);
+  transform: scale(1) translate(0, 120%);
   opacity: 0;
   visibility: hidden;
-  margin: 0px 0px 25px 0px;
+  margin: 0px 0px 15px 0px;
 }
 
 .chat__user.send {
@@ -1459,11 +1545,13 @@ textarea:focus {
 .chat__user_me .chat__user-msg {
   margin: 0px 0px 0px 0px;
   background-color: #725afd;
+  border-radius: 20px 10px 0px 20px;
 }
 
 .chat__user-data {
   display: flex;
   align-items: center;
+  align-self: flex-end;
 }
 
 .chat__user-avatar {
@@ -1508,15 +1596,16 @@ textarea:focus {
   margin: 0px 0px 0px 10px;
   padding: 10px 15px;
   background-color: #191919;
-  border-radius: 20px;
+  border-radius: 10px 20px 20px 0px;
   max-width: 65%;
   display: flex;
 }
 
 .chat__msg {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 20px;
   line-height: 125%;
+  letter-spacing: 0.02em;
 }
 
 .chat__time {
@@ -1531,49 +1620,14 @@ textarea:focus {
   display: flex;
   align-items: center;
   position: relative;
-}
-
-.chat__scroll {
-  position: absolute;
-  top: -75px;
-  right: 0px;
-  width: 50px;
-  height: 50px;
-  background-color: #252525;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-  opacity: 0;
-  visibility: hidden;
-  transform: translate(0, 120%);
-}
-
-.chat__scroll span::before,
-.chat__scroll span::after {
-  content: "";
-  position: absolute;
-  width: 20px;
-  background-color: #fff;
-  height: 3px;
-  top: 50%;
-  transform: translate(0%, -50%);
-}
-
-.chat__scroll span::before {
-  left: 9px;
-  transform: translate(0%, -50%) rotate(45deg);
-}
-
-.chat__scroll span::after {
-  right: 9px;
-  transform: translate(0%, -50%) rotate(-45deg);
+  margin: 10px 0px 0px 0px;
 }
 
 .chat__input {
   flex: 1 1 auto;
   margin: 0px 10px 0px 0px;
   background-color: #252525;
-  border-radius: 15px;
+  border-radius: 20px;
   padding: 20px;
   font-size: 24px;
   letter-spacing: 0.04em;
@@ -1607,6 +1661,42 @@ textarea:focus {
 .chat__btn img {
   height: 40px;
   width: 40px;
+}
+
+.chat__scroll-button {
+  position: absolute;
+  top: -75px;
+  right: 5px;
+  width: 50px;
+  height: 50px;
+  background-color: #252525;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, 150%);
+}
+
+.chat__scroll-button span::before,
+.chat__scroll-button span::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  background-color: #fff;
+  height: 3px;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+
+.chat__scroll-button span::before {
+  left: 9px;
+  transform: translate(0%, -50%) rotate(45deg);
+}
+
+.chat__scroll-button span::after {
+  right: 9px;
+  transform: translate(0%, -50%) rotate(-45deg);
 }
 
 .members__leaders {
@@ -1696,7 +1786,7 @@ textarea:focus {
   border-radius: 50%;
   overflow: hidden;
   transition: all 0.4s ease 0s;
-  margin: 0px 15px 0px 0px;
+  margin: 0px 10px 0px 0px;
 }
 
 .contacts__avatar img {
@@ -1717,6 +1807,7 @@ textarea:focus {
 
 .contacts__nickname {
   font-weight: 700;
+  margin: 0px 0px 5px 0px;
 }
 
 .contacts__name {
@@ -1916,10 +2007,10 @@ textarea:focus {
   transform: scale(1.2);
 }
 
-.articles__data {
+.articles__date {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 10px;
+  left: 10px;
   font-weight: 700;
   font-size: 18px;
   background: rgba(17, 17, 17, 0.75);
@@ -1928,7 +2019,7 @@ textarea:focus {
   align-items: center;
 }
 
-.articles__data span {
+.articles__date span {
   margin: 0px 15px 0px 0px;
   text-transform: uppercase;
   font-size: 20px;
@@ -2077,7 +2168,7 @@ textarea:focus {
 }
 
 .profile__content {
-  font-size: 24px;
+  font-size: 22px;
   flex: 0 1 60%;
   padding: 0px 0px 0px 30px;
 }
@@ -2096,6 +2187,7 @@ textarea:focus {
 }
 
 .profile__describe {
+  font-size: 20px;
   line-height: 120%;
 }
 
@@ -2254,7 +2346,7 @@ textarea:focus {
 }
 
 .tables__type {
-  flex: 0 0 70px;
+  flex: 0 0 60px;
   padding: 5px;
   text-transform: uppercase;
   font-weight: 700;
@@ -2491,12 +2583,12 @@ textarea:focus {
     filter: brightness(1.5);
   }
 
-  .chat__scroll:hover {
-    background-color: #191919;
-  }
-
   .chat__btn:hover {
     background: #191919;
+  }
+
+  .chat__scroll-button:hover {
+    background-color: #191919;
   }
 
   .members__avatar:hover {
@@ -2655,6 +2747,10 @@ textarea:focus {
     font-size: 20px;
   }
 
+  .profile__describe {
+    font-size: 18px;
+  }
+
   .tables__title {
     font-size: 22px;
   }
@@ -2681,11 +2777,12 @@ textarea:focus {
     font-size: 40px;
     color: #fff;
     position: fixed;
-    bottom: 7.5%;
+    bottom: 5%;
     right: 20px;
     z-index: 3;
     opacity: 0;
     visibility: hidden;
+    transform: translate(0, 100%);
     transition: all 0.4s ease 0s;
   }
 
@@ -3073,7 +3170,6 @@ textarea:focus {
 
   .about__btn {
     font-size: 24px;
-    padding: 20px;
   }
 
   .about-swiper {
@@ -3106,10 +3202,6 @@ textarea:focus {
     height: 25px;
   }
 
-  .chat__user {
-    margin: 0px 0px 15px 0px;
-  }
-
   .chat__user-avatar {
     width: 60px;
     height: 60px;
@@ -3131,24 +3223,8 @@ textarea:focus {
     font-size: 12px;
   }
 
-  .chat__scroll {
-    top: -70px;
-    width: 50px;
-    height: 50px;
-  }
-
-  .chat__scroll span::before,
-  .chat__scroll span::after {
-    width: 18px;
-    height: 3px;
-  }
-
-  .chat__scroll span::before {
-    left: 10px;
-  }
-
-  .chat__scroll span::after {
-    right: 10px;
+  .chat__form {
+    margin: 0px 0px 0px 0px;
   }
 
   .chat__input {
@@ -3163,6 +3239,23 @@ textarea:focus {
   .chat__btn img {
     width: 35px;
     height: 35px;
+  }
+
+  .chat__scroll-button {
+    top: -70px;
+  }
+
+  .chat__scroll-button span::before,
+  .chat__scroll-button span::after {
+    width: 17px;
+  }
+
+  .chat__scroll-button span::before {
+    left: 11px;
+  }
+
+  .chat__scroll-button span::after {
+    right: 11px;
   }
 
   .members__leader {
@@ -3237,14 +3330,12 @@ textarea:focus {
     min-height: 50px;
   }
 
-  .articles__data {
-    left: 15px;
-    top: 15px;
+  .articles__date {
     font-size: 16px;
     padding: 10px;
   }
 
-  .articles__data span {
+  .articles__date span {
     font-size: 18px;
   }
 
@@ -3285,6 +3376,10 @@ textarea:focus {
   .profile__content {
     padding: 0px 0px 0px 20px;
     font-size: 18px;
+  }
+
+  .profile__describe {
+    font-size: 16px;
   }
 
   .profile__social:not(:last-child) {
@@ -3569,6 +3664,10 @@ textarea:focus {
     height: 23px;
   }
 
+  .chat__user {
+    margin: 0px 0px 10px 0px;
+  }
+
   .chat__user_me .chat__user-msg {
     max-width: 90%;
   }
@@ -3591,26 +3690,6 @@ textarea:focus {
     font-size: 11px;
   }
 
-  .chat__scroll {
-    top: -65px;
-    width: 45px;
-    height: 45px;
-  }
-
-  .chat__scroll span::before,
-  .chat__scroll span::after {
-    width: 16px;
-    height: 2px;
-  }
-
-  .chat__scroll span::before {
-    left: 9px;
-  }
-
-  .chat__scroll span::after {
-    right: 9px;
-  }
-
   .chat__input {
     margin: 0px 5px 0px 0px;
     font-size: 17px;
@@ -3624,6 +3703,27 @@ textarea:focus {
   .chat__btn img {
     width: 30px;
     height: 30px;
+  }
+
+  .chat__scroll-button {
+    top: -65px;
+    right: 0px;
+    width: 45px;
+    height: 45px;
+  }
+
+  .chat__scroll-button span::before,
+  .chat__scroll-button span::after {
+    width: 15px;
+    height: 2px;
+  }
+
+  .chat__scroll-button span::before {
+    left: 10px;
+  }
+
+  .chat__scroll-button span::after {
+    right: 10px;
   }
 
   .members__leader {
@@ -3657,12 +3757,15 @@ textarea:focus {
   .contacts__avatar {
     flex: 0 0 60px;
     height: 60px;
-    margin: 0px 10px 0px 0px;
   }
 
   .contacts__info {
     font-size: 16px;
     max-width: 120px;
+  }
+
+  .contacts__nickname {
+    margin: 0px 0px 0px 0px;
   }
 
   .contacts__social:not(:last-child) {
@@ -3766,6 +3869,10 @@ textarea:focus {
     margin: 0px 0px 10px 0px;
   }
 
+  .profile__describe {
+    font-size: 16px;
+  }
+
   .profile__distribute-icon {
     font-size: 25px;
   }
@@ -3843,11 +3950,11 @@ textarea:focus {
 }
 
 @media (max-width: 579px) {
-  .articles__data {
+  .articles__date {
     font-size: 14px;
   }
 
-  .articles__data span {
+  .articles__date span {
     font-size: 16px;
     margin: 0px 10px 0px 0px;
   }
@@ -4057,10 +4164,6 @@ textarea:focus {
     height: 20px;
   }
 
-  .chat__user {
-    margin: 0px 0px 10px 0px;
-  }
-
   .chat__user-avatar {
     width: 50px;
     height: 50px;
@@ -4074,26 +4177,6 @@ textarea:focus {
     font-size: 13px;
   }
 
-  .chat__scroll {
-    top: -60px;
-    width: 40px;
-    height: 40px;
-  }
-
-  .chat__scroll span::before,
-  .chat__scroll span::after {
-    width: 14px;
-    height: 2px;
-  }
-
-  .chat__scroll span::before {
-    left: 8px;
-  }
-
-  .chat__scroll span::after {
-    right: 8px;
-  }
-
   .chat__input {
     font-size: 15px;
     padding: 15px;
@@ -4101,6 +4184,25 @@ textarea:focus {
 
   .chat__btn {
     flex: 0 0 49px;
+  }
+
+  .chat__scroll-button {
+    top: -60px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .chat__scroll-button span::before,
+  .chat__scroll-button span::after {
+    width: 13px;
+  }
+
+  .chat__scroll-button span::before {
+    left: 9px;
+  }
+
+  .chat__scroll-button span::after {
+    right: 9px;
   }
 
   .members__leader {
@@ -4188,14 +4290,12 @@ textarea:focus {
     margin: 0px 0px 10px 0px;
   }
 
-  .articles__data {
-    top: 10px;
-    left: 10px;
+  .articles__date {
     padding: 7px;
     font-size: 12px;
   }
 
-  .articles__data span {
+  .articles__date span {
     font-size: 14px;
   }
 
@@ -4241,6 +4341,10 @@ textarea:focus {
   }
 
   .profile__content {
+    font-size: 14px;
+  }
+
+  .profile__describe {
     font-size: 14px;
   }
 
