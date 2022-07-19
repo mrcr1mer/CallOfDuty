@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20220718213611" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20220718213611">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20220719213544" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20220719213544">
 	<link rel="shortcut icon" href="img/favicon.ico">
 	<title>Создать команду</title>
 </head>
@@ -51,33 +51,79 @@
 			<div class="container">
 				<div class="main__body">
 					<section class="create-team">
-						<form action="#" class="create-team__form">
-							<div class="create-team__body">
-								<div class="create-team__clan clan">
-									<div class="clan__header">
-										<div class="clan__searh">
-											<label class="clan__label-search" for="searchPlayers">Поиск по имени</label>
-											<input type="text" id="searchPlayers" name="search" class="clan__input-searh">
-										</div>
-										<div class="clan__icon _icon-search"></div>
+						<div class="players">
+							<h2 class="players__title">Создание команды</h2>
+							<form action="#" class="players__form">
+								<div class="players__name-team">
+									<label class="players__label-name" for="nameTeam">Название команды: </label>
+									<input autocomplete="off" type="text" class="players__input-name" name="nameTeam"
+										id="nameTeam">
+								</div>
+								<div class="players__discribe">
+									<h3 class="players__title-discribe">Добавить участников</h3>
+									<div class="players__text-discribe">Добавляя участников команды каждый игрок получает
+										приглашение на
+										вступление в команду.Для зачисления игрока в команду необходимо чтобы он принял
+										приглашение в своем профиле.
 									</div>
-									<ul class="clan__body">
-										<li class="clan__item">
-											<input type="checkbox" id="clanChexbox" class="clan__checkbox" name="clanPlayers" value="player">
-											<label class="clan__label-checkbox" for="clanChexbox">CrispySmasher</label>
+								</div>
+								<div class="players__list list-players">
+									<div class="list-players__header">
+										<div class="list-players__title ">Поиск по имени</div>
+										<div class="list-players__searh">
+											<input autocomplete="off" type="text" id="searchPlayers" name="searchPlayers"
+												class="list-players__input-searh">
+											<label class="list-players__label-search _icon-search" for="searchPlayers"></label>
+										</div>
+									</div>
+									<ul class="list-players__items">
+										<li class="list-players__item">
+											<input type="checkbox" id="player1" class="list-players__input" name="players"
+												value="player1">
+											<label class="list-players__label-checkbox" for="player1">CrispySmasher</label>
+										</li>
+										<li class="list-players__item">
+											<input type="checkbox" id="player2" class="list-players__input" name="players"
+												value="player2">
+											<label class="list-players__label-checkbox" for="player2">cr1mer</label>
+										</li>
+										<li class="list-players__item">
+											<input type="checkbox" id="player3" class="list-players__input" name="players"
+												value="player3">
+											<label class="list-players__label-checkbox" for="player3">muhabrot</label>
+										</li>
+										<li class="list-players__item">
+											<input type="checkbox" id="player4" class="list-players__input" name="players"
+												value="player4">
+											<label class="list-players__label-checkbox" for="player4">CrispySmasher</label>
+										</li>
+										<li class="list-players__item">
+											<input type="checkbox" id="player5" class="list-players__input" name="players"
+												value="player5">
+											<label class="list-players__label-checkbox" for="player5">CrispySmasher</label>
+										</li>
+										<li class="list-players__item">
+											<input type="checkbox" id="player6" class="list-players__input" name="players"
+												value="player6">
+											<label class="list-players__label-checkbox" for="player6">CrispySmasher</label>
+										</li>
+										<li class="list-players__item">
+											<input type="checkbox" id="player7" class="list-players__input" name="players"
+												value="player7">
+											<label class="list-players__label-checkbox" for="player7">CrispySmasher</label>
 										</li>
 									</ul>
 								</div>
-							</div>
-							<div class="create-team__buttons buttons">
-								<div class="buttons__column">
-									<a href="profile.html" class="buttons__button">Вернуться в профиль</a>
+								<div class="players__buttons buttons">
+									<div class="buttons__column">
+										<a href="profile.html" class="buttons__button">Вернуться в профиль</a>
+									</div>
+									<div class="buttons__column">
+										<button type="submit" class="buttons__button">Создать команду</button>
+									</div>
 								</div>
-								<div class="buttons__column">
-									<button type="submit" class="buttons__button">Создать команду</button>
-								</div>
-							</div>
-						</form>
+							</form>
+						</div>
 					</section>
 					<aside class="aside">
 	<div class="aside__body">
@@ -432,8 +478,8 @@
 		</div>
 	</div>
 </div>
-	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js?_v=20220718213611"></script>
-	<script src="js/app.min.js?_v=20220718213611"></script>
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js?_v=20220719213544"></script>
+	<script src="js/app.min.js?_v=20220719213544"></script>
 </body>
 
 </html>

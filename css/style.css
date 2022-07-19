@@ -1,6 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Bebas+Neue:regular&display=swap&subset=cyrillic-ext);
+@import url("https://fonts.googleapis.com/css?family=Bebas+Neue:regular&display=swap&subset=cyrillic-ext");
 
-@import url(https://fonts.googleapis.com/css?family=Montserrat:300,regular,500,600,700,800,900&display=swap&subset=cyrillic-ext);
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,regular,500,600,700,800,900&display=swap&subset=cyrillic-ext");
 
 :root {
   --vh: 1vh;
@@ -52,10 +52,6 @@ body.burger-lock {
   display: flex;
   flex-direction: column;
   position: relative;
-}
-
-.wrapper > * {
-  min-width: 0;
 }
 
 .container {
@@ -459,11 +455,11 @@ textarea:focus {
   border-left: 5px solid #fd7e09;
   padding: 10px 0px 10px 5px;
   transition: all 0.9s ease 0s;
-  min-height: 950px;
+  min-height: 960px;
 }
 
 .aside_big {
-  min-height: 985px;
+  min-height: 990px;
 }
 
 .aside.active {
@@ -763,8 +759,8 @@ textarea:focus {
 }
 
 .title-aside {
-  font-weight: 900;
-  font-size: 24px;
+  font-weight: 700;
+  font-size: 28px;
   display: block;
   color: #fff;
   transition: all 0.4s ease 0s;
@@ -1490,7 +1486,7 @@ textarea:focus {
 }
 
 .about {
-  min-width: 0;
+  min-width: 0px;
   display: flex;
   flex-direction: column;
 }
@@ -1869,6 +1865,122 @@ textarea:focus {
   display: none;
 }
 
+.clan {
+  margin: 0px 0px 40px 0px;
+}
+
+.clan__header {
+  background-color: #121212;
+  min-height: 70px;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+}
+
+.clan__title {
+  color: #fd7e09;
+  font-size: 28px;
+}
+
+.clan__total-online {
+  color: #fd7e09;
+  font-size: 20px;
+}
+
+.clan ol.clan__body {
+  list-style: none;
+  counter-reset: item;
+}
+
+.clan ol.clan__body li {
+  position: relative;
+}
+
+.clan ol.clan__body li::before {
+  content: counter(item) " ";
+  counter-increment: item;
+  position: absolute;
+  left: 20px;
+}
+
+.clan__body {
+  max-height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-color: #fd7e09 transparent;
+  scrollbar-width: thin;
+}
+
+.clan__body::-webkit-scrollbar {
+  width: 4px;
+}
+
+.clan__body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.clan__body::-webkit-scrollbar-thumb {
+  background-color: #fd7e09;
+}
+
+.clan__body::-webkit-scrollbar-thumb:hover {
+  background-color: #ff5100;
+}
+
+.clan__body::-webkit-scrollbar-thumb:active {
+  background-color: #8b2f12;
+}
+
+.clan__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  background: rgba(20, 20, 20, 0.65);
+  min-height: 50px;
+  padding: 10px 20px 10px 60px;
+  font-size: 20px;
+}
+
+.clan__item:not(:last-child) {
+  border-bottom: 1px solid #121212;
+}
+
+.clan__info {
+  display: flex;
+  align-items: center;
+}
+
+.clan__data {
+  font-weight: 500;
+  line-height: 120%;
+  flex: 0 0 160px;
+}
+
+.clan__data:not(:last-child) {
+  margin: 0px 40px 0px 0px;
+}
+
+.clan__data_nickname {
+  font-weight: 700;
+  color: #fff;
+  transition: all 0.4s ease 0s;
+}
+
+.clan__online {
+  font-weight: 500;
+}
+
+.clan__online_on {
+  color: rgba(5, 255, 0, 0.67);
+}
+
+.clan__online_off {
+  color: #d9d9d9;
+}
+
 .contacts__title {
   font-weight: 600;
   font-size: 24px;
@@ -1953,138 +2065,6 @@ textarea:focus {
 
 .contacts__social:not(:last-child) {
   margin: 0px 20px 0px 0px;
-}
-
-.clan {
-  margin: 0px 0px 40px 0px;
-}
-
-.clan__header {
-  background-color: #121212;
-  min-height: 70px;
-  padding: 0px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: 600;
-}
-
-.clan__title {
-  color: #fd7e09;
-  font-size: 28px;
-}
-
-.clan__total-online {
-  color: #fd7e09;
-  font-size: 20px;
-}
-
-.clan ol.clan__body {
-  list-style: none;
-  counter-reset: item;
-}
-
-.clan ol.clan__body li {
-  position: relative;
-}
-
-.clan ol.clan__body li::before {
-  content: counter(item) " ";
-  counter-increment: item;
-  position: absolute;
-  left: 20px;
-}
-
-.clan__body {
-  max-height: 300px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  scrollbar-color: #fd7e09 transparent;
-  scrollbar-width: thin;
-}
-
-.clan__body::-webkit-scrollbar {
-  width: 4px;
-}
-
-.clan__body::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-
-.clan__body::-webkit-scrollbar-thumb {
-  background-color: #fd7e09;
-}
-
-.clan__body::-webkit-scrollbar-thumb:hover {
-  background-color: #ff5100;
-}
-
-.clan__body::-webkit-scrollbar-thumb:active {
-  background-color: #8b2f12;
-}
-
-.clan__item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: 600;
-  background: rgba(20, 20, 20, 0.65);
-  min-height: 60px;
-  padding: 10px 20px 10px 60px;
-  font-size: 20px;
-}
-
-.clan__item:not(:last-child) {
-  border-bottom: 1px solid #121212;
-}
-
-.clan__info {
-  display: flex;
-  align-items: center;
-}
-
-.clan__data {
-  font-weight: 500;
-  line-height: 120%;
-  flex: 0 0 160px;
-}
-
-.clan__data:not(:last-child) {
-  margin: 0px 40px 0px 0px;
-}
-
-.clan__data_nickname {
-  font-weight: 700;
-  color: #fff;
-  transition: all 0.4s ease 0s;
-}
-
-.clan__online {
-  font-weight: 500;
-}
-
-.clan__online_on {
-  color: rgba(5, 255, 0, 0.67);
-}
-
-.clan__online_off {
-  color: #d9d9d9;
-}
-
-.clan__label-checkbox {
-  font-weight: 600;
-  font-size: 22px;
-  cursor: pointer;
-  flex: 1 1 auto;
-  transition: all 0.4s ease 0s;
-}
-
-.clan__checkbox {
-  display: none;
-}
-
-.clan__checkbox:checked + .clan__label-checkbox {
-  background-color: #fd7e09;
 }
 
 .articles {
@@ -2349,7 +2329,7 @@ textarea:focus {
 .buttons {
   display: flex;
   align-items: center;
-  margin: 0px -20px;
+  margin: 40px -20px 0px;
 }
 
 .buttons__column {
@@ -2377,7 +2357,6 @@ textarea:focus {
 
 .tables {
   display: flex;
-  margin: 0px 0px 40px 0px;
 }
 
 .tables__table {
@@ -2628,6 +2607,201 @@ textarea:focus {
   font-size: 45px;
 }
 
+.players__title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 120%;
+  letter-spacing: 0.05em;
+  margin: 0px 0px 30px 0px;
+}
+
+.players__items {
+  display: flex;
+}
+
+.players__item {
+  flex: 0 1 50%;
+}
+
+.players__item:not(:last-child) {
+  margin: 0px 40px 0px 0px;
+}
+
+.players__name-team {
+  display: flex;
+  align-items: center;
+  margin: 0px 0px 20px 0px;
+}
+
+.players__label-name {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%;
+  margin: 0px 15px 0px 0px;
+}
+
+.players__input-name {
+  height: 40px;
+  background-color: #191919;
+  padding: 0px 20px;
+  font-size: 20px;
+  color: #fff;
+  flex: 0 1 55%;
+  letter-spacing: 0.04em;
+}
+
+.players__discribe {
+  margin: 0px 0px 20px 0px;
+}
+
+.players__title-discribe {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%;
+  margin: 0px 0px 5px 0px;
+}
+
+.players__text-discribe {
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 120%;
+  color: #c4c4c4;
+}
+
+.list-players__header {
+  background-color: #121212;
+  height: 70px;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.list-players__header_delete {
+  justify-content: space-between;
+}
+
+.list-players__title {
+  font-weight: 300;
+  font-size: 24px;
+}
+
+.list-players__searh {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  margin: 0px 0px 0px 20px;
+}
+
+.list-players__input-searh {
+  height: 36px;
+  padding: 0px 20px;
+  background-color: #191919;
+  font-size: 20px;
+  color: #fff;
+  letter-spacing: 0.04em;
+  flex: 1 1 auto;
+  margin: 0px 15px 0px 0px;
+}
+
+.list-players__label-search {
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.list-players__del {
+  cursor: pointer;
+  font-size: 30px;
+  color: #fff;
+  background-color: transparent;
+}
+
+.list-players__add {
+  cursor: pointer;
+  position: relative;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+}
+
+.list-players__add::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+
+.list-players__add::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 2px;
+  background-color: #fff;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
+}
+
+.list-players__items {
+  max-height: 250px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-color: #fd7e09 transparent;
+  scrollbar-width: thin;
+}
+
+.list-players__items::-webkit-scrollbar {
+  width: 4px;
+}
+
+.list-players__items::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.list-players__items::-webkit-scrollbar-thumb {
+  background-color: #fd7e09;
+}
+
+.list-players__items::-webkit-scrollbar-thumb:hover {
+  background-color: #ff5100;
+}
+
+.list-players__items::-webkit-scrollbar-thumb:active {
+  background-color: #8b2f12;
+}
+
+.list-players__item {
+  background: rgba(20, 20, 20, 0.65);
+  height: 50px;
+}
+
+.list-players__item:not(:last-child) {
+  border-bottom: 1px solid #121212;
+}
+
+.list-players__input {
+  display: none;
+}
+
+.list-players__input:checked + .list-players__label-checkbox {
+  background-color: #fd7e09;
+}
+
+.list-players__label-checkbox {
+  font-weight: 600;
+  font-size: 22px;
+  cursor: pointer;
+  transition: all 0.4s ease 0s;
+  flex: 0 1 100%;
+  padding: 0px 30px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
 @media (min-width: 1025px) {
   .btn:hover {
     background-color: #ff5100;
@@ -2713,12 +2887,12 @@ textarea:focus {
     display: block;
   }
 
-  .contacts__avatar:hover {
-    filter: brightness(1.5);
-  }
-
   .clan__data_nickname:hover {
     color: #fd7e09;
+  }
+
+  .contacts__avatar:hover {
+    filter: brightness(1.5);
   }
 
   .articles.active .articles__item {
@@ -2755,6 +2929,14 @@ textarea:focus {
   .tables__btn_close:hover::after,
   .tables__btn_close:hover::before {
     background-color: #e90000;
+  }
+
+  .players__items.active {
+    flex-direction: column;
+  }
+
+  .players__items.active .players__item:not(:last-child) {
+    margin: 0px 0px 40px 0px;
   }
 }
 
@@ -3384,6 +3566,32 @@ textarea:focus {
     font-size: 18px;
   }
 
+  .clan {
+    margin: 0px 0px 25px 0px;
+  }
+
+  .clan__header {
+    min-height: 60px;
+    padding: 0px 15px;
+  }
+
+  .clan__title {
+    font-size: 22px;
+  }
+
+  .clan ol.clan__body li::before {
+    left: 15px;
+  }
+
+  .clan__body {
+    max-height: 250px;
+  }
+
+  .clan__item {
+    padding: 10px 15px 10px 50px;
+    min-height: 50px;
+  }
+
   .contacts__title {
     font-size: 22px;
   }
@@ -3415,32 +3623,6 @@ textarea:focus {
 
   .contacts__social:nth-child(3) {
     font-size: 50px;
-  }
-
-  .clan {
-    margin: 0px 0px 25px 0px;
-  }
-
-  .clan__header {
-    min-height: 60px;
-    padding: 0px 15px;
-  }
-
-  .clan__title {
-    font-size: 22px;
-  }
-
-  .clan ol.clan__body li::before {
-    left: 15px;
-  }
-
-  .clan__body {
-    max-height: 250px;
-  }
-
-  .clan__item {
-    padding: 10px 15px 10px 50px;
-    min-height: 50px;
   }
 
   .articles__date {
@@ -3499,12 +3681,12 @@ textarea:focus {
     margin: 0px 10px 0px 0px;
   }
 
-  .buttons__button {
-    font-size: 18px;
+  .buttons {
+    margin: 30px -20px 0px;
   }
 
-  .tables {
-    margin: 0px 0px 30px 0px;
+  .buttons__button {
+    font-size: 18px;
   }
 
   .tables__title {
@@ -3535,6 +3717,63 @@ textarea:focus {
   .tables__btn_close::before,
   .tables__btn_close::after {
     background-color: #e90000;
+  }
+
+  .players__title {
+    font-size: 26px;
+    margin: 0px 0px 25px 0px;
+  }
+
+  .players__items {
+    flex-direction: column;
+  }
+
+  .players__item:not(:last-child) {
+    margin: 0px 0px 30px 0px;
+  }
+
+  .players__label-name {
+    font-size: 22px;
+  }
+
+  .players__title-discribe {
+    font-size: 22px;
+  }
+
+  .players__text-discribe {
+    font-size: 20px;
+  }
+
+  .list-players__header {
+    height: 60px;
+  }
+
+  .list-players__title {
+    font-size: 22px;
+  }
+
+  .list-players__input-searh {
+    height: 34px;
+  }
+
+  .list-players__label-search {
+    font-size: 28px;
+  }
+
+  .list-players__del {
+    font-size: 28px;
+  }
+
+  .list-players__items {
+    max-height: 200px;
+  }
+
+  .list-players__item {
+    height: 40px;
+  }
+
+  .list-players__label-checkbox {
+    font-size: 20px;
   }
 }
 
@@ -3862,6 +4101,26 @@ textarea:focus {
     font-size: 16px;
   }
 
+  .clan {
+    margin: 0px 0px 15px 0px;
+  }
+
+  .clan__title {
+    font-size: 20px;
+  }
+
+  .clan__total-online {
+    font-size: 16px;
+  }
+
+  .clan__item {
+    font-size: 16px;
+  }
+
+  .clan__data {
+    flex: 0 0 140px;
+  }
+
   .contacts__title {
     font-size: 20px;
     margin: 0px 0px 10px 0px;
@@ -3899,26 +4158,6 @@ textarea:focus {
 
   .contacts__social:nth-child(3) {
     font-size: 45px;
-  }
-
-  .clan {
-    margin: 0px 0px 15px 0px;
-  }
-
-  .clan__title {
-    font-size: 20px;
-  }
-
-  .clan__total-online {
-    font-size: 16px;
-  }
-
-  .clan__item {
-    font-size: 16px;
-  }
-
-  .clan__data {
-    flex: 0 0 140px;
   }
 
   .articles {
@@ -4337,37 +4576,6 @@ textarea:focus {
     width: 70px;
   }
 
-  .contacts__title {
-    font-size: 16px;
-  }
-
-  .contacts__avatar {
-    flex: 0 0 50px;
-    height: 50px;
-    margin: 0px 5px 0px 0px;
-  }
-
-  .contacts__info {
-    max-width: 100px;
-    font-size: 14px;
-  }
-
-  .contacts__social:not(:last-child) {
-    margin: 0px 5px 0px 0px;
-  }
-
-  .contacts__social {
-    font-size: 30px;
-  }
-
-  .contacts__social:nth-child(1) {
-    font-size: 23px;
-  }
-
-  .contacts__social:nth-child(3) {
-    font-size: 37px;
-  }
-
   .clan__header {
     min-height: 50px;
     padding: 0px 10px;
@@ -4401,6 +4609,37 @@ textarea:focus {
 
   .clan__data:not(:last-child) {
     margin: 0px 10px 0px 0px;
+  }
+
+  .contacts__title {
+    font-size: 16px;
+  }
+
+  .contacts__avatar {
+    flex: 0 0 50px;
+    height: 50px;
+    margin: 0px 5px 0px 0px;
+  }
+
+  .contacts__info {
+    max-width: 100px;
+    font-size: 14px;
+  }
+
+  .contacts__social:not(:last-child) {
+    margin: 0px 5px 0px 0px;
+  }
+
+  .contacts__social {
+    font-size: 30px;
+  }
+
+  .contacts__social:nth-child(1) {
+    font-size: 23px;
+  }
+
+  .contacts__social:nth-child(3) {
+    font-size: 37px;
   }
 
   .articles__item {
@@ -4489,6 +4728,10 @@ textarea:focus {
     margin: 0px 5px 0px 0px;
   }
 
+  .buttons {
+    margin: 20px 0px 0px 0px;
+  }
+
   .buttons__column > *:not(:last-child) {
     margin: 0px 0px 5px 0px;
   }
@@ -4500,10 +4743,6 @@ textarea:focus {
   .buttons__button {
     padding: 5px 20px;
     font-size: 14px;
-  }
-
-  .tables {
-    margin: 0px 0px 20px 0px;
   }
 
   .tables__table:not(:last-child) {
