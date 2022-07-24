@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20220719213544" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20220719213544">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20220724202528" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20220724202528">
 	<link rel="shortcut icon" href="img/favicon.ico">
 	<title>Создать команду</title>
 </head>
@@ -55,28 +55,32 @@
 							<h2 class="players__title">Создание команды</h2>
 							<form action="#" class="players__form">
 								<div class="players__name-team">
-									<label class="players__label-name" for="nameTeam">Название команды: </label>
+									<label class="players__label-name title-players" for="nameTeam">Название команды: </label>
 									<input autocomplete="off" type="text" class="players__input-name" name="nameTeam"
 										id="nameTeam">
 								</div>
 								<div class="players__discribe">
-									<h3 class="players__title-discribe">Добавить участников</h3>
+									<h3 class="players__title-discribe title-players">Добавить участников</h3>
 									<div class="players__text-discribe">Добавляя участников команды каждый игрок получает
-										приглашение на
-										вступление в команду.Для зачисления игрока в команду необходимо чтобы он принял
-										приглашение в своем профиле.
+										приглашение на вступление в команду. Для зачисления игрока в команду необходимо чтобы он
+										принял приглашение в своем профиле.
 									</div>
 								</div>
 								<div class="players__list list-players">
 									<div class="list-players__header">
-										<div class="list-players__title ">Поиск по имени</div>
+										<div class="list-players__title title-players title-players_light">Поиск <span>по
+												имени</span></div>
 										<div class="list-players__searh">
-											<input autocomplete="off" type="text" id="searchPlayers" name="searchPlayers"
+											<input autocomplete="off" type="text" id="searchPlayers" name="search"
 												class="list-players__input-searh">
-											<label class="list-players__label-search _icon-search" for="searchPlayers"></label>
+											<label class="list-players__label-search _icon-search icon-players"
+												for="searchPlayers"></label>
 										</div>
 									</div>
 									<ul class="list-players__items">
+										<li class="list-players__item list-players__item_hidden">
+											<div class="list-players__alert"></div>
+										</li>
 										<li class="list-players__item">
 											<input type="checkbox" id="player1" class="list-players__input" name="players"
 												value="player1">
@@ -125,7 +129,7 @@
 							</form>
 						</div>
 					</section>
-					<aside class="aside">
+					<aside class="aside aside-open">
 	<div class="aside__body">
 		<div class="aside__dots">
 			<div class="aside__dot"></div>
@@ -478,8 +482,8 @@
 		</div>
 	</div>
 </div>
-	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js?_v=20220719213544"></script>
-	<script src="js/app.min.js?_v=20220719213544"></script>
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js?_v=20220724202528"></script>
+	<script src="js/app.min.js?_v=20220724202528"></script>
 </body>
 
 </html>

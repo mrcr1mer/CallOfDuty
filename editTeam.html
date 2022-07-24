@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20220719213544" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20220719213544">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20220724202528" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20220724202528">
 	<link rel="shortcut icon" href="img/favicon.ico">
 	<title>Редактировать команду</title>
 </head>
@@ -54,62 +54,52 @@
 						<div class="players">
 							<h2 class="players__title">Редактирование команды</h2>
 							<div class="players__name-team">
-								<label class="players__label-name" for="nameTeam">Название команды: </label>
+								<label class="players__label-name title-players" for="nameTeam">Название команды: </label>
 								<input autocomplete="off" type="text" class="players__input-name" name="nameTeam"
 									id="nameTeam">
 							</div>
 							<div class="players__discribe">
-								<h3 class="players__title-discribe">Добавить участников</h3>
+								<h3 class="players__title-discribe title-players">Добавить участников</h3>
 								<div class="players__text-discribe">Добавляя участников команды каждый игрок получает
 									приглашение на
 									вступление в команду.Для зачисления игрока в команду необходимо чтобы он принял
 									приглашение в своем профиле.
 								</div>
 							</div>
-							<div class="players__items">														
+							<div class="players__items aside-open">														
 								<div class="players__item">														
 									<form action="#" class="players__form">												
 										<div class="players__list list-players">
 											<div class="list-players__header list-players__header_delete">
-												<div class="list-players__title ">Участники команды</div>
-												<button type="submit" class="list-players__del _icon-del"></button>
+												<div class="list-players__title title-players title-players_light">Участники команды</div>
+												<button type="submit" class="list-players__del _icon-del icon-players"></button>
 											</div>
 											<ul class="list-players__items">
 												<li class="list-players__item">
-													<input type="checkbox" id="player_1" class="list-players__input" name="teamPlayers"
+													<input type="checkbox" id="deletePlayer1" class="list-players__input" name="teamPlayers"
 														value="player1">
-													<label class="list-players__label-checkbox" for="player_1">CrispySmasher</label>
+													<label class="list-players__label-checkbox" for="deletePlayer1">CrispySmasher</label>
 												</li>
 												<li class="list-players__item">
-													<input type="checkbox" id="player_2" class="list-players__input" name="teamPlayers"
-														value="player1">
-													<label class="list-players__label-checkbox" for="player_2">cr1mer</label>
+													<input type="checkbox" id="deletePlayer2" class="list-players__input" name="teamPlayers"
+														value="player2">
+													<label class="list-players__label-checkbox" for="deletePlayer2">cr1mer</label>
 												</li>
 												<li class="list-players__item">
-													<input type="checkbox" id="player_3" class="list-players__input" name="teamPlayers"
-														value="player1">
-													<label class="list-players__label-checkbox" for="player_3">muhabrot</label>
+													<input type="checkbox" id="deletePlayer3" class="list-players__input" name="teamPlayers"
+														value="player3">
+													<label class="list-players__label-checkbox" for="deletePlayer3">muhabrot</label>
 												</li>
 												<li class="list-players__item">
-													<input type="checkbox" id="player_4" class="list-players__input" name="teamPlayers"
-														value="player1">
-													<label class="list-players__label-checkbox" for="player_4">CrispySmasher</label>
+													<input type="checkbox" id="deletePlayer4" class="list-players__input" name="teamPlayers"
+														value="player4">
+													<label class="list-players__label-checkbox" for="deletePlayer4">CrispySmasher</label>
 												</li>
 												<li class="list-players__item">
-													<input type="checkbox" id="player_5" class="list-players__input" name="teamPlayers"
-														value="player1">
-													<label class="list-players__label-checkbox" for="player_5">CrispySmasher</label>
-												</li>
-												<li class="list-players__item">
-													<input type="checkbox" id="player_6" class="list-players__input" name="teamPlayers"
-														value="player1">
-													<label class="list-players__label-checkbox" for="player_6">CrispySmasher</label>
-												</li>
-												<li class="list-players__item">
-													<input type="checkbox" id="player_7" class="list-players__input" name="teamPlayers"
-														value="player1">
-													<label class="list-players__label-checkbox" for="player_7">CrispySmasher</label>
-												</li>
+													<input type="checkbox" id="deletePlayer5" class="list-players__input" name="teamPlayers"
+														value="player5">
+													<label class="list-players__label-checkbox" for="deletePlayer5">CrispySmasher</label>
+												</li>												
 											</ul>
 										</div>							
 									</form>
@@ -120,9 +110,9 @@
 											<div class="list-players__header">
 												<button type="submit" class="list-players__add"></button>
 												<div class="list-players__searh">
-													<input autocomplete="off" type="text" id="searchPlayers" name="searchPlayers"
+													<input autocomplete="off" type="text" id="searchPlayers" name="search"
 														class="list-players__input-searh">
-													<label class="list-players__label-search _icon-search" for="searchPlayers"></label>
+													<label class="list-players__label-search _icon-search icon-players" for="searchPlayers"></label>
 												</div>
 											</div>
 											<ul class="list-players__items">
@@ -176,7 +166,7 @@
 							</div>
 						</div>
 					</section>
-					<aside class="aside">
+					<aside class="aside aside-open">
 	<div class="aside__body">
 		<div class="aside__dots">
 			<div class="aside__dot"></div>
@@ -529,8 +519,8 @@
 		</div>
 	</div>
 </div>
-	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js?_v=20220719213544"></script>
-	<script src="js/app.min.js?_v=20220719213544"></script>
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js?_v=20220724202528"></script>
+	<script src="js/app.min.js?_v=20220724202528"></script>
 </body>
 
 </html>
