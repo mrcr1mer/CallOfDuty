@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20220724202528" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20220724202528">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20220725184656" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20220725184656">
 	<link rel="shortcut icon" href="img/favicon.ico">
 	<title>Редактировать команду</title>
 </head>
@@ -66,45 +66,8 @@
 									приглашение в своем профиле.
 								</div>
 							</div>
-							<div class="players__items aside-open">														
-								<div class="players__item">														
-									<form action="#" class="players__form">												
-										<div class="players__list list-players">
-											<div class="list-players__header list-players__header_delete">
-												<div class="list-players__title title-players title-players_light">Участники команды</div>
-												<button type="submit" class="list-players__del _icon-del icon-players"></button>
-											</div>
-											<ul class="list-players__items">
-												<li class="list-players__item">
-													<input type="checkbox" id="deletePlayer1" class="list-players__input" name="teamPlayers"
-														value="player1">
-													<label class="list-players__label-checkbox" for="deletePlayer1">CrispySmasher</label>
-												</li>
-												<li class="list-players__item">
-													<input type="checkbox" id="deletePlayer2" class="list-players__input" name="teamPlayers"
-														value="player2">
-													<label class="list-players__label-checkbox" for="deletePlayer2">cr1mer</label>
-												</li>
-												<li class="list-players__item">
-													<input type="checkbox" id="deletePlayer3" class="list-players__input" name="teamPlayers"
-														value="player3">
-													<label class="list-players__label-checkbox" for="deletePlayer3">muhabrot</label>
-												</li>
-												<li class="list-players__item">
-													<input type="checkbox" id="deletePlayer4" class="list-players__input" name="teamPlayers"
-														value="player4">
-													<label class="list-players__label-checkbox" for="deletePlayer4">CrispySmasher</label>
-												</li>
-												<li class="list-players__item">
-													<input type="checkbox" id="deletePlayer5" class="list-players__input" name="teamPlayers"
-														value="player5">
-													<label class="list-players__label-checkbox" for="deletePlayer5">CrispySmasher</label>
-												</li>												
-											</ul>
-										</div>							
-									</form>
-								</div>
-								<div class="players__item">														
+							<div class="players__items aside-open">	
+								<div class="players__item players__item_add">														
 									<form action="#" class="players__form">												
 										<div class="players__list list-players">
 											<div class="list-players__header">
@@ -115,7 +78,9 @@
 													<label class="list-players__label-search _icon-search icon-players" for="searchPlayers"></label>
 												</div>
 											</div>
-											<ul class="list-players__items">
+											<ul class="list-players__items">		
+												<li class="list-players__item list-players__item_alert">											
+												</li>								
 												<li class="list-players__item">
 													<input type="checkbox" id="player1" class="list-players__input" name="players"
 														value="player1">
@@ -154,7 +119,44 @@
 											</ul>
 										</div>							
 									</form>
-								</div>
+								</div>													
+								<div class="players__item players__item_del">														
+									<form action="#" class="players__form">												
+										<div class="players__list list-players">
+											<div class="list-players__header list-players__header_delete">
+												<div class="list-players__title title-players title-players_light">Участники команды</div>
+												<button type="submit" class="list-players__del _icon-del icon-players"></button>
+											</div>
+											<ul class="list-players__items">
+												<li class="list-players__item">
+													<input type="checkbox" id="deletePlayer1" class="list-players__input" name="teamPlayers"
+														value="player1">
+													<label class="list-players__label-checkbox" for="deletePlayer1">CrispySmasher</label>
+												</li>
+												<li class="list-players__item">
+													<input type="checkbox" id="deletePlayer2" class="list-players__input" name="teamPlayers"
+														value="player2">
+													<label class="list-players__label-checkbox" for="deletePlayer2">cr1mer</label>
+												</li>
+												<li class="list-players__item">
+													<input type="checkbox" id="deletePlayer3" class="list-players__input" name="teamPlayers"
+														value="player3">
+													<label class="list-players__label-checkbox" for="deletePlayer3">muhabrot</label>
+												</li>
+												<li class="list-players__item">
+													<input type="checkbox" id="deletePlayer4" class="list-players__input" name="teamPlayers"
+														value="player4">
+													<label class="list-players__label-checkbox" for="deletePlayer4">CrispySmasher</label>
+												</li>
+												<li class="list-players__item">
+													<input type="checkbox" id="deletePlayer5" class="list-players__input" name="teamPlayers"
+														value="player5">
+													<label class="list-players__label-checkbox" for="deletePlayer5">CrispySmasher</label>
+												</li>												
+											</ul>
+										</div>							
+									</form>
+								</div>								
 							</div>
 							<div class="players__buttons buttons">
 								<div class="buttons__column">
@@ -519,8 +521,8 @@
 		</div>
 	</div>
 </div>
-	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js?_v=20220724202528"></script>
-	<script src="js/app.min.js?_v=20220724202528"></script>
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js?_v=20220725184656"></script>
+	<script src="js/app.min.js?_v=20220725184656"></script>
 </body>
 
 </html>

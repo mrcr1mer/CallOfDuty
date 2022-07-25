@@ -2712,7 +2712,7 @@ textarea:focus {
 }
 
 .list-players__input-searh {
-  height: 35px;
+  height: 40px;
   padding: 0px 20px;
   background-color: #191919;
   font-size: 20px;
@@ -2762,6 +2762,11 @@ textarea:focus {
   scrollbar-width: thin;
 }
 
+.list-players__items.active {
+  min-height: 300px;
+  background-color: rgba(20, 20, 20, 0.65);
+}
+
 .list-players__items::-webkit-scrollbar {
   width: 4px;
 }
@@ -2783,24 +2788,33 @@ textarea:focus {
 }
 
 .list-players__item {
-  background: rgba(20, 20, 20, 0.65);
+  background-color: rgba(20, 20, 20, 0.65);
   height: 60px;
-}
-
-.list-players__item.hidden {
-  display: none;
 }
 
 .list-players__item:not(:last-child) {
   border-bottom: 1px solid #121212;
 }
 
-.list-players__item_hidden {
+.list-players__item.hidden {
   display: none;
 }
 
-.list-players__item_hidden.show {
-  display: block;
+.list-players__item_alert {
+  display: none;
+  min-height: 300px;
+  font-size: 25px;
+  padding: 30px;
+}
+
+.list-players__item_alert:not(:last-child) {
+  border-bottom: none;
+}
+
+.list-players__item_alert.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .list-players__input {
@@ -5001,8 +5015,13 @@ textarea:focus {
   }
 
   .list-players__input-searh {
-    height: 25px;
+    height: 30px;
     margin: 0px 10px 0px 0px;
+  }
+
+  .list-players__add {
+    width: 20px;
+    height: 20px;
   }
 
   .list-players__items {
@@ -5137,6 +5156,10 @@ textarea:focus {
 }
 
 @media (max-width: 1024px) and (min-width: 768px) {
+  .about-swiper__image {
+    padding: 0px 0px 70% 0px;
+  }
+
   .about-swiper .swiper-slide-prev,
   .about-swiper .swiper-slide-next {
     filter: blur(2px);
