@@ -1116,7 +1116,7 @@ textarea:focus {
 .chat-aside__btn {
   background-color: transparent;
   flex: 0 0 35px;
-  height: 40px;
+  height: 35px;
   position: relative;
   overflow: hidden;
 }
@@ -2637,7 +2637,7 @@ textarea:focus {
 .players__name-team {
   display: flex;
   align-items: center;
-  margin: 0px 0px 25px 0px;
+  margin: 0px 0px 30px 0px;
 }
 
 .players__label-name {
@@ -2645,7 +2645,7 @@ textarea:focus {
 }
 
 .players__input-name {
-  height: 40px;
+  height: 45px;
   background-color: #191919;
   padding: 0px 20px;
   font-size: 20px;
@@ -2664,13 +2664,13 @@ textarea:focus {
 
 .players__text-discribe {
   font-weight: 300;
-  font-size: 22px;
+  font-size: 21px;
   line-height: 120%;
   color: #c4c4c4;
 }
 
 .title-players {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 24px;
   line-height: 120%;
   letter-spacing: 0.03em;
@@ -2682,7 +2682,7 @@ textarea:focus {
 
 .icon-players {
   cursor: pointer;
-  font-size: 30px;
+  font-size: 35px;
   color: #fff;
   background-color: transparent;
   transition: all 0.4s ease 0s;
@@ -2696,7 +2696,7 @@ textarea:focus {
   align-items: center;
 }
 
-.list-players__header_delete {
+.list-players__header_del {
   justify-content: space-between;
 }
 
@@ -2718,8 +2718,8 @@ textarea:focus {
   font-size: 20px;
   color: #fff;
   letter-spacing: 0.04em;
-  width: 100%;
   margin: 0px 15px 0px 0px;
+  width: 100%;
 }
 
 .list-players__add {
@@ -2800,18 +2800,20 @@ textarea:focus {
   display: none;
 }
 
-.list-players__item_alert {
+.list-players__item.search-alert {
   display: none;
   min-height: 300px;
+  font-weight: 500;
   font-size: 25px;
   padding: 30px;
+  background: none;
 }
 
-.list-players__item_alert:not(:last-child) {
+.list-players__item.search-alert:not(:last-child) {
   border-bottom: none;
 }
 
-.list-players__item_alert.show {
+.list-players__item.search-alert.show {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3869,11 +3871,11 @@ textarea:focus {
   }
 
   .players__name-team {
-    margin: 0px 0px 20px 0px;
+    margin: 0px 0px 25px 0px;
   }
 
   .players__text-discribe {
-    font-size: 20px;
+    font-size: 19px;
   }
 
   .title-players {
@@ -3884,12 +3886,21 @@ textarea:focus {
     height: 60px;
   }
 
+  .list-players__items.active {
+    min-height: 250px;
+  }
+
   .list-players__items {
     max-height: 250px;
   }
 
   .list-players__item {
     height: 50px;
+  }
+
+  .list-players__item.search-alert {
+    min-height: 250px;
+    font-size: 22px;
   }
 
   .list-players__label-checkbox {
@@ -4380,7 +4391,6 @@ textarea:focus {
   }
 
   .buttons__button {
-    padding: 7px 20px;
     font-size: 16px;
   }
 
@@ -4415,7 +4425,7 @@ textarea:focus {
   }
 
   .players__name-team {
-    margin: 0px 0px 15px 0px;
+    margin: 0px 0px 20px 0px;
     flex-direction: column;
     align-items: flex-start;
   }
@@ -4917,7 +4927,7 @@ textarea:focus {
   }
 
   .buttons__button {
-    padding: 5px 20px;
+    padding: 7px 20px;
     font-size: 14px;
   }
 
@@ -4968,7 +4978,7 @@ textarea:focus {
   }
 
   .players__name-team {
-    margin: 0px 0px 10px 0px;
+    margin: 0px 0px 15px 0px;
   }
 
   .players__label-name {
@@ -4978,7 +4988,7 @@ textarea:focus {
   .players__input-name {
     width: 100%;
     font-size: 16px;
-    height: 30px;
+    height: 35px;
   }
 
   .players__discribe {
@@ -4993,16 +5003,16 @@ textarea:focus {
     font-size: 15px;
   }
 
-  .title-players span {
-    display: none;
-  }
-
   .title-players {
     font-size: 18px;
   }
 
+  .title-players span {
+    display: none;
+  }
+
   .icon-players {
-    font-size: 24px;
+    font-size: 25px;
   }
 
   .list-players__header {
@@ -5024,12 +5034,21 @@ textarea:focus {
     height: 20px;
   }
 
+  .list-players__items.active {
+    min-height: 200px;
+  }
+
   .list-players__items {
     max-height: 200px;
   }
 
   .list-players__item {
     height: 40px;
+  }
+
+  .list-players__item.search-alert {
+    min-height: 200px;
+    font-size: 20px;
   }
 
   .list-players__label-checkbox {
@@ -5157,7 +5176,7 @@ textarea:focus {
 
 @media (max-width: 1024px) and (min-width: 768px) {
   .about-swiper__image {
-    padding: 0px 0px 70% 0px;
+    padding: 0px 0px 65% 0px;
   }
 
   .about-swiper .swiper-slide-prev,
