@@ -4,10 +4,10 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20220726190951" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20220726190951">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20220728191518" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20220728191518">
 	<link rel="shortcut icon" href="favicon.ico">
-	<title>Турниры</title>
+	<title>Турнир</title>
 </head>
 
 <body>
@@ -53,33 +53,82 @@
 					<section class="tournament">
 						<article class="tournament__info info-tournament">
 							<div class="info-tournament__image">
-								<picture><source srcset="img/aside/01.webp" type="image/webp"><img src="img/aside/01.jpg" alt=""></picture>
-								<div class="info-tournament__describe">
-									<h3 class="info-tournament__title">Турнир королевская битва</h3>
-									<div class="info-tournament__items">
-										<div class="info-tournament__item">Тип:<span>Командный турнир 1vs1</span></div>
-										<div class="info-tournament__item">Режим:<span>Королевская битва</span></div>
-										<div class="info-tournament__item">Дата:<span>20 июня - 27 июня</span></div>
-										<div class="info-tournament__item info-tournament__item_vertical">
-											Описание <span>Турнир посвященный 8 марта. Пройдет в несколько этапов. Самые сильные и
-												смекалистые разделят 20.000 рублей. Турнир посвященный 8 марта. Пройдет в несколько
-												этапов. Самые сильные и смекалистые разделят 20.000 рублей.</span>
-										</div>
-										<div class="info-tournament__item info-tournament__item_vertical">
-											Правила
-											<span>
+								<picture><source srcset="img/tournaments/02.webp" type="image/webp"><img src="img/tournaments/02.webp" alt=""></picture>						
+								<div class="info-tournament__description">
+									<button type="button" class="info-tournament__button">
+										<span></span>
+									</button>
+									<div class="info-tournament__content">
+										<h3 class="info-tournament__title">Турнир королевская битва</h3>
+										<div class="info-tournament__items">
+											<div class="info-tournament__item"><span>Тип:</span>Командный турнир 1vs1</div>
+											<div class="info-tournament__item"><span>Режим:</span>Королевская битва</div>
+											<div class="info-tournament__item"><span>Дата:</span>20 июня - 27 июня</div>
+											<div class="info-tournament__item info-tournament__item_vertical">
+												<span>Описание</span> Турнир посвященный 8 марта. Пройдет в несколько этапов. Самые
+												сильные и смекалистые разделят 20.000 рублей. Турнир посвященный 8 марта. Пройдет в несколько
+												этапов. Самые сильные и смекалистые разделят 20.000 рублей.
+											</div>
+											<div class="info-tournament__item info-tournament__item_vertical">
+												<span>Правила</span>
 												<ol class="info-tournament__list">
-													<li> Не использовать ананасы</li>
+													<li>Не использовать ананасы</li>
 													<li>Нельзя кемпить и сидеть в кустах</li>
 													<li>Не использовать импакт снаряжение (гранаты и помпы)</li>
 												</ol>
-											</span>
+											</div>
 										</div>
+										<form action="#" class="info-tournament__form">
+											<div class="info-tournament__remark">
+												В вашей команде больше 2 игроков выберите тех кто будет учавствовать в турнире
+											</div>
+											<ul class="info-tournament__checkboxes">
+												<li class="info-tournament__checkbox-wrapper">
+													<input type="checkbox" class="info-tournament__checkbox" name="players" id="player1" value="player1">
+													<label class="info-tournament__checkbox-label" for="player1">
+														<div class="info-tournament__avatar"><picture><source srcset="img/members/04.webp" type="image/webp"><img src="img/members/04.jpg" alt=""></picture></div>
+														cr1mer
+														<div class="info-tournament__wins">65<span class="_icon-win"></span></div>									
+													</label>
+												</li>
+												<li class="info-tournament__checkbox-wrapper">
+													<input checked type="checkbox" class="info-tournament__checkbox" name="players" id="player2" value="player2">
+													<label class="info-tournament__checkbox-label" for="player2">
+														<div class="info-tournament__avatar"><picture><source srcset="img/members/05.webp" type="image/webp"><img src="img/members/05.jpg" alt=""></picture></div>
+														yung
+														<div class="info-tournament__wins">54<span class="_icon-win"></span></div>		
+													</label>
+												</li>
+												<li class="info-tournament__checkbox-wrapper">
+													<input type="checkbox" class="info-tournament__checkbox" name="players" id="player3" value="player3">
+													<label class="info-tournament__checkbox-label" for="player3">
+														<div class="info-tournament__avatar"><picture><source srcset="img/members/07.webp" type="image/webp"><img src="img/members/07.jpg" alt=""></picture></div>
+														d1ztroy
+														<div class="info-tournament__wins">120<span class="_icon-win"></span></div>		
+													</label>
+												</li>
+												<li class="info-tournament__checkbox-wrapper">
+													<input checked type="checkbox" class="info-tournament__checkbox" name="players" id="player4" value="player4">
+													<label class="info-tournament__checkbox-label" for="player4">
+														<div class="info-tournament__avatar"><picture><source srcset="img/members/01.webp" type="image/webp"><img src="img/members/01.jpg" alt=""></picture></div>
+														arthas
+														<div class="info-tournament__wins">22<span class="_icon-win"></span></div>	
+													</label>
+												</li>
+												<li class="info-tournament__checkbox-wrapper">
+													<input type="checkbox" class="info-tournament__checkbox" name="players" id="player5" value="player5">
+													<label class="info-tournament__checkbox-label" for="player5">
+														<div class="info-tournament__avatar"><picture><source srcset="img/members/06.webp" type="image/webp"><img src="img/members/06.jpg" alt=""></picture></div>
+														tohen
+														<div class="info-tournament__wins">5<span class="_icon-win"></span></div>	
+													</label>
+												</li>
+											</ul>
+											<button type="submit" class="info-tournament__form-button">Участвовать</button>
+										</form>
 									</div>
-									<form action="#" class="info-tournament__form">
-										<button type="submit" class="info-tournament__button">Участвовать</button>
-									</form>									
 								</div>
+							</div>
 						</article>
 						<div class="tournament__participants participants-tournament"></div>
 						<div class="tournament__teams teams-tournament"></div>
@@ -453,8 +502,8 @@
 		</div>
 	</div>
 </div>
-	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js?_v=20220726190951"></script>
-	<script src="js/app.min.js?_v=20220726190951"></script>
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js?_v=20220728191518"></script>
+	<script src="js/app.min.js?_v=20220728191518"></script>
 </body>
 
 </html>
