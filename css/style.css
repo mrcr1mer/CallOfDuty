@@ -2865,7 +2865,7 @@ textarea:focus {
   overflow: hidden;
 }
 
-.info-tournament__image > img {
+.info-tournament__img {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -2876,11 +2876,11 @@ textarea:focus {
   transition: all 0.8s ease 0s;
 }
 
-.info-tournament__image > img:hover {
+.info-tournament__img:hover {
   transform: scale(1.2);
 }
 
-.info-tournament__image > img.disabled:hover {
+.info-tournament__img.disabled:hover {
   transform: scale(1);
 }
 
