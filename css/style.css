@@ -7,7 +7,7 @@
 }
 
 html {
-  scrollbar-color: #fd7e09 #191919;
+  scrollbar-color: #fd7e09 #131313;
   scrollbar-width: thin;
 }
 
@@ -16,7 +16,7 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-track {
-  background-color: #191919;
+  background-color: #131313;
 }
 
 html::-webkit-scrollbar-thumb {
@@ -34,7 +34,7 @@ html::-webkit-scrollbar-thumb:active {
 body {
   font-family: Montserrat;
   color: #fff;
-  background-color: #191919;
+  background-color: #131313;
 }
 
 body.lock {
@@ -46,7 +46,7 @@ body.burger-lock {
 }
 
 .wrapper {
-  background: linear-gradient(90deg, rgb(66, 66, 66) 0%, rgb(15, 15, 15) 100%, rgb(15, 15, 15) 100%) no-repeat;
+  background: linear-gradient(90deg, rgb(25, 25, 25) 0%, rgb(35, 35, 35) 50%, rgb(25, 25, 25) 100%) no-repeat;
   min-height: 100%;
   overflow: hidden;
   display: flex;
@@ -110,7 +110,7 @@ textarea {
 }
 
 textarea {
-  resize: none;
+  resize: vertical;
 }
 
 input::-ms-clear {
@@ -264,7 +264,7 @@ textarea:focus {
 }
 
 .bg {
-  filter: brightness(0.15);
+  filter: brightness(0.2);
   position: absolute;
   top: 230px;
   right: -150px;
@@ -526,7 +526,7 @@ textarea:focus {
 
 .aside__arrows {
   background-color: transparent;
-  margin: 0px 0px 30px 0px;
+  margin: 0px 0px 20px 0px;
   width: 40px;
   height: 30px;
   position: relative;
@@ -697,7 +697,7 @@ textarea:focus {
 .aside__content {
   transition: opacity 0.7s ease 0s;
   position: absolute;
-  top: 60px;
+  top: 50px;
   left: 0;
   height: 100%;
   width: 275px;
@@ -2240,7 +2240,7 @@ textarea:focus {
 }
 
 .profile__avatar {
-  flex: 0 1 40%;
+  flex: 0 1 45%;
 }
 
 .profile__image {
@@ -2282,8 +2282,8 @@ textarea:focus {
 
 .profile__content {
   font-size: 22px;
-  flex: 0 1 60%;
-  padding: 0px 0px 0px 30px;
+  flex: 0 1 55%;
+  padding: 0px 0px 0px 20px;
 }
 
 .profile__content > *:not(:last-child) {
@@ -2366,7 +2366,7 @@ textarea:focus {
   align-items: center;
   width: 100%;
   text-align: center;
-  background-color: rgba(22, 22, 22, 0.8);
+  background-color: rgb(22, 22, 22);
   padding: 10px 20px;
   font-size: 20px;
   line-height: 120%;
@@ -2485,7 +2485,7 @@ textarea:focus {
   justify-content: space-between;
   flex: 1 1 auto;
   padding: 10px;
-  background-color: #181818;
+  background-color: #191919;
   color: #fff;
   font-weight: 600;
   font-size: 20px;
@@ -2545,11 +2545,10 @@ textarea:focus {
 .edit-profile__body {
   display: flex;
   align-items: center;
-  margin: 0px 0px 40px 0px;
 }
 
 .edit-profile__avatar {
-  flex: 0 1 40%;
+  flex: 0 1 45%;
 }
 
 .edit-profile__image {
@@ -2567,15 +2566,35 @@ textarea:focus {
   left: 0;
   -o-object-fit: cover;
      object-fit: cover;
+  filter: brightness(0.5);
 }
 
 .edit-profile__item {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-profile__file {
   display: none;
 }
 
+.edit-profile__label-photo {
+  cursor: pointer;
+  font-size: 80px;
+  transition: all 0.4s ease 0s;
+}
+
+.edit-profile__label-photo:hover {
+  color: #c4c4c4;
+}
+
 .edit-profile__content {
-  padding: 0px 0px 0px 30px;
-  flex: 0 1 60%;
+  padding: 0px 0px 0px 20px;
+  flex: 0 1 55%;
 }
 
 .edit-profile__data {
@@ -2589,15 +2608,16 @@ textarea:focus {
 
 .edit-profile__label {
   font-weight: 300;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 120%;
   margin: 0px 10px 0px 0px;
 }
 
 .edit-profile__input {
-  background-color: #181818;
+  background-color: #191919;
   color: #fff;
-  padding: 10px 15px;
+  padding: 5px 10px;
+  height: 45px;
   font-size: 16px;
   line-height: 120%;
   flex: 1 1 auto;
@@ -2617,21 +2637,48 @@ textarea:focus {
 }
 
 .edit-profile textarea.edit-profile__input {
+  padding: 10px 10px;
   min-height: 140px;
+  font-size: 20px;
+  scrollbar-color: #fd7e09 transparent;
+  scrollbar-width: thin;
+}
+
+.edit-profile textarea.edit-profile__input::-webkit-scrollbar {
+  width: 6px;
+}
+
+.edit-profile textarea.edit-profile__input::-webkit-scrollbar-track {
+  background-color: #191919;
+}
+
+.edit-profile textarea.edit-profile__input::-webkit-scrollbar-thumb {
+  background-color: #fd7e09;
+}
+
+.edit-profile textarea.edit-profile__input::-webkit-scrollbar-thumb:hover {
+  background-color: #ff5100;
+}
+
+.edit-profile textarea.edit-profile__input::-webkit-scrollbar-thumb:active {
+  background-color: #8b2f12;
 }
 
 .edit-profile__social {
-  font-size: 35px;
+  font-size: 40px;
   color: #fff;
-  flex: 0 0 45px;
-  margin: 0px 10px 0px 0px;
+  flex: 0 0 50px;
+  margin: 0px 5px 0px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+  color: #fd7e09;
 }
 
 .edit-profile__social_vk {
-  font-size: 45px;
+  font-size: 50px;
 }
 
 .players__title {
@@ -2886,7 +2933,7 @@ textarea:focus {
 
 .info-tournament__description {
   position: absolute;
-  width: 75%;
+  width: 80%;
   height: 100%;
   transform: translate(-100%, 0);
   transition: all 0.8s ease 0s;
@@ -2907,12 +2954,6 @@ textarea:focus {
   border-left: 40px solid #fd7e09;
   border-top: 20px solid #fd7e09;
   border-bottom: 20px solid #fd7e09;
-}
-
-.info-tournament__button:hover {
-  border-top: 20px solid #ff5100;
-  border-bottom: 20px solid #ff5100;
-  border-left: 40px solid #ff5100;
 }
 
 .info-tournament__button span {
@@ -2943,11 +2984,6 @@ textarea:focus {
   border-top: 20px solid rgba(10, 10, 10, 0.9);
   border-bottom: 20px solid rgba(10, 10, 10, 0.9);
   border-left: 40px solid rgba(10, 10, 10, 0.9);
-}
-
-.info-tournament__button.active:hover span::before,
-.info-tournament__button.active:hover span::after {
-  background-color: #ff5100;
 }
 
 .info-tournament__button.active span::before,
@@ -3304,6 +3340,10 @@ textarea:focus {
     background-color: #e90000;
   }
 
+  .edit-profile__social:hover {
+    color: #ff5100;
+  }
+
   .players__items.active {
     flex-direction: column;
   }
@@ -3319,6 +3359,17 @@ textarea:focus {
   .list-players__add:hover::before,
   .list-players__add:hover::after {
     background-color: #fd7e09;
+  }
+
+  .info-tournament__button:hover {
+    border-top: 20px solid #ff5100;
+    border-bottom: 20px solid #ff5100;
+    border-left: 40px solid #ff5100;
+  }
+
+  .info-tournament__button.active:hover span::before,
+  .info-tournament__button.active:hover span::after {
+    background-color: #ff5100;
   }
 
   .info-tournament__avatar:hover {
@@ -4071,7 +4122,6 @@ textarea:focus {
   }
 
   .profile__content {
-    padding: 0px 0px 0px 20px;
     font-size: 18px;
   }
 
@@ -4169,6 +4219,10 @@ textarea:focus {
 
   .list-players__label-checkbox {
     font-size: 20px;
+  }
+
+  .tournament {
+    padding: 0px 70px;
   }
 }
 
@@ -4737,6 +4791,10 @@ textarea:focus {
   .list-players__label-checkbox {
     padding: 0px 20px;
     font-size: 18px;
+  }
+
+  .tournament {
+    padding: 0;
   }
 }
 

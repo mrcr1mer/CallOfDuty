@@ -4,15 +4,14 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20220728201933" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20220728201933">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20220801180142" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20220801180142">
 	<link rel="shortcut icon" href="favicon.ico">
 	<title>Редактировать профиль</title>
 </head>
 
 <body>
 	<div class="wrapper">
-		<div class="bg"><picture><source srcset="img/bg.webp" type="image/webp"><img src="img/bg.png" alt=""></picture></div>
 		<header class="header">
 	<div class="container">
 		<div class="header__top">
@@ -55,52 +54,52 @@
 							<div class="edit-profile__body">
 								<div class="edit-profile__avatar">
 									<div class="edit-profile__image">
-										<picture><source srcset="img/aside/01.webp" type="image/webp"><img src="img/aside/01.jpg" alt=""></picture>
+										<picture><source srcset="img/members/04.webp" type="image/webp"><img src="img/members/04.jpg" alt=""></picture>
 										<div class="edit-profile__item">
-											<input accept=".jpg, .jpeg, .png" type="file" name="profileImage"
+											<input accept=".jpg, .jpeg, .png, .webp" type="file" name="image"
 												class="edit-profile__file" id="profileImage">
-											<label for="profileImage" class="edit-profile__icon-photo _icon-photo"></label>
+											<label for="profileImage" class="edit-profile__label-photo _icon-photo"></label>
 										</div>
 									</div>
 								</div>
 								<div class="edit-profile__content">
 									<div class="edit-profile__data">
 										<label class="edit-profile__label" for="profileNickname">Ник:</label>
-										<input type="text" id="profileNickname" name="profileNickname"
+										<input autocomplete="off" type="text" id="profileNickname" name="nickname"
 											placeholder="Введите ваш ник" class="edit-profile__input">
 									</div>
 									<div class="edit-profile__data">
 										<label class="edit-profile__label" for="profileName">Имя:</label>
-										<input type="text" id="profileName" name="profileName" placeholder="Введите ваше имя"
+										<input autocomplete="off" type="text" id="profileName" name="name" placeholder="Введите ваше имя"
 											class="edit-profile__input">
 									</div>
 									<div class="edit-profile__data">
 										<label class="edit-profile__label" for="profileEmail">Email:</label>
-										<input type="email" id="profileEmail" name="profileEmail" placeholder="Введите ваш email"
+										<input autocomplete="off" type="email" id="profileEmail" name="email" placeholder="Введите ваш email"
 											class="edit-profile__input">
 									</div>
 									<div class="edit-profile__data">
 										<label class="edit-profile__label" for="profilePhone">Телефон:</label>
-										<input type="number" id="profilePhone" name="profilePhone"
+										<input autocomplete="off" type="number" id="profilePhone" name="phone"
 											placeholder="Введите ваш Телефон" class="edit-profile__input">
 									</div>
 									<div class="edit-profile__data">
-										<textarea class="edit-profile__input" name="profileDescribe"
-											placeholder="Описание"></textarea>
+										<textarea autocomplete="off" class="edit-profile__input" name="description"
+											placeholder="Описание профиля"></textarea>
 									</div>
 									<div class="edit-profile__data">
-										<div class="edit-profile__social edit-profile__social_tg _icon-tg"></div>
-										<input type="url" name="profileNickname" placeholder="Ссылка на телеграм"
+										<label for="telegram" class="edit-profile__social edit-profile__social_tg _icon-tg"></label>
+										<input id="telegram" type="url" name="telegram" placeholder="Ссылка на телеграм"
 											class="edit-profile__input">
 									</div>
 									<div class="edit-profile__data">
-										<div class="edit-profile__social edit-profile__social_insta _icon-insta"></div>
-										<input type="url" name="profileNickname" placeholder="Ссылка на телеграм"
+										<label for="instagram" class="edit-profile__social edit-profile__social_insta _icon-insta"></label>
+										<input id="instagram" type="url" name="instagram" placeholder="Ссылка на инстрагам"
 											class="edit-profile__input">
 									</div>
 									<div class="edit-profile__data">
-										<div class="edit-profile__social edit-profile__social_vk _icon-vk"></div>
-										<input type="url" name="profileNickname" placeholder="Ссылка на телеграм"
+										<label for="vk" class="edit-profile__social edit-profile__social_vk _icon-vk"></label>
+										<input id="vk" type="url" name="vk" placeholder="Ссылка на вк"
 											class="edit-profile__input">
 									</div>
 								</div>
@@ -468,8 +467,8 @@
 		</div>
 	</div>
 </div>
-	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js?_v=20220728201933"></script>
-	<script src="js/app.min.js?_v=20220728201933"></script>
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js?_v=20220801180142"></script>
+	<script src="js/app.min.js?_v=20220801180142"></script>
 </body>
 
 </html>
