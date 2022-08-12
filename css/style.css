@@ -2187,7 +2187,6 @@ textarea._error::placeholder {
   background-color: rgb(15, 15, 15);
   flex: 0 1 48%;
   margin: 0px 0px 40px 0px;
-  transition: all 0.8s ease 0s;
 }
 
 .articles__item._active {
@@ -3545,6 +3544,12 @@ textarea._error::placeholder {
     border-top: 20px solid #ff5100;
     border-bottom: 20px solid #ff5100;
     border-left: 40px solid #ff5100;
+  }
+
+  .info-tournament__button.active:hover {
+    border-top-color: rgba(10, 10, 10, 0.9);
+    border-bottom-color: rgba(10, 10, 10, 0.9);
+    border-left-color: rgba(10, 10, 10, 0.9);
   }
 
   .info-tournament__button.active:hover i::before,
@@ -5252,7 +5257,7 @@ textarea._error::placeholder {
 
   .popup__title {
     margin: 0px 0px 20px 0px;
-    padding: 0px 60px 0px 0px;
+    padding: 0px 50px 0px 0px;
   }
 
   .popup__close {
