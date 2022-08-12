@@ -3086,6 +3086,10 @@ textarea._error::placeholder {
   align-items: center;
 }
 
+.tournament > *:not(:last-child) {
+  margin: 0px 0px 30px 0px;
+}
+
 .info-tournament__image {
   padding: 0px 0px 60% 0px;
   position: relative;
@@ -3116,7 +3120,7 @@ textarea._error::placeholder {
   width: 85%;
   height: 100%;
   transform: translate(-100%, 0);
-  transition: all 0.8s ease 0s;
+  transition: all 0.6s ease 0s;
 }
 
 .info-tournament__description.active {
@@ -3272,7 +3276,7 @@ textarea._error::placeholder {
   font-size: 22px;
   line-height: 120%;
   margin: 0px 0px 10px 0px;
-  color: #e90000;
+  color: #ffe600;
 }
 
 .info-tournament__checkboxes {
@@ -3354,6 +3358,202 @@ textarea._error::placeholder {
 
 .info-tournament__form-button.disabled {
   background-color: rgb(122, 122, 122);
+}
+
+.participants-tournament__items {
+  max-height: 340px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0px 5px 0px 0px;
+  scrollbar-color: #fd7e09 transparent;
+  scrollbar-width: thin;
+}
+
+.participants-tournament__items > *:not(:last-child) {
+  margin: 0px 0px 10px 0px;
+}
+
+.participants-tournament__items::-webkit-scrollbar {
+  width: 4px;
+}
+
+.participants-tournament__items::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.participants-tournament__items::-webkit-scrollbar-thumb {
+  background-color: #fd7e09;
+}
+
+.participants-tournament__items::-webkit-scrollbar-thumb:hover {
+  background-color: #ff5100;
+}
+
+.participants-tournament__items::-webkit-scrollbar-thumb:active {
+  background-color: #8b2f12;
+}
+
+.participants-tournament__item {
+  height: 60px;
+  background-color: #191919;
+  display: flex;
+  align-items: center;
+}
+
+.participants-tournament__avatar {
+  height: 100%;
+  flex: 0 0 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.participants-tournament__avatar img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.participants-tournament__data {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0px 20px;
+  line-height: 120%;
+}
+
+.participants-tournament__data_nickname {
+  color: #fff;
+}
+
+.participants-tournament__data_win {
+  display: flex;
+  align-items: center;
+}
+
+.participants-tournament__data_win i {
+  font-size: 24px;
+  color: #fd7e09;
+  margin: 0px 0px 0px 5px;
+}
+
+.title-tournament {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 120%;
+  margin: 0px 0px 15px 0px;
+}
+
+.teams-tournament__items {
+  max-height: 340px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0px 5px 0px 0px;
+  scrollbar-color: #fd7e09 transparent;
+  scrollbar-width: thin;
+}
+
+.teams-tournament__items._init .teams-tournament__header::before,
+.teams-tournament__items._init .teams-tournament__header::after {
+  content: "";
+  background-color: #fff;
+  width: 30px;
+  height: 3px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translate(0, -50%);
+  transition: all 0.4s ease 0s;
+}
+
+.teams-tournament__items._init .teams-tournament__header::after {
+  transform: translate(0, -50%) rotate(-90deg);
+}
+
+.teams-tournament__items._init .teams-tournament__header._active {
+  background-color: rgb(10, 10, 10);
+}
+
+.teams-tournament__items._init .teams-tournament__header._active::after {
+  transform: translate(0, -50%) rotate(0deg);
+  background-color: #fd7e09;
+}
+
+.teams-tournament__items > *:not(:last-child) {
+  margin: 0px 0px 10px 0px;
+}
+
+.teams-tournament__items::-webkit-scrollbar {
+  width: 4px;
+}
+
+.teams-tournament__items::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.teams-tournament__items::-webkit-scrollbar-thumb {
+  background-color: #fd7e09;
+}
+
+.teams-tournament__items::-webkit-scrollbar-thumb:hover {
+  background-color: #ff5100;
+}
+
+.teams-tournament__items::-webkit-scrollbar-thumb:active {
+  background-color: #8b2f12;
+}
+
+.teams-tournament__header {
+  height: 60px;
+  background-color: #191919;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.teams-tournament__data {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 120%;
+  margin: 0px 20px;
+}
+
+.teams-tournament__data_leader span {
+  font-weight: 300;
+  color: #c4c4c4;
+}
+
+.teams-tournament__data_online {
+  display: flex;
+  align-items: center;
+}
+
+.teams-tournament__data_online i {
+  margin: 0px 0px 0px 5px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.teams-tournament__data_win {
+  display: flex;
+  align-items: center;
+}
+
+.teams-tournament__data_win i {
+  font-size: 24px;
+  margin: 0px 0px 0px 5px;
+  color: #fd7e09;
+}
+
+.teams-tournament__content .participants-tournament__item {
+  background-color: rgb(15, 15, 15);
+}
+
+.teams-tournament__content .participants-tournament__item:first-child {
+  margin: 10px 0px 10px 0px;
 }
 
 @media (min-width: 1025px) {
@@ -3708,7 +3908,7 @@ textarea._error::placeholder {
 
   .header__top::before {
     content: "";
-    background-color: #191919;
+    background-color: #212121;
     width: 100%;
     position: fixed;
     top: 0px;
@@ -5028,7 +5228,7 @@ textarea._error::placeholder {
   }
 
   .info-tournament__description {
-    width: 100%;
+    width: 95%;
   }
 
   .info-tournament__button {
@@ -5063,11 +5263,11 @@ textarea._error::placeholder {
   }
 
   .info-tournament__button i::before {
-    transform: translate(10px, 0%) rotate(45deg);
+    transform: translate(8px, 0%) rotate(45deg);
   }
 
   .info-tournament__button i::after {
-    transform: translate(10px, 0%) rotate(-45deg);
+    transform: translate(8px, 0%) rotate(-45deg);
   }
 
   .info-tournament__content {
@@ -5128,6 +5328,8 @@ textarea._error::placeholder {
   }
 
   .info-tournament__form-button {
+    padding: 0px 30px;
+    height: 40px;
     font-size: 20px;
   }
 }
@@ -5771,6 +5973,10 @@ textarea._error::placeholder {
     margin: 0px 5px 0px 0px;
   }
 
+  .info-tournament__item_vertical span {
+    margin: 0px 0px 5px 0px;
+  }
+
   .info-tournament__item {
     font-size: 16px;
   }
@@ -5797,7 +6003,7 @@ textarea._error::placeholder {
   }
 
   .info-tournament__form-button {
-    height: 40px;
+    height: 35px;
     font-size: 18px;
   }
 }
