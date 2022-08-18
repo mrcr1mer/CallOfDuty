@@ -42,7 +42,7 @@ body.burger-lock {
 }
 
 .wrapper {
-  background: linear-gradient(90deg, rgb(25, 25, 25) 0%, rgb(35, 35, 35) 50%, rgb(25, 25, 25) 100%) no-repeat;
+  background: linear-gradient(90deg, rgb(29, 29, 29) 0%, rgb(35, 35, 35) 50%, rgb(29, 29, 29) 100%) no-repeat;
   min-height: 100%;
   overflow: hidden;
   display: flex;
@@ -296,9 +296,9 @@ textarea::placeholder {
 }
 
 input::-moz-placeholder,
-input :-moz-placeholder,
+input:-moz-placeholder,
 textarea::-moz-placeholder,
-textarea :-moz-placeholder {
+textarea:-moz-placeholder {
   opacity: 1;
 }
 
@@ -350,6 +350,13 @@ textarea._error::placeholder {
   letter-spacing: 1px;
   word-break: break-all;
   transition: all 0.4s ease 0s;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 120%;
+  margin: 0px 0px 10px 0px;
 }
 
 .header {
@@ -1898,7 +1905,13 @@ textarea._error::placeholder {
 
 .members__leaders {
   display: flex;
+  align-items: flex-start;
   flex-wrap: wrap;
+}
+
+.members__leaders.active .members__avatar {
+  width: 115px;
+  height: 115px;
 }
 
 .members__leader {
@@ -1920,8 +1933,8 @@ textarea._error::placeholder {
 
 .members__avatar {
   margin: 0px 0px 5px 0px;
-  width: 130px;
-  height: 130px;
+  width: 125px;
+  height: 125px;
   position: relative;
   border-radius: 50%;
   overflow: hidden;
@@ -1939,7 +1952,7 @@ textarea._error::placeholder {
 }
 
 .members__data {
-  font-size: 22px;
+  font-size: 20px;
   line-height: 130%;
   text-align: center;
 }
@@ -1953,7 +1966,7 @@ textarea._error::placeholder {
 }
 
 .clan {
-  margin: 0px 0px 40px 0px;
+  margin: 10px 0px 40px 0px;
 }
 
 .clan__header {
@@ -1968,31 +1981,31 @@ textarea._error::placeholder {
 
 .clan__title {
   color: #fd7e09;
-  font-size: 28px;
+  font-size: 26px;
 }
 
 .clan__total-online {
   color: #fd7e09;
-  font-size: 20px;
+  font-size: 22px;
 }
 
-.clan ol.clan__body {
+.clan ol.clan__items {
   list-style: none;
   counter-reset: item;
 }
 
-.clan ol.clan__body li {
+.clan ol.clan__items li {
   position: relative;
 }
 
-.clan ol.clan__body li::before {
+.clan ol.clan__items li::before {
   content: counter(item) " ";
   counter-increment: item;
   position: absolute;
   left: 20px;
 }
 
-.clan__body {
+.clan__items {
   max-height: 300px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -2000,23 +2013,23 @@ textarea._error::placeholder {
   scrollbar-width: thin;
 }
 
-.clan__body::-webkit-scrollbar {
+.clan__items::-webkit-scrollbar {
   width: 4px;
 }
 
-.clan__body::-webkit-scrollbar-track {
+.clan__items::-webkit-scrollbar-track {
   background-color: transparent;
 }
 
-.clan__body::-webkit-scrollbar-thumb {
+.clan__items::-webkit-scrollbar-thumb {
   background-color: #fd7e09;
 }
 
-.clan__body::-webkit-scrollbar-thumb:hover {
+.clan__items::-webkit-scrollbar-thumb:hover {
   background-color: #ff5100;
 }
 
-.clan__body::-webkit-scrollbar-thumb:active {
+.clan__items::-webkit-scrollbar-thumb:active {
   background-color: #8b2f12;
 }
 
@@ -2024,10 +2037,10 @@ textarea._error::placeholder {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: 600;
-  background-color: rgba(20, 20, 20, 0.65);
+  font-weight: 500;
+  background-color: #191919;
   min-height: 60px;
-  padding: 10px 20px 10px 60px;
+  padding: 10px 20px 10px 50px;
   font-size: 20px;
 }
 
@@ -2038,26 +2051,23 @@ textarea._error::placeholder {
 .clan__info {
   display: flex;
   align-items: center;
+  flex: 1 1 auto;
+  padding: 0px 20px 0px 0px;
 }
 
 .clan__data {
-  font-weight: 500;
   line-height: 120%;
-  flex: 0 0 160px;
+  flex: 0 1 33.333%;
 }
 
 .clan__data:not(:last-child) {
-  margin: 0px 40px 0px 0px;
+  margin: 0px 20px 0px 0px;
 }
 
 .clan__data_nickname {
   font-weight: 700;
   color: #fff;
   transition: all 0.4s ease 0s;
-}
-
-.clan__online {
-  font-weight: 500;
 }
 
 .clan__online_on {
@@ -2068,18 +2078,12 @@ textarea._error::placeholder {
   color: #c4c4c4;
 }
 
-.contacts__title {
-  font-weight: 600;
-  font-size: 24px;
-  margin: 0px 0px 15px 0px;
-}
-
 .contacts__items > *:not(:last-child) {
   margin: 0px 0px 10px 0px;
 }
 
 .contacts__item {
-  background: rgba(20, 20, 20, 0.65);
+  background: #191919;
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
@@ -2089,7 +2093,7 @@ textarea._error::placeholder {
 .contacts__data {
   display: flex;
   align-items: center;
-  padding: 0px 10px 0px 0px;
+  width: 100%;
 }
 
 .contacts__avatar {
@@ -2113,9 +2117,9 @@ textarea._error::placeholder {
 }
 
 .contacts__info {
-  font-size: 19px;
+  font-size: 20px;
   line-height: 110%;
-  max-width: 150px;
+  flex: 0 1 160px;
 }
 
 .contacts__nickname {
@@ -2124,12 +2128,13 @@ textarea._error::placeholder {
 }
 
 .contacts__name {
-  color: #727272;
+  color: rgb(122, 122, 122);
 }
 
 .contacts__socials {
   display: flex;
   align-items: center;
+  margin: 0px 0px 0px 10px;
 }
 
 .contacts__social {
@@ -2234,6 +2239,17 @@ textarea._error::placeholder {
 
 .tournament > *:not(:last-child) {
   margin: 0px 0px 30px 0px;
+}
+
+.tournament__info {
+  transition: all 0.8s ease 0s;
+  opacity: 0;
+  transform: translate(0, 50%);
+}
+
+.tournament__info._animate {
+  opacity: 1;
+  transform: translate(0, 0);
 }
 
 .info-tournament__image {
@@ -2586,13 +2602,6 @@ textarea._error::placeholder {
   margin: 0px 0px 0px 5px;
 }
 
-.title-tournament {
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 120%;
-  margin: 0px 0px 10px 0px;
-}
-
 .teams-tournament__items {
   max-height: 340px;
   overflow-y: auto;
@@ -2680,6 +2689,7 @@ textarea._error::placeholder {
 .teams-tournament__data_leader span {
   font-weight: 300;
   color: #c4c4c4;
+  margin: 0px 5px 0px 0px;
 }
 
 .teams-tournament__data_online {
@@ -2703,8 +2713,12 @@ textarea._error::placeholder {
   color: #fd7e09;
 }
 
-.teams-tournament__content .participants-tournament__items {
+.teams-tournament__content {
   padding: 10px 0px 0px 0px;
+}
+
+.teams-tournament__content .participants-tournament__items {
+  overflow-y: hidden;
 }
 
 .teams-tournament__content .participants-tournament__item {
@@ -2828,19 +2842,61 @@ textarea._error::placeholder {
 .profile__image-icon {
   position: absolute;
   bottom: 0px;
-  left: 0;
   width: 100%;
-  height: 100px;
-  transition: all 0.6s ease 0s;
+  height: 120px;
+  transition: all 0.4s ease 0s;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 40px;
   opacity: 0;
 }
 
-.profile__image-icon span {
+.profile__place {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.profile__place_first {
+  order: 2;
+  color: #FFD700;
+  margin: 0px 10px;
+}
+
+.profile__place_first i {
+  font-size: 50px;
+}
+
+.profile__place_first span {
+  padding: 5px 0px 0px 0px;
+  font-size: 24px;
+}
+
+.profile__place_second {
+  order: 1;
+  color: #c0c0c0;
+}
+
+.profile__place_second i {
+  font-size: 40px;
+}
+
+.profile__place_second span {
+  padding: 5px 0px 0px 0px;
+  font-size: 24px;
+}
+
+.profile__place_third {
+  order: 3;
+  color: #cd7f32;
+}
+
+.profile__place_third i {
+  font-size: 35px;
+}
+
+.profile__place_third span {
   padding: 5px 0px 0px 0px;
   font-size: 24px;
 }
@@ -2934,20 +2990,6 @@ textarea._error::placeholder {
   margin: 0px 0px 10px 0px;
 }
 
-.buttons__column._active .buttons__button {
-  transition: all 0.6s ease 0s;
-  opacity: 1;
-  transform: translate(0, 0);
-}
-
-.buttons__column._active .buttons__button:nth-child(2) {
-  transition-delay: 0.2s;
-}
-
-.buttons__column._active .buttons__button:nth-child(3) {
-  transition-delay: 0.4s;
-}
-
 .buttons__button {
   display: flex;
   justify-content: center;
@@ -2996,13 +3038,6 @@ textarea._error::placeholder {
 
 .tables__table_invite .tables__name:hover {
   color: #fff;
-}
-
-.tables__title {
-  font-weight: 700;
-  font-size: 24px;
-  margin: 0px 0px 15px 0px;
-  flex: 1 1 auto;
 }
 
 .tables__body {
@@ -3381,6 +3416,39 @@ textarea._error::placeholder {
   align-items: center;
   flex: 1 1 auto;
   margin: 0px 0px 0px 20px;
+  position: relative;
+}
+
+.list-players__reset {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translate(0, -50%);
+  background-color: transparent;
+  transition: all 0.2s ease 0s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.list-players__reset::before,
+.list-players__reset::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  height: 3px;
+  left: 50%;
+  top: 50%;
+}
+
+.list-players__reset::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.list-players__reset::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .list-players__input-searh {
@@ -3626,6 +3694,10 @@ textarea._error::placeholder {
     display: block;
   }
 
+  .clan__items.active .clan__item {
+    font-size: 18px;
+  }
+
   .clan__data_nickname:hover {
     color: #fd7e09;
   }
@@ -3708,7 +3780,7 @@ textarea._error::placeholder {
   }
 
   .profile__image:hover .profile__image-icon {
-    background-color: rgba(20, 20, 20, 0.65);
+    background-color: rgba(0, 0, 0, 0.6);
     opacity: 1;
   }
 
@@ -3790,41 +3862,12 @@ textarea._error::placeholder {
     font-size: 22px;
   }
 
-  .members__avatar {
-    width: 120px;
-    height: 120px;
-  }
-
-  .members__data {
-    font-size: 20px;
-  }
-
-  .clan__title {
-    font-size: 24px;
-  }
-
-  .clan__total-online {
-    font-size: 18px;
-  }
-
-  .clan__item {
-    font-size: 18px;
-  }
-
-  .clan__data:not(:last-child) {
-    margin: 0px 20px 0px 0px;
-  }
-
   .profile__content {
     font-size: 20px;
   }
 
   .profile__describe {
     font-size: 18px;
-  }
-
-  .tables__title {
-    font-size: 22px;
   }
 }
 
@@ -3835,10 +3878,6 @@ textarea._error::placeholder {
 }
 
 @media (max-width: 1024px) {
-  .wrapper {
-    background: linear-gradient(90deg, rgb(30, 30, 30) 0%, rgb(35, 35, 35) 50%, rgb(30, 30, 30) 100%) no-repeat;
-  }
-
   .bg {
     display: none;
   }
@@ -3867,6 +3906,10 @@ textarea._error::placeholder {
   .btn {
     font-size: 26px;
     height: 65px;
+  }
+
+  .title {
+    font-size: 26px;
   }
 
   .header {
@@ -4273,42 +4316,38 @@ textarea._error::placeholder {
     margin: 0px 0px 25px 0px;
   }
 
+  .members__avatar {
+    width: 110px;
+    height: 110px;
+  }
+
   .members__data {
     font-size: 18px;
   }
 
   .clan {
-    margin: 0px 0px 25px 0px;
+    margin: 5px 0px 30px 0px;
   }
 
   .clan__header {
     min-height: 60px;
-    padding: 0px 15px;
   }
 
   .clan__title {
-    font-size: 22px;
+    font-size: 24px;
   }
 
-  .clan ol.clan__body li::before {
-    left: 15px;
+  .clan__total-online {
+    font-size: 20px;
   }
 
-  .clan__body {
+  .clan__items {
     max-height: 250px;
   }
 
   .clan__item {
-    padding: 10px 15px 10px 50px;
     min-height: 50px;
-  }
-
-  .contacts__title {
-    font-size: 22px;
-  }
-
-  .contacts__item {
-    padding: 10px 15px;
+    font-size: 18px;
   }
 
   .contacts__avatar {
@@ -4317,23 +4356,12 @@ textarea._error::placeholder {
   }
 
   .contacts__info {
-    font-size: 17px;
+    font-size: 18px;
+    flex: 0 1 150px;
   }
 
   .contacts__social:not(:last-child) {
     margin: 0px 15px 0px 0px;
-  }
-
-  .contacts__social {
-    font-size: 40px;
-  }
-
-  .contacts__social:nth-child(1) {
-    font-size: 30px;
-  }
-
-  .contacts__social:nth-child(3) {
-    font-size: 50px;
   }
 
   .articles {
@@ -4412,10 +4440,6 @@ textarea._error::placeholder {
     font-size: 22px;
   }
 
-  .title-tournament {
-    font-size: 26px;
-  }
-
   .teams-tournament__items {
     max-height: 290px;
   }
@@ -4457,6 +4481,10 @@ textarea._error::placeholder {
     margin: 0px 0px 30px 0px;
   }
 
+  .profile__avatar {
+    width: 50%;
+  }
+
   .profile__image-icon {
     background-color: rgba(20, 20, 20, 0.65);
     opacity: 1;
@@ -4476,10 +4504,6 @@ textarea._error::placeholder {
 
   .buttons {
     margin: 30px -20px 0px;
-  }
-
-  .tables__title {
-    margin: 0px 0px 10px 0px;
   }
 
   .tables__body {
@@ -4617,6 +4641,10 @@ textarea._error::placeholder {
 @media (max-width: 767px) {
   .btn {
     height: 55px;
+    font-size: 24px;
+  }
+
+  .title {
     font-size: 24px;
   }
 
@@ -4913,18 +4941,12 @@ textarea._error::placeholder {
   }
 
   .members__leader {
-    margin: 0px 0px 15px 0px;
-    flex: 0 1 25%;
-  }
-
-  .members__leader:nth-child(2),
-  .members__leader:nth-child(3) {
-    flex: 0 1 25%;
+    margin: 0px 0px 20px 0px;
   }
 
   .members__avatar {
-    width: 110px;
-    height: 110px;
+    width: 90px;
+    height: 90px;
   }
 
   .members__data {
@@ -4932,46 +4954,50 @@ textarea._error::placeholder {
   }
 
   .clan {
-    margin: 0px 0px 15px 0px;
+    margin: 10px 0px 20px 0px;
+  }
+
+  .clan__header {
+    padding: 0px 15px;
   }
 
   .clan__title {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .clan__total-online {
-    font-size: 16px;
+    font-size: 18px;
+  }
+
+  .clan ol.clan__items li::before {
+    left: 15px;
   }
 
   .clan__item {
+    padding: 10px 15px 10px 45px;
     font-size: 16px;
   }
 
   .clan__data {
-    flex: 0 0 140px;
+    flex: 0 1 50%;
   }
 
-  .contacts__title {
-    font-size: 20px;
-    margin: 0px 0px 10px 0px;
+  .clan__data_name {
+    display: none;
   }
 
   .contacts__item {
-    padding: 10px;
+    padding: 10px 15px;
   }
 
   .contacts__avatar {
-    flex: 0 0 60px;
-    height: 60px;
+    flex: 0 0 55px;
+    height: 55px;
   }
 
   .contacts__info {
     font-size: 16px;
-    max-width: 120px;
-  }
-
-  .contacts__nickname {
-    margin: 0px 0px 0px 0px;
+    flex: 0 0 130px;
   }
 
   .contacts__social:not(:last-child) {
@@ -5120,10 +5146,6 @@ textarea._error::placeholder {
     font-size: 20px;
   }
 
-  .title-tournament {
-    font-size: 24px;
-  }
-
   .teams-tournament__items {
     max-height: 270px;
   }
@@ -5171,18 +5193,12 @@ textarea._error::placeholder {
   }
 
   .profile__avatar {
-    flex: 0 1 100%;
-    width: 50%;
+    width: 55%;
     margin: 0px 0px 20px 0px;
   }
 
   .profile__image-icon {
     height: 80px;
-    font-size: 30px;
-  }
-
-  .profile__image-icon span {
-    font-size: 20px;
   }
 
   .profile__content {
@@ -5222,6 +5238,9 @@ textarea._error::placeholder {
   .buttons__column {
     width: 100%;
     padding: 0;
+  }
+
+  .buttons__column:not(:first-child) {
     margin: 0px 0px 10px 0px;
   }
 
@@ -5244,10 +5263,6 @@ textarea._error::placeholder {
 
   .tables__table:not(:last-child) {
     margin: 0px 0px 20px 0px;
-  }
-
-  .tables__title {
-    font-size: 20px;
   }
 
   .tables__item:not(:last-child) {
@@ -5352,19 +5367,6 @@ textarea._error::placeholder {
 }
 
 @media (max-width: 640px) {
-  .members__avatar {
-    width: 85px;
-    height: 85px;
-  }
-
-  .members__data {
-    font-size: 14px;
-  }
-
-  .clan__data_name {
-    display: none;
-  }
-
   .current-news {
     padding: 0px 0px;
   }
@@ -5390,6 +5392,10 @@ textarea._error::placeholder {
     letter-spacing: 0.5px;
     height: 50px;
     font-size: 22px;
+  }
+
+  .title {
+    font-size: 20px;
   }
 
   .header {
@@ -5627,7 +5633,7 @@ textarea._error::placeholder {
   }
 
   .members__leader {
-    margin: 0px 0px 10px 0px;
+    margin: 0px 0px 15px 0px;
     flex: 0 1 50%;
   }
 
@@ -5637,8 +5643,16 @@ textarea._error::placeholder {
   }
 
   .members__avatar {
-    height: 70px;
-    width: 70px;
+    height: 75px;
+    width: 75px;
+  }
+
+  .members__data {
+    font-size: 14px;
+  }
+
+  .clan {
+    margin: 0px 0px 15px 0px;
   }
 
   .clan__header {
@@ -5647,18 +5661,18 @@ textarea._error::placeholder {
   }
 
   .clan__title {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .clan__total-online {
-    font-size: 14px;
+    font-size: 16px;
   }
 
-  .clan ol.clan__body li::before {
+  .clan ol.clan__items li::before {
     left: 10px;
   }
 
-  .clan__body {
+  .clan__items {
     max-height: 200px;
   }
 
@@ -5668,26 +5682,14 @@ textarea._error::placeholder {
     font-size: 14px;
   }
 
-  .clan__data {
-    flex: 0 0 120px;
-  }
-
-  .clan__data:not(:last-child) {
-    margin: 0px 10px 0px 0px;
-  }
-
-  .contacts__title {
-    font-size: 16px;
-  }
-
   .contacts__avatar {
-    flex: 0 0 50px;
-    height: 50px;
     margin: 0px 5px 0px 0px;
+    flex: 0 0 45px;
+    height: 45px;
   }
 
   .contacts__info {
-    max-width: 100px;
+    flex: 0 0 110px;
     font-size: 14px;
   }
 
@@ -5700,11 +5702,11 @@ textarea._error::placeholder {
   }
 
   .contacts__social:nth-child(1) {
-    font-size: 23px;
+    font-size: 25px;
   }
 
   .contacts__social:nth-child(3) {
-    font-size: 37px;
+    font-size: 35px;
   }
 
   .articles__item:not(:last-child) {
@@ -5812,10 +5814,6 @@ textarea._error::placeholder {
     font-size: 18px;
   }
 
-  .title-tournament {
-    font-size: 20px;
-  }
-
   .teams-tournament__items._init .teams-tournament__header::before,
   .teams-tournament__items._init .teams-tournament__header::after {
     width: 15px;
@@ -5828,7 +5826,6 @@ textarea._error::placeholder {
   }
 
   .teams-tournament__header {
-    height: 40px;
     padding: 0px 10px;
   }
 
@@ -5867,17 +5864,11 @@ textarea._error::placeholder {
   }
 
   .profile__avatar {
-    margin: 0px 0px 15px 0px;
-    width: 60%;
+    width: 65%;
   }
 
   .profile__image-icon {
     height: 70px;
-    font-size: 25px;
-  }
-
-  .profile__image-icon span {
-    font-size: 18px;
   }
 
   .profile__content {
@@ -5916,6 +5907,14 @@ textarea._error::placeholder {
     margin: 20px 0px 0px 0px;
   }
 
+  .buttons__column:not(:first-child) {
+    margin: 0px 0px 5px 0px;
+  }
+
+  .buttons__column > *:not(:last-child) {
+    margin: 0px 0px 5px 0px;
+  }
+
   .buttons__button {
     height: 35px;
     font-size: 16px;
@@ -5923,11 +5922,6 @@ textarea._error::placeholder {
 
   .tables__table:not(:last-child) {
     margin: 0px 0px 15px 0px;
-  }
-
-  .tables__title {
-    font-size: 16px;
-    margin: 0px 0px 5px 0px;
   }
 
   .tables__body {
@@ -6081,34 +6075,30 @@ textarea._error::placeholder {
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 469px) {
   .contacts__item {
-    padding: 10px 5px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 370px) {
+  .contacts__socials {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  .contacts__avatar {
-    flex: 0 0 40px;
-    height: 40px;
-  }
-
-  .contacts__info {
-    max-width: 90px;
-  }
-
-  .contacts__info > *:not(:last-child) {
+  .contacts__social:not(:last-child) {
     margin: 0px 0px 0px 0px;
-  }
-
-  .contacts__name {
-    font-size: 12px;
   }
 
   .contacts__social {
     font-size: 25px;
+    flex: 0 1 50%;
+    text-align: center;
   }
 
   .contacts__social:nth-child(1) {
-    font-size: 17px;
+    font-size: 20px;
   }
 
   .contacts__social:nth-child(3) {
@@ -6172,12 +6162,8 @@ textarea._error::placeholder {
 }
 
 @media (max-width: 320px) {
-  .clan__item {
-    font-size: 12px;
-  }
-
-  .clan__data {
-    flex: 0 0 100px;
+  .title {
+    font-size: 18px;
   }
 }
 
@@ -6188,6 +6174,18 @@ textarea._error::placeholder {
 
   .pagination__list > *:not(:last-child) {
     margin: 0px 10px 0px 0px;
+  }
+
+  .clan__title {
+    font-size: 16px;
+  }
+
+  .clan__total-online {
+    font-size: 14px;
+  }
+
+  .clan__item {
+    font-size: 12px;
   }
 }
 
@@ -6222,11 +6220,5 @@ textarea._error::placeholder {
 
   .menu {
     padding: 120px 20px 20px;
-  }
-}
-
-@media (max-width: 290px) {
-  .contacts__info {
-    max-width: 80px;
   }
 }
