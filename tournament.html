@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20220818194152" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20220818194152">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20220819134028" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20220819134028">
 	<link rel="shortcut icon" href="favicon.ico">
 	<title>Турнир</title>
 </head>
@@ -409,6 +409,38 @@
 								</li>
 							</ul>
 						</div>
+						<div class="tournament__container">
+							<div class="tournament__edit edit">
+								<!-- Тут чекбоксовая кнопка -->
+								<input type="checkbox" id="chexboxRemember" name="edit" class="popup__checkbox-input edit__btn">
+								<!-- Тут кнопка сохранить -->
+								<div class="edit__save">Сохранить</div>
+				
+								<div class="edit__tips">
+									<p class="edit__tip"><span class="edit__head">Двойное нажатие</span> <span class="edit__content">- используйте для удаления участника (удалить участника в 1-ом столбце возможно только через админ панель).</span></p>
+									<p class="edit__tip"><span class="edit__head">Enter/Tab</span> <span class="edit__content">- переключение между полей для изменения счета у каждого игрока.</span></p>
+									<p class="edit__tip"><span class="edit__head">Нажатие на игрока</span> <span class="edit__content">- игрок выделится оранжевым цветом после этого кликом по выделенной ячейке его можно будет перенести.</span></p>
+									<p class="edit__tip"><span class="edit__head">Сохранить</span><span class="edit__content">- после сохранения новые данные отправяться на сервер. Это может занять какое-то время.</span></p>
+								</div>
+							</div>
+							<div class="tournament__table tour-table">
+								<div class="tour-table__body" id="zoom">
+									<input type="text" class="score-edit" name="edit" value="">
+								</div>
+								<div class="tour-table__info table-info">
+									<div class="table-info__scale table-scale">
+										<i class="table-scale__reset"></i>
+										<div class="table-scale__text">100%</div>
+									</div>
+									<div class="table-info__body">
+										<div class="table-info__content">
+											<p class="table-info__item"><span>Ctrl+Колесико</span> - зум таблицы</p>
+											<p class="table-info__item"><span>LMB+Движение</span> - перемещениие таблицы</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</section>
 					<aside class="aside aside-open">
 	<div class="aside__body">
@@ -775,8 +807,24 @@
 		</div>
 	</div>
 </div>
-	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js?_v=20220818194152"></script>
-	<script src="js/app.min.js?_v=20220818194152"></script>
+
+	<script id="data" type="application/json">
+		{
+			"stages": [
+				[{"player1": "CrispySmasher", "score": "1,13", "player2": "ArterLegend"},{"player1": "OlegPro", "score": "4,0", "player2": "NiggerMaster"}, {"player1": "CrispySmasher", "score": "1,2", "player2": "ArterLegend"},{"player1": "OlegPro", "score": "4,0", "player2": "NiggerMaster"}, {"player1": "CrispySmasher", "score": "1,13", "player2": "ArterLegend"},{"player1": "OlegPro", "score": "4,0", "player2": "NiggerMaster"}, {"player1": "CrispySmasher", "score": "1,2", "player2": "ArterLegend"},{"player1": "OlegPro", "score": "4,0", "player2": "NiggerMaster"}],
+				[{"player1": "CrispySmasher", "score": "1,13", "player2": "ArterLegend"},{"player1": "OlegPro", "score": "4,0", "player2": "NiggerMaster"}, {"player1": "CrispySmasher", "score": "1,2", "player2": "ArterLegend"},{"player1": "OlegPro", "score": "4,0", "player2": "NiggerMaster"}],
+				[{"player1": "CrispySmasher", "score": "1,2", "player2": "ArterLegend"},{"player1": "OlegPro", "score": "4,0", "player2": "NiggerMaster"}],
+				[{"player1": "", "score": "0,0", "player2": ""}, {"player1": "", "score": "0,0", "player2": ""}],
+				[{"first": "", "second": "", "third": ""}]
+			],
+			"first": "",
+			"second": "",
+			"third": ""
+		}
+	</script>
+
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js?_v=20220819134028"></script>
+	<script src="js/app.min.js?_v=20220819134028"></script>
 </body>
 
 </html>
