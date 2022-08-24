@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20220819134028" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20220819134028">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20220824193321" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20220824193321">
 	<link rel="shortcut icon" href="favicon.ico">
 	<title>Турнир</title>
 </head>
@@ -136,6 +136,55 @@
 						<div class="tournament__participants participants-tournament">
 							<h3 class="participants-tournament__title title">Участники</h3>
 							<ul class="participants-tournament__items">
+								<li class="participants-tournament__item">
+									<a href="#" class="participants-tournament__avatar"><picture><source srcset="img/members/03.webp" type="image/webp"><img src="img/members/03.jpg" alt=""></picture></a>			
+									<div	class="participants-tournament__data">crispySmasher</div>
+									<div	class="participants-tournament__data participants-tournament__data_name">Илья</div>
+									<div class="participants-tournament__data">PTD</div>
+									<div class="participants-tournament__data participants-tournament__data_win">65 <i class="_icon-win"></i></div>
+								</li>
+								<li class="participants-tournament__item">
+									<a href="#" class="participants-tournament__avatar"><picture><source srcset="img/members/04.webp" type="image/webp"><img src="img/members/04.jpg" alt=""></picture></a>
+									<div	class="participants-tournament__data">cr1mer</div>
+									<div	class="participants-tournament__data participants-tournament__data_name">Артем</div>
+									<div class="participants-tournament__data">PTD</div>
+									<div class="participants-tournament__data participants-tournament__data_win">23 <i class="_icon-win"></i></div>
+								</li>
+								<li class="participants-tournament__item">
+									<a href="#" class="participants-tournament__avatar"><picture><source srcset="img/members/05.webp" type="image/webp"><img src="img/members/05.jpg" alt=""></picture></a>									
+									<div	class="participants-tournament__data">yung</div>
+									<div	class="participants-tournament__data participants-tournament__data_name">Константин</div>
+									<div class="participants-tournament__data">PTD</div>
+									<div class="participants-tournament__data participants-tournament__data_win">233<i class="_icon-win"></i></div>
+								</li>
+								<li class="participants-tournament__item">
+									<a href="#" class="participants-tournament__avatar"><picture><source srcset="img/members/06.webp" type="image/webp"><img src="img/members/06.jpg" alt=""></picture></a>								
+									<div	class="participants-tournament__data">d1ztroy</div>
+									<div	class="participants-tournament__data participants-tournament__data_name">Дима</div>
+									<div class="participants-tournament__data">PTD</div>
+									<div class="participants-tournament__data participants-tournament__data_win">124<i class="_icon-win"></i></div>
+								</li>
+								<li class="participants-tournament__item">
+									<a href="#" class="participants-tournament__avatar"><picture><source srcset="img/members/07.webp" type="image/webp"><img src="img/members/07.jpg" alt=""></picture></a>									
+									<div	class="participants-tournament__data">grind</div>
+									<div	class="participants-tournament__data participants-tournament__data_name">Антон</div>
+									<div class="participants-tournament__data">PTD</div>
+									<div class="participants-tournament__data participants-tournament__data_win">1<i class="_icon-win"></i></div>
+								</li>
+								<li class="participants-tournament__item">
+									<a href="#" class="participants-tournament__avatar"><picture><source srcset="img/members/01.webp" type="image/webp"><img src="img/members/01.jpg" alt=""></picture></a>									
+									<div	class="participants-tournament__data">tohen</div>
+									<div	class="participants-tournament__data participants-tournament__data_name">Влад</div>
+									<div class="participants-tournament__data">-</div>
+									<div class="participants-tournament__data participants-tournament__data_win">43<i class="_icon-win"></i></div>
+								</li>
+								<li class="participants-tournament__item">
+									<a href="#" class="participants-tournament__avatar"><picture><source srcset="img/members/02.webp" type="image/webp"><img src="img/members/02.jpg" alt=""></picture></a>		
+									<div	class="participants-tournament__data">arthas</div>
+									<div	class="participants-tournament__data participants-tournament__data_name">Андрей</div>
+									<div class="participants-tournament__data">PTD</div>
+									<div class="participants-tournament__data participants-tournament__data_win">1027<i class="_icon-win"></i></div>
+								</li>
 								<li class="participants-tournament__item">
 									<a href="#" class="participants-tournament__avatar"><picture><source srcset="img/members/03.webp" type="image/webp"><img src="img/members/03.jpg" alt=""></picture></a>			
 									<div	class="participants-tournament__data">crispySmasher</div>
@@ -410,12 +459,15 @@
 							</ul>
 						</div>
 						<div class="tournament__container">
-							<div class="tournament__edit edit">
+							<h3 class="table-tournament__title title">Турнирная таблица</h3>
+							<div class="tournament__edit edit">					
 								<!-- Тут чекбоксовая кнопка -->
-								<input type="checkbox" id="chexboxRemember" name="edit" class="popup__checkbox-input edit__btn">
+								<div class="edit__group">
+									<input type="checkbox" id="editBtn" name="edit" class="popup__checkbox-input edit__btn">
+									<label for="editBtn" class="edit__label">Редактировать</label>
+								</div>
 								<!-- Тут кнопка сохранить -->
-								<div class="edit__save">Сохранить</div>
-				
+								<div class="edit__save btn">Сохранить</div>				
 								<div class="edit__tips">
 									<p class="edit__tip"><span class="edit__head">Двойное нажатие</span> <span class="edit__content">- используйте для удаления участника (удалить участника в 1-ом столбце возможно только через админ панель).</span></p>
 									<p class="edit__tip"><span class="edit__head">Enter/Tab</span> <span class="edit__content">- переключение между полей для изменения счета у каждого игрока.</span></p>
@@ -538,7 +590,7 @@
 						<div class="chat-aside__user chat-aside__user_me send">
 							<div class="chat-aside__user-msg">
 								<div class="chat-aside__msg">
-									Текст сообщений сообщений
+									Lorem ipsum dolor sit amet consectetur
 								</div>
 								<time class="chat-aside__time">14:43</time>
 							</div>
@@ -823,8 +875,8 @@
 		}
 	</script>
 
-	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js?_v=20220819134028"></script>
-	<script src="js/app.min.js?_v=20220819134028"></script>
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js?_v=20220824193321"></script>
+	<script src="js/app.min.js?_v=20220824193321"></script>
 </body>
 
 </html>
