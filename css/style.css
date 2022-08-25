@@ -335,24 +335,6 @@ textarea._error::placeholder {
   display: none;
 }
 
-.btn {
-  display: flex;
-  line-height: 110%;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-weight: 600;
-  background-color: #fd7e09;
-  color: #fff;
-  width: 100%;
-  height: 70px;
-  padding: 10px;
-  font-size: 30px;
-  letter-spacing: 1px;
-  word-break: break-all;
-  transition: all 0.4s ease 0s;
-}
-
 .title {
   font-weight: 600;
   font-size: 28px;
@@ -398,6 +380,65 @@ textarea._error::placeholder {
 ._anim-translateX._animate {
   transform: translate(0, 0);
   opacity: 1;
+}
+
+._anim-translateY {
+  opacity: 0;
+  transform: translate(0, 100px);
+  transition: all 0.8s ease 0s;
+}
+
+._anim-translateY._animate {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.btn {
+  display: flex;
+  line-height: 110%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 600;
+  background-color: #fd7e09;
+  color: #fff;
+  width: 100%;
+  height: 70px;
+  padding: 10px;
+  font-size: 30px;
+  letter-spacing: 1px;
+  word-break: break-all;
+  transition: all 0.4s ease 0s;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  margin: 40px -20px 0px;
+}
+
+.buttons__column {
+  flex: 0 1 50%;
+  padding: 0 20px;
+}
+
+.buttons__column > *:not(:last-child) {
+  margin: 0px 0px 10px 0px;
+}
+
+.buttons__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 45px;
+  width: 100%;
+  background-color: rgb(20, 20, 20);
+  padding: 0px 20px;
+  font-size: 20px;
+  line-height: 120%;
+  color: #fd7e09;
+  transition: all 0.4s ease 0s;
 }
 
 .header {
@@ -2649,7 +2690,7 @@ textarea._error::placeholder {
 .teams-tournament__items._init .teams-tournament__header::after {
   content: "";
   background-color: #fff;
-  width: 20px;
+  width: 25px;
   height: 3px;
   position: absolute;
   right: 20px;
@@ -3137,7 +3178,7 @@ textarea._error::placeholder {
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: url("../../img/tournaments/reset.svg") center/cover no-repeat;
+  background: url("../img/tournaments/reset.svg") center/cover no-repeat;
   transition: all 0.4s ease 0s;
 }
 
@@ -3166,19 +3207,10 @@ textarea._error::placeholder {
 .edit__btn {
   width: 72px;
   height: 36px;
-  border-radius: 36px;
-  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3) inset;
-  position: relative;
-  transition: all 0.4s ease 0s;
 }
 
 .edit__btn::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  border-radius: 50%;
+  width: 36px;
 }
 
 .edit__btn:checked::before {
@@ -3366,56 +3398,57 @@ textarea._error::placeholder {
   position: absolute;
   bottom: 0px;
   width: 100%;
-  height: 140px;
+  height: 130px;
+  opacity: 0;
+  overflow: hidden;
   transition: all 0.4s ease 0s;
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
-}
-
-.profile__trophies {
-  display: flex;
   flex-direction: column;
-  align-items: center;
   font-size: 60px;
 }
 
-.profile__trophies i {
+.profile__wins i {
   color: #fff;
   cursor: pointer;
   transition: all 0.4s ease 0s;
-  position: relative;
-  z-index: 2;
 }
 
-.profile__trophies i:hover {
+.profile__wins i:hover {
   color: #fd7e09;
 }
 
-.profile__trophies span {
+.profile__wins span {
   width: 20px;
   height: 20px;
   position: relative;
 }
 
-.profile__trophies span::before,
-.profile__trophies span::after {
+.profile__wins span._stop::before,
+.profile__wins span._stop::after {
+  -webkit-animation-name: none;
+          animation-name: none;
+  opacity: 0;
+}
+
+.profile__wins span::before,
+.profile__wins span::after {
   content: "";
   background-color: #fff;
   width: 100%;
   height: 3px;
   position: absolute;
-  -webkit-animation: animTrophy 1.5s ease-out 0s infinite;
-          animation: animTrophy 1.5s ease-out 0s infinite;
+  -webkit-animation: animTrophy 1.3s ease-out 0s infinite;
+          animation: animTrophy 1.3s ease-out 0s infinite;
 }
 
-.profile__trophies span::after {
+.profile__wins span::after {
   transform: rotate(45deg);
   right: 6px;
 }
 
-.profile__trophies span::before {
+.profile__wins span::before {
   left: 6px;
   transform: rotate(-45deg);
 }
@@ -3423,7 +3456,7 @@ textarea._error::placeholder {
 @-webkit-keyframes animTrophy {
   0% {
     opacity: 0;
-    top: -20px;
+    top: -15px;
   }
 
   50% {
@@ -3432,14 +3465,14 @@ textarea._error::placeholder {
 
   100% {
     opacity: 0;
-    top: 0;
+    top: 5px;
   }
 }
 
 @keyframes animTrophy {
   0% {
     opacity: 0;
-    top: -20px;
+    top: -15px;
   }
 
   50% {
@@ -3448,23 +3481,42 @@ textarea._error::placeholder {
 
   100% {
     opacity: 0;
-    top: 0;
+    top: 5px;
   }
 }
 
-.profile__places {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  align-items: flex-end;
+.profile__trophies {
   background-color: rgb(10, 10, 10);
-  padding: 20px 30px;
-  border-radius: 30px;
+  box-shadow: 0px 0px 5px #d9d9d9;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  padding: 5px 20px;
+  border-radius: 10px;
+  transform: perspective(400px) translate(-50%, -50%) rotateX(45deg);
+  transform-origin: 0 0;
   opacity: 0;
   visibility: hidden;
   transition: all 0.6s ease 0s;
+}
+
+.profile__trophies._show {
+  opacity: 1;
+  visibility: visible;
+  top: 50%;
+  transform: perspective(400px) translate(-50%, -50%) rotateX(0deg);
+}
+
+.profile__trophies h4 {
+  font-size: 26px;
+  font-weight: 500;
+  text-align: center;
+  margin: 0px 0px 10px 0px;
+}
+
+.profile__places {
+  display: flex;
+  align-items: flex-end;
 }
 
 .profile__place {
@@ -3482,7 +3534,7 @@ textarea._error::placeholder {
   order: 2;
   color: #ffd700;
   margin: 0px 15px;
-  font-size: 50px;
+  font-size: 45px;
 }
 
 .profile__place_second {
@@ -3515,11 +3567,6 @@ textarea._error::placeholder {
 .profile__data span {
   color: #fd7e09;
   font-weight: 600;
-}
-
-.profile__description {
-  font-size: 20px;
-  line-height: 120%;
 }
 
 .profile__admin {
@@ -3570,36 +3617,6 @@ textarea._error::placeholder {
 
 .profile__tables._active .tables__table:nth-child(3) {
   transition-delay: 0.2s;
-}
-
-.buttons {
-  display: flex;
-  align-items: center;
-  margin: 40px -20px 0px;
-}
-
-.buttons__column {
-  flex: 0 1 50%;
-  padding: 0 20px;
-}
-
-.buttons__column > *:not(:last-child) {
-  margin: 0px 0px 10px 0px;
-}
-
-.buttons__button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 45px;
-  width: 100%;
-  background-color: rgb(20, 20, 20);
-  padding: 0px 20px;
-  font-size: 20px;
-  line-height: 120%;
-  color: #fd7e09;
-  transition: all 0.4s ease 0s;
 }
 
 .tables {
@@ -3918,14 +3935,6 @@ textarea._error::placeholder {
   font-size: 55px;
 }
 
-.players__title {
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 120%;
-  letter-spacing: 0.05em;
-  margin: 0px 0px 30px 0px;
-}
-
 .players__items {
   display: flex;
 }
@@ -3951,21 +3960,21 @@ textarea._error::placeholder {
 .players__input-name {
   height: 45px;
   background-color: #191919;
-  padding: 0px 20px;
+  padding: 0 15px;
   font-size: 20px;
   color: #fff;
   flex: 0 1 50%;
 }
 
-.players__discribe {
+.players__description {
   margin: 0px 0px 20px 0px;
 }
 
-.players__title-discribe {
+.players__title-description {
   margin: 0px 0px 5px 0px;
 }
 
-.players__text-discribe {
+.players__text-description {
   font-weight: 300;
   font-size: 21px;
   line-height: 120%;
@@ -3977,18 +3986,6 @@ textarea._error::placeholder {
   font-size: 24px;
   line-height: 120%;
   letter-spacing: 0.03em;
-}
-
-.title-players_light {
-  font-weight: 300;
-}
-
-.icon-players {
-  cursor: pointer;
-  font-size: 35px;
-  color: #fff;
-  background-color: transparent;
-  transition: all 0.4s ease 0s;
 }
 
 .list-players__header {
@@ -4005,13 +4002,14 @@ textarea._error::placeholder {
 
 .list-players__title {
   text-align: center;
+  font-weight: 300;
 }
 
 .list-players__searh {
   display: flex;
   align-items: center;
   flex: 1 1 auto;
-  margin: 0px 0px 0px 20px;
+  margin: 0px 0px 0px 15px;
   position: relative;
 }
 
@@ -4049,7 +4047,7 @@ textarea._error::placeholder {
 
 .list-players__input-searh {
   height: 45px;
-  padding: 0px 20px;
+  padding: 0 15px;
   background-color: #191919;
   font-size: 20px;
   color: #fff;
@@ -4057,11 +4055,19 @@ textarea._error::placeholder {
   width: 100%;
 }
 
+.list-players__icon {
+  cursor: pointer;
+  font-size: 35px;
+  color: #fff;
+  background-color: transparent;
+  transition: all 0.4s ease 0s;
+}
+
 .list-players__add {
   cursor: pointer;
   position: relative;
-  width: 25px;
-  height: 25px;
+  flex: 0 0 30px;
+  height: 30px;
   background-color: transparent;
 }
 
@@ -4071,22 +4077,15 @@ textarea._error::placeholder {
   position: absolute;
   background-color: #fff;
   transition: all 0.4s ease 0s;
+  width: 100%;
+  height: 3px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .list-players__add::before {
-  width: 100%;
-  height: 2px;
-  top: 50%;
-  left: 0;
-  transform: translate(0, -50%);
-}
-
-.list-players__add::after {
-  height: 100%;
-  width: 2px;
-  left: 50%;
-  top: 0;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -50%) rotate(90deg);
 }
 
 .list-players__items {
@@ -4097,7 +4096,7 @@ textarea._error::placeholder {
   scrollbar-width: thin;
 }
 
-.list-players__items.active {
+.list-players__items._active {
   min-height: 300px;
   background-color: #171717;
 }
@@ -4131,10 +4130,6 @@ textarea._error::placeholder {
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.list-players__item.hidden {
-  display: none;
-}
-
 .list-players__item.search-alert {
   display: none;
   min-height: 300px;
@@ -4148,21 +4143,21 @@ textarea._error::placeholder {
   border-bottom: none;
 }
 
-.list-players__item.search-alert.show {
+.list-players__item.search-alert._show {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.list-players__input {
+.list-players__checkbox {
   display: none;
 }
 
-.list-players__input:checked + .list-players__label-checkbox {
+.list-players__checkbox:checked + .list-players__checkbox-label {
   background-color: #fd7e09;
 }
 
-.list-players__label-checkbox {
+.list-players__checkbox-label {
   font-weight: 600;
   font-size: 22px;
   cursor: pointer;
@@ -4181,6 +4176,10 @@ textarea._error::placeholder {
 
   .btn:hover {
     background-color: #ff5100;
+  }
+
+  .buttons__button:hover {
+    color: #ff5100;
   }
 
   .header__btn:hover {
@@ -4379,10 +4378,6 @@ textarea._error::placeholder {
     opacity: 1;
   }
 
-  .buttons__button:hover {
-    color: #ff5100;
-  }
-
   .tables__name:hover {
     color: #fd7e09;
   }
@@ -4416,7 +4411,7 @@ textarea._error::placeholder {
     margin: 0px 0px 40px 0px;
   }
 
-  .icon-players:hover {
+  .list-players__icon:hover {
     color: #fd7e09;
   }
 
@@ -4490,13 +4485,17 @@ textarea._error::placeholder {
     transition: all 0.4s ease 0s;
   }
 
+  .title {
+    font-size: 26px;
+  }
+
   .btn {
     font-size: 26px;
     height: 65px;
   }
 
-  .title {
-    font-size: 26px;
+  .buttons {
+    margin: 30px -20px 0px;
   }
 
   .header {
@@ -5089,25 +5088,12 @@ textarea._error::placeholder {
   }
 
   .profile__wins {
-    height: 120px;
     background-color: rgba(20, 20, 20, 0.65);
     opacity: 1;
   }
 
-  .profile__trophies {
-    font-size: 50px;
-  }
-
   .profile__content {
-    font-size: 18px;
-  }
-
-  .profile__description {
-    font-size: 16px;
-  }
-
-  .buttons {
-    margin: 30px -20px 0px;
+    font-size: 20px;
   }
 
   .tables__body {
@@ -5174,11 +5160,6 @@ textarea._error::placeholder {
     font-size: 60px;
   }
 
-  .players__title {
-    font-size: 26px;
-    margin: 0px 0px 20px 0px;
-  }
-
   .players__items {
     flex-direction: column;
   }
@@ -5191,7 +5172,7 @@ textarea._error::placeholder {
     margin: 0px 0px 25px 0px;
   }
 
-  .players__text-discribe {
+  .players__text-description {
     font-size: 19px;
   }
 
@@ -5207,7 +5188,7 @@ textarea._error::placeholder {
     height: 40px;
   }
 
-  .list-players__items.active {
+  .list-players__items._active {
     min-height: 250px;
   }
 
@@ -5224,7 +5205,7 @@ textarea._error::placeholder {
     font-size: 22px;
   }
 
-  .list-players__label-checkbox {
+  .list-players__checkbox-label {
     font-size: 20px;
   }
 }
@@ -5247,13 +5228,40 @@ textarea._error::placeholder {
 }
 
 @media (max-width: 767px) {
+  .title {
+    font-size: 24px;
+  }
+
   .btn {
     height: 55px;
     font-size: 24px;
   }
 
-  .title {
-    font-size: 24px;
+  .buttons {
+    flex-direction: column;
+    margin: 30px 0px 0px 0px;
+  }
+
+  .buttons__column {
+    width: 100%;
+    padding: 0;
+  }
+
+  .buttons__column:not(:first-child) {
+    margin: 0px 0px 10px 0px;
+  }
+
+  .buttons__column:nth-child(1) {
+    order: 2;
+  }
+
+  .buttons__column:nth-child(2) {
+    order: 1;
+  }
+
+  .buttons__button {
+    height: 40px;
+    font-size: 18px;
   }
 
   .header {
@@ -5632,8 +5640,12 @@ textarea._error::placeholder {
     font-size: 24px;
   }
 
+  .tournament > *:not(:last-child) {
+    margin: 0px 0px 20px 0px;
+  }
+
   .info-tournament__description {
-    width: 100%;
+    width: 95%;
   }
 
   .info-tournament__button {
@@ -5680,7 +5692,7 @@ textarea._error::placeholder {
   }
 
   .info-tournament__title {
-    padding: 0px 25px 0px 0px;
+    padding: 0px 45px 0px 0px;
     font-size: 24px;
     margin: 0px 0px 10px 0px;
   }
@@ -5752,6 +5764,11 @@ textarea._error::placeholder {
 
   .participants-tournament__data_win i {
     font-size: 20px;
+  }
+
+  .teams-tournament__items._init .teams-tournament__header::before,
+  .teams-tournament__items._init .teams-tournament__header::after {
+    width: 20px;
   }
 
   .teams-tournament__items {
@@ -5845,10 +5862,17 @@ textarea._error::placeholder {
     margin: 0px 0px 10px 0px;
   }
 
+  .edit__btn::before {
+    width: 32px;
+  }
+
+  .edit__btn:checked::before {
+    left: 50%;
+  }
+
   .edit__btn {
     height: 32px;
     width: 64px;
-    border-radius: 32px;
   }
 
   .edit__label {
@@ -5923,7 +5947,12 @@ textarea._error::placeholder {
   }
 
   .profile__wins {
-    height: 100px;
+    height: 110px;
+    font-size: 50px;
+  }
+
+  .profile__trophies h4 {
+    font-size: 22px;
   }
 
   .profile__place span {
@@ -5944,15 +5973,8 @@ textarea._error::placeholder {
   }
 
   .profile__content {
+    font-size: 18px;
     padding: 0;
-  }
-
-  .profile__content > *:not(:last-child) {
-    margin: 0px 0px 10px 0px;
-  }
-
-  .profile__description {
-    font-size: 16px;
   }
 
   .profile__admin i {
@@ -5969,33 +5991,6 @@ textarea._error::placeholder {
 
   .profile__social:nth-child(3) {
     font-size: 50px;
-  }
-
-  .buttons {
-    flex-direction: column;
-    margin: 30px 0px 0px 0px;
-  }
-
-  .buttons__column {
-    width: 100%;
-    padding: 0;
-  }
-
-  .buttons__column:not(:first-child) {
-    margin: 0px 0px 10px 0px;
-  }
-
-  .buttons__column:nth-child(1) {
-    order: 2;
-  }
-
-  .buttons__column:nth-child(2) {
-    order: 1;
-  }
-
-  .buttons__button {
-    height: 40px;
-    font-size: 18px;
   }
 
   .tables {
@@ -6050,11 +6045,6 @@ textarea._error::placeholder {
     font-size: 55px;
   }
 
-  .players__title {
-    font-size: 24px;
-    margin: 0px 0px 15px 0px;
-  }
-
   .players__name-team {
     margin: 0px 0px 20px 0px;
     flex-direction: column;
@@ -6071,21 +6061,16 @@ textarea._error::placeholder {
     flex: 1 1 auto;
   }
 
-  .players__discribe {
+  .players__description {
     margin: 0px 0px 15px 0px;
   }
 
-  .players__text-discribe {
+  .players__text-description {
     font-size: 17px;
   }
 
   .title-players {
     font-size: 20px;
-  }
-
-  .title-players_light {
-    font-weight: 300;
-    font-size: 18px;
   }
 
   .title-players span {
@@ -6096,16 +6081,15 @@ textarea._error::placeholder {
     padding: 0px 15px;
   }
 
-  .list-players__searh {
-    margin: 0px 0px 0px 15px;
-  }
-
-  .list-players__input-searh {
-    padding: 0px 15px;
+  .list-players__title {
     font-size: 18px;
   }
 
-  .list-players__label-checkbox {
+  .list-players__input-searh {
+    font-size: 18px;
+  }
+
+  .list-players__checkbox-label {
     padding: 0px 20px;
     font-size: 18px;
   }
@@ -6133,14 +6117,31 @@ textarea._error::placeholder {
     padding: 0px 10px;
   }
 
+  .title {
+    font-size: 20px;
+  }
+
   .btn {
     letter-spacing: 0.5px;
     height: 50px;
     font-size: 22px;
   }
 
-  .title {
-    font-size: 20px;
+  .buttons {
+    margin: 20px 0px 0px 0px;
+  }
+
+  .buttons__column:not(:first-child) {
+    margin: 0px 0px 5px 0px;
+  }
+
+  .buttons__column > *:not(:last-child) {
+    margin: 0px 0px 5px 0px;
+  }
+
+  .buttons__button {
+    height: 35px;
+    font-size: 16px;
   }
 
   .header {
@@ -6429,8 +6430,8 @@ textarea._error::placeholder {
 
   .contacts__avatar {
     margin: 0px 5px 0px 0px;
-    flex: 0 0 45px;
-    height: 45px;
+    flex: 0 0 50px;
+    height: 50px;
   }
 
   .contacts__info {
@@ -6472,6 +6473,10 @@ textarea._error::placeholder {
     font-size: 20px;
   }
 
+  .tournament > *:not(:last-child) {
+    margin: 0px 0px 15px 0px;
+  }
+
   .info-tournament__button {
     border-right: 35px solid #fd7e09;
     border-left: 15px solid transparent;
@@ -6494,6 +6499,7 @@ textarea._error::placeholder {
   }
 
   .info-tournament__title {
+    padding: 0px 35px 0px 0px;
     font-size: 20px;
   }
 
@@ -6561,7 +6567,6 @@ textarea._error::placeholder {
 
   .teams-tournament__items._init .teams-tournament__header::before,
   .teams-tournament__items._init .teams-tournament__header::after {
-    width: 15px;
     height: 2px;
     right: 10px;
   }
@@ -6592,10 +6597,13 @@ textarea._error::placeholder {
     margin: 0px 0px 7px 0px;
   }
 
+  .edit__btn::before {
+    width: 28px;
+  }
+
   .edit__btn {
     height: 28px;
     width: 56px;
-    border-radius: 28px;
   }
 
   .edit__label {
@@ -6654,6 +6662,29 @@ textarea._error::placeholder {
 
   .profile__wins {
     height: 90px;
+    font-size: 40px;
+  }
+
+  .profile__wins span {
+    width: 16px;
+    height: 16px;
+  }
+
+  .profile__wins span::before,
+  .profile__wins span::after {
+    height: 2px;
+  }
+
+  .profile__wins span::after {
+    right: 5px;
+  }
+
+  .profile__wins span::before {
+    left: 5px;
+  }
+
+  .profile__trophies h4 {
+    font-size: 20px;
   }
 
   .profile__place span {
@@ -6674,10 +6705,6 @@ textarea._error::placeholder {
 
   .profile__content {
     font-size: 16px;
-  }
-
-  .profile__description {
-    font-size: 14px;
   }
 
   .profile__admin i {
@@ -6702,23 +6729,6 @@ textarea._error::placeholder {
 
   .profile__social:not(:last-child) {
     margin: 0px 10px 0px 0px;
-  }
-
-  .buttons {
-    margin: 20px 0px 0px 0px;
-  }
-
-  .buttons__column:not(:first-child) {
-    margin: 0px 0px 5px 0px;
-  }
-
-  .buttons__column > *:not(:last-child) {
-    margin: 0px 0px 5px 0px;
-  }
-
-  .buttons__button {
-    height: 35px;
-    font-size: 16px;
   }
 
   .tables__table:not(:last-child) {
@@ -6791,9 +6801,8 @@ textarea._error::placeholder {
     font-size: 50px;
   }
 
-  .players__title {
-    font-size: 20px;
-    margin: 0px 0px 10px 0px;
+  .players__item:not(:last-child) {
+    margin: 0px 0px 20px 0px;
   }
 
   .players__name-team {
@@ -6810,24 +6819,16 @@ textarea._error::placeholder {
     height: 35px;
   }
 
-  .players__discribe {
+  .players__description {
     margin: 0px 0px 10px 0px;
   }
 
-  .players__title-discribe {
-    margin: 0px 0px 0px 0px;
-  }
-
-  .players__text-discribe {
+  .players__text-description {
     font-size: 15px;
   }
 
   .title-players {
     font-size: 18px;
-  }
-
-  .icon-players {
-    font-size: 25px;
   }
 
   .list-players__header {
@@ -6854,12 +6855,21 @@ textarea._error::placeholder {
     margin: 0px 5px 0px 0px;
   }
 
-  .list-players__add {
-    width: 20px;
-    height: 20px;
+  .list-players__icon {
+    font-size: 30px;
   }
 
-  .list-players__items.active {
+  .list-players__add {
+    flex: 0 0 25px;
+    height: 25px;
+  }
+
+  .list-players__add::before,
+  .list-players__add::after {
+    height: 2px;
+  }
+
+  .list-players__items._active {
     min-height: 200px;
   }
 
@@ -6876,7 +6886,7 @@ textarea._error::placeholder {
     font-size: 20px;
   }
 
-  .list-players__label-checkbox {
+  .list-players__checkbox-label {
     padding: 0px 15px;
     font-size: 16px;
   }
@@ -6889,6 +6899,10 @@ textarea._error::placeholder {
 }
 
 @media (max-width: 370px) {
+  .contacts__item {
+    padding: 5px;
+  }
+
   .contacts__socials {
     flex-wrap: wrap;
     justify-content: center;
@@ -6906,6 +6920,11 @@ textarea._error::placeholder {
 
   .contacts__social:nth-child(1) {
     font-size: 20px;
+    margin: 0px 0px 5px 0px;
+  }
+
+  .contacts__social:nth-child(2) {
+    margin: 0px 0px 5px 0px;
   }
 
   .contacts__social:nth-child(3) {
@@ -6914,13 +6933,13 @@ textarea._error::placeholder {
 }
 
 @media (max-width: 360px) {
-  .edit__save {
-    flex: 0 1 100%;
-  }
-
   .edit__group {
     flex: 0 1 100%;
     margin: 0px 0px 10px 0px;
+  }
+
+  .edit__save {
+    flex: 0 1 100%;
   }
 }
 
