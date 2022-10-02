@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20220831122937" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20220831122937">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20221002132955" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20221002132955">
 	<link rel="shortcut icon" href="favicon.ico">
 	<title>Турнир</title>
 </head>
@@ -49,9 +49,7 @@
 							<div class="info-tournament__image">
 								<picture><source srcset="img/tournaments/02.webp" type="image/webp"><img class="info-tournament__img disabled" src="img/tournaments/02.webp" alt=""></picture>
 								<div class="info-tournament__description">
-									<button type="button" class="info-tournament__button">
-										<i></i>
-									</button>
+									<button type="button" class="info-tournament__button"><i></i></button>
 									<div class="info-tournament__content">
 										<h2 class="info-tournament__title">Турнир королевская битва</h2>
 										<div class="info-tournament__items">
@@ -60,7 +58,7 @@
 											<div class="info-tournament__item"><span>Дата:</span>20 июня - 27 июня</div>
 											<div class="info-tournament__item">
 												<span>Статус:</span>
-												<div class="info-tournament__status">Прием заявок</div>
+												<div class="info-tournament__status info-tournament__status_green">Прием заявок</div>
 											</div>
 											<div class="info-tournament__item info-tournament__item_vertical">
 												<span>Описание</span>
@@ -239,7 +237,6 @@
 									<div data-spoller class="teams-tournament__header">
 										<div class="teams-tournament__data teams-tournament__data_team">XSET Gaming</div>
 										<div class="teams-tournament__data teams-tournament__data_leader"><span>Leader:</span>crispySmasher</div>
-										<div class="teams-tournament__data teams-tournament__data_online">3/5 <i class="_icon-person"></i></div>
 										<div class="teams-tournament__data teams-tournament__data_win">250 <i class="_icon-win"></i></div>
 									</div>
 									<div class="teams-tournament__content">
@@ -272,7 +269,6 @@
 									<div data-spoller class="teams-tournament__header">
 										<div class="teams-tournament__data teams-tournament__data_team">NRX Jeremiah</div>
 										<div class="teams-tournament__data teams-tournament__data_leader"><span>Leader:</span>cr1mer</div>
-										<div class="teams-tournament__data teams-tournament__data_online">4/5 <i class="_icon-person"></i></div>
 										<div class="teams-tournament__data teams-tournament__data_win">1480 <i class="_icon-win"></i></div>
 									</div>
 									<div class="teams-tournament__content">
@@ -312,7 +308,6 @@
 									<div data-spoller class="teams-tournament__header">
 										<div class="teams-tournament__data teams-tournament__data_team">SharpeR Esport</div>
 										<div class="teams-tournament__data teams-tournament__data_leader"><span>Leader:</span>grind</div>
-										<div class="teams-tournament__data teams-tournament__data_online">2/5 <i class="_icon-person"></i></div>
 										<div class="teams-tournament__data teams-tournament__data_win">430 <i class="_icon-win"></i></div>
 									</div>
 									<div class="teams-tournament__content">
@@ -338,7 +333,6 @@
 									<div data-spoller class="teams-tournament__header">
 										<div class="teams-tournament__data teams-tournament__data_team">Rampage Gaming</div>
 										<div class="teams-tournament__data teams-tournament__data_leader"><span>Leader:</span>d1ztroy</div>
-										<div class="teams-tournament__data teams-tournament__data_online">5/5 <i class="_icon-person"></i></div>
 										<div class="teams-tournament__data teams-tournament__data_win">10421 <i class="_icon-win"></i></div>
 									</div>
 									<div class="teams-tournament__content">
@@ -385,7 +379,6 @@
 									<div data-spoller class="teams-tournament__header">
 										<div class="teams-tournament__data teams-tournament__data_team">21 Huntsmen</div>
 										<div class="teams-tournament__data teams-tournament__data_leader"><span>Leader:</span>yung</div>
-										<div class="teams-tournament__data teams-tournament__data_online">1/5 <i class="_icon-person"></i></div>
 										<div class="teams-tournament__data teams-tournament__data_win">76 <i class="_icon-win"></i></div>
 									</div>
 									<div class="teams-tournament__content">
@@ -404,7 +397,6 @@
 									<div data-spoller class="teams-tournament__header">
 										<div class="teams-tournament__data teams-tournament__data_team">FunPlus Phoenix</div>
 										<div class="teams-tournament__data teams-tournament__data_leader"><span>Leader:</span>arthas</div>
-										<div class="teams-tournament__data teams-tournament__data_online">2/5 <i class="_icon-person"></i></div>
 										<div class="teams-tournament__data teams-tournament__data_win">430 <i class="_icon-win"></i></div>
 									</div>
 									<div class="teams-tournament__content">
@@ -430,7 +422,6 @@
 									<div data-spoller class="teams-tournament__header">
 										<div class="teams-tournament__data teams-tournament__data_team">ALMGHTY</div>
 										<div class="teams-tournament__data teams-tournament__data_leader"><span>Leader:</span>yung</div>
-										<div class="teams-tournament__data teams-tournament__data_online">2/5 <i class="_icon-person"></i></div>
 										<div class="teams-tournament__data teams-tournament__data_win">8650 <i class="_icon-win"></i></div>
 									</div>
 									<div class="teams-tournament__content">
@@ -567,7 +558,7 @@
 							</div>
 						</div>
 						<div class="chat-aside__user send">
-							<div class="chat-aside__user-data send">
+							<div class="chat-aside__user-data">
 								<a href="" class="chat-aside__user-avatar">
 									<picture><source srcset="img/members/01.webp" type="image/webp"><img src="img/members/01.jpg" alt=""></picture>
 								</a>
@@ -615,7 +606,15 @@
 								</div>
 								<time class="chat-aside__time">14:43</time>
 							</div>
-						</div>						
+						</div>	
+						<div class="chat-aside__user chat-aside__user_me send">
+							<div class="chat-aside__user-msg">
+								<div class="chat-aside__msg">
+									Ок
+								</div>
+								<time class="chat-aside__time">14:43</time>
+							</div>
+						</div>							
 					</div>
 					<form action="#" class="chat-aside__form">
 						<input autocomplete="off" name="chat" type="text" class="chat-aside__input" placeholder="Сообщение...">
@@ -637,7 +636,7 @@
 	<div class="container">
 		<div class="footer__body">
 			<a href="privacy.html" class="footer__privacy">Политика конфиденциальности</a>
-			<div class="footer__copyright">Copyright 2022</div>
+			<div class="footer__copyright">All rights reserved</div>
 		</div>
 	</div>
 </footer>
@@ -682,7 +681,7 @@
 					</div>
 					<div class="popup__item">
 						<label class="popup__label" for="popupEmail">Email</label>
-						<input autocomplete="off" type="email" class="popup__input _error" id="popupEmail" name="email" placeholder="Введите email" required>
+						<input autocomplete="off" type="email" class="popup__input" id="popupEmail" name="email" placeholder="Введите email" required>
 					</div>
 					<div class="popup__item">
 						<label class="popup__label" for="popupPassword">Пароль</label>
@@ -697,6 +696,12 @@
 						<input autocomplete="off" type="text" class="popup__input" id="popupUID" name="UID"
 							placeholder="скопируйте в игровом профиле" required>
 					</div>
+				</div>
+				<div class="popup__policy">
+					<input required class="popup__policy-input" type="checkbox" id="popupAgreement" name="agreement" value="agreement">
+					<label for="popupAgreement" class="popup__policy-label">
+						<span>Я даю свое согласие на обработку персональных данных в соответствии с <a href="privacy.html">Условиями</a>*</span>
+					</label>
 				</div>
 				<button type="submit" class="popup__btn btn">Зарегистрироваться</button>
 			</form>
@@ -871,8 +876,8 @@
 		}
 	</script>
 
-	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js?_v=20220831122937"></script>
-	<script src="js/app.min.js?_v=20220831122937"></script>
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js?_v=20221002132955"></script>
+	<script src="js/app.min.js?_v=20221002132955"></script>
 </body>
 
 </html>

@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20220831122937" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20220831122937">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20221002132955" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20221002132955">
 	<link rel="shortcut icon" href="favicon.ico">
 	<title>О клане</title>
 </head>
@@ -189,7 +189,7 @@
 							</div>
 						</div>
 						<div class="chat-aside__user send">
-							<div class="chat-aside__user-data send">
+							<div class="chat-aside__user-data">
 								<a href="" class="chat-aside__user-avatar">
 									<picture><source srcset="img/members/01.webp" type="image/webp"><img src="img/members/01.jpg" alt=""></picture>
 								</a>
@@ -237,7 +237,15 @@
 								</div>
 								<time class="chat-aside__time">14:43</time>
 							</div>
-						</div>						
+						</div>	
+						<div class="chat-aside__user chat-aside__user_me send">
+							<div class="chat-aside__user-msg">
+								<div class="chat-aside__msg">
+									Ок
+								</div>
+								<time class="chat-aside__time">14:43</time>
+							</div>
+						</div>							
 					</div>
 					<form action="#" class="chat-aside__form">
 						<input autocomplete="off" name="chat" type="text" class="chat-aside__input" placeholder="Сообщение...">
@@ -259,7 +267,7 @@
 	<div class="container">
 		<div class="footer__body">
 			<a href="privacy.html" class="footer__privacy">Политика конфиденциальности</a>
-			<div class="footer__copyright">Copyright 2022</div>
+			<div class="footer__copyright">All rights reserved</div>
 		</div>
 	</div>
 </footer>
@@ -304,7 +312,7 @@
 					</div>
 					<div class="popup__item">
 						<label class="popup__label" for="popupEmail">Email</label>
-						<input autocomplete="off" type="email" class="popup__input _error" id="popupEmail" name="email" placeholder="Введите email" required>
+						<input autocomplete="off" type="email" class="popup__input" id="popupEmail" name="email" placeholder="Введите email" required>
 					</div>
 					<div class="popup__item">
 						<label class="popup__label" for="popupPassword">Пароль</label>
@@ -319,6 +327,12 @@
 						<input autocomplete="off" type="text" class="popup__input" id="popupUID" name="UID"
 							placeholder="скопируйте в игровом профиле" required>
 					</div>
+				</div>
+				<div class="popup__policy">
+					<input required class="popup__policy-input" type="checkbox" id="popupAgreement" name="agreement" value="agreement">
+					<label for="popupAgreement" class="popup__policy-label">
+						<span>Я даю свое согласие на обработку персональных данных в соответствии с <a href="privacy.html">Условиями</a>*</span>
+					</label>
 				</div>
 				<button type="submit" class="popup__btn btn">Зарегистрироваться</button>
 			</form>
@@ -477,8 +491,18 @@
 		</div>
 	</div>
 </div>
-	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js?_v=20220831122937"></script>
-	<script src="js/app.min.js?_v=20220831122937"></script>
+	<div class="cookie" style="opacity: 0; visibility: hidden;">
+		<div class="cookie__body">
+			<div class="cookie__message">
+				Мы используем cookie для хранения данных и для более удобного пользования сайта. Нажимая "Согласиться", вы даете согласие нам на использование cookie. <a class="cookie__link" href="privacy.html">Узнать больше</a>
+			</div>
+			<div class="cookie__buttons">
+				<button type="button" class="cookie__button">Согласиться</button>
+			</div>	
+		</div>
+	</div>
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js?_v=20221002132955"></script>
+	<script src="js/app.min.js?_v=20221002132955"></script>
 </body>
 
 </html>
