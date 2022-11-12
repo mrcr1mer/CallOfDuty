@@ -4,9 +4,12 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20221002221126" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20221002221126">
+
 	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css?_v=20221113001945"/>
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20221113001945" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20221113001945">
+	
 	<title>Турнир</title>
 </head>
 
@@ -129,7 +132,7 @@
 						</article>
 						<div class="tournament__participants participants-tournament _anim-item">
 							<h3 class="participants-tournament__title title _anim-item">Участники</h3>
-							<ul class="participants-tournament__items aside-open">
+							<ul data-simplebar class="participants-tournament__items aside-open">
 								<li class="participants-tournament__item _table-item">
 									<a href="#" class="participants-tournament__avatar"><picture><source srcset="img/members/03.webp" type="image/webp"><img src="img/members/03.jpg" alt=""></picture></a>			
 									<div	class="participants-tournament__data">crispySmasher</div>
@@ -232,7 +235,7 @@
 						</div>
 						<div class="tournament__teams teams-tournament _anim-item">
 							<h3 class="teams-tournament__title title _anim-item">Команды</h3>
-							<ul data-spollers data-one-spoller class="teams-tournament__items aside-open">
+							<ul data-simplebar data-spollers data-one-spoller class="teams-tournament__items aside-open">
 								<li class="teams-tournament__item _table-item">
 									<div data-spoller class="teams-tournament__header">
 										<div class="teams-tournament__data teams-tournament__data_team">XSET Gaming</div>
@@ -629,6 +632,7 @@
 		<a href="chat.html" class="aside__icon-chat _icon-chat"></a>
 	</div>
 </aside>
+
 				</div>
 			</div>
 		</main>
@@ -702,6 +706,11 @@
 					<label for="popupAgreement" class="popup__policy-label">
 						<span>Я даю свое согласие на обработку персональных данных в соответствии с <a href="privacy.html">Условиями</a>*</span>
 					</label>
+				</div>
+				<div class="popup__google-policy">
+					This site is protected by reCAPTCHA and the Google
+    				<a href="https://policies.google.com/privacy">Privacy Policy</a> and
+   				<a href="https://policies.google.com/terms">Terms of Service</a> apply.
 				</div>
 				<button type="submit" class="popup__btn btn">Зарегистрироваться</button>
 			</form>
@@ -876,8 +885,9 @@
 		}
 	</script>
 
-	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js?_v=20221002221126"></script>
-	<script src="js/app.min.js?_v=20221002221126"></script>
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js?_v=20221113001945"></script>
+<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js?_v=20221113001945"></script>
+<script src="js/app.min.js?_v=20221113001945"></script>
 </body>
 
 </html>

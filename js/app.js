@@ -293,6 +293,11 @@ if (error) {
 	}, 5000);
 }
 
+
+// if (window.matchMedia('(min-width: 1025px)').matches) {
+// 	const simpleBar = new SimpleBar(document.querySelector('.info-tournament__content'));
+// 	simpleBar.recalculate();
+//  }
 ;// CONCATENATED MODULE: ./src/js/modules/popups.js
 const popupLinks = document.querySelectorAll('.popup-link');
 const body = document.querySelector('body');

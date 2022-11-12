@@ -157,15 +157,6 @@ h6 {
   font-style: normal;
 }
 
-@font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url("../fonts/icons.woff") format("woff"), url("../fonts/icons.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-
 [class^=_icon-]::before,
 [class*=" _icon-"]::before {
   font-family: "icons";
@@ -287,10 +278,6 @@ input::-moz-placeholder, textarea::-moz-placeholder {
   color: #c4c4c4;
 }
 
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-  color: #c4c4c4;
-}
-
 input::placeholder,
 textarea::placeholder {
   color: #c4c4c4;
@@ -309,11 +296,6 @@ textarea._error {
 }
 
 input._error::-moz-placeholder, textarea._error::-moz-placeholder {
-  font-weight: 500;
-  color: #e90000;
-}
-
-input._error:-ms-input-placeholder, textarea._error:-ms-input-placeholder {
   font-weight: 500;
   color: #e90000;
 }
@@ -636,23 +618,20 @@ textarea._error::placeholder {
 .aside.active .aside__arrows .arrow:nth-child(1)::before {
   left: 0px;
   opacity: 1;
-  -webkit-animation-name: none;
-          animation-name: none;
+  animation-name: none;
 }
 
 .aside.active .aside__arrows .arrow:nth-child(3)::before,
 .aside.active .aside__arrows .arrow:nth-child(3)::after {
   opacity: 1;
   left: 12px;
-  -webkit-animation-name: none;
-          animation-name: none;
+  animation-name: none;
 }
 
 .aside.active .aside__arrows .arrow:nth-child(2)::before,
 .aside.active .aside__arrows .arrow:nth-child(2)::after {
   opacity: 0;
-  -webkit-animation-name: none;
-          animation-name: none;
+  animation-name: none;
 }
 
 .aside.active .aside__icon-chat {
@@ -704,24 +683,7 @@ textarea._error::placeholder {
 .aside__arrows .arrow:nth-child(1)::before,
 .aside__arrows .arrow:nth-child(1)::after {
   left: 0px;
-  -webkit-animation: animArrows1 1.3s ease-out 0s infinite;
-          animation: animArrows1 1.3s ease-out 0s infinite;
-}
-
-@-webkit-keyframes animArrows1 {
-  0% {
-    left: 12px;
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  100% {
-    left: 0px;
-    opacity: 0;
-  }
+  animation: animArrows1 1.3s ease-out 0s infinite;
 }
 
 @keyframes animArrows1 {
@@ -743,24 +705,7 @@ textarea._error::placeholder {
 .aside__arrows .arrow:nth-child(2)::before,
 .aside__arrows .arrow:nth-child(2)::after {
   left: 12px;
-  -webkit-animation: animArrows2 1.3s ease-out 0.2s infinite;
-          animation: animArrows2 1.3s ease-out 0.2s infinite;
-}
-
-@-webkit-keyframes animArrows2 {
-  0% {
-    left: 24px;
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  100% {
-    left: 12px;
-    opacity: 0;
-  }
+  animation: animArrows2 1.3s ease-out 0.2s infinite;
 }
 
 @keyframes animArrows2 {
@@ -782,24 +727,7 @@ textarea._error::placeholder {
 .aside__arrows .arrow:nth-child(3)::before,
 .aside__arrows .arrow:nth-child(3)::after {
   left: 24px;
-  -webkit-animation: animArrows3 1.3s ease-out 0.4s infinite;
-          animation: animArrows3 1.3s ease-out 0.4s infinite;
-}
-
-@-webkit-keyframes animArrows3 {
-  0% {
-    left: 36px;
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  100% {
-    left: 24px;
-    opacity: 0;
-  }
+  animation: animArrows3 1.3s ease-out 0.4s infinite;
 }
 
 @keyframes animArrows3 {
@@ -975,54 +903,7 @@ textarea._error::placeholder {
 }
 
 .chat-aside__body.blocked:hover .icon-blocked {
-  -webkit-animation: blockedAnim 1.25s linear;
-          animation: blockedAnim 1.25s linear;
-}
-
-@-webkit-keyframes blockedAnim {
-  0% {
-    transform: translate(-50%, 0%) rotate(0deg);
-  }
-
-  10% {
-    transform: translate(-50%, 0%) rotate(10deg);
-  }
-
-  20% {
-    transform: translate(-50%, 0%) rotate(-10deg);
-  }
-
-  30% {
-    transform: translate(-50%, 0%) rotate(10deg);
-  }
-
-  40% {
-    transform: translate(-50%, 0%) rotate(-10deg);
-  }
-
-  50% {
-    transform: translate(-50%, 0%) rotate(10deg);
-  }
-
-  60% {
-    transform: translate(-50%, 0%) rotate(-10deg);
-  }
-
-  70% {
-    transform: translate(-50%, 0%) rotate(10deg);
-  }
-
-  80% {
-    transform: translate(-50%, 0%) rotate(-10deg);
-  }
-
-  90% {
-    transform: translate(-50%, 0%) rotate(10deg);
-  }
-
-  100% {
-    transform: translate(-50%, 0%) rotate(0deg);
-  }
+  animation: blockedAnim 1.25s linear;
 }
 
 @keyframes blockedAnim {
@@ -1113,6 +994,7 @@ textarea._error::placeholder {
 .chat-aside__content {
   flex: 1 1 auto;
   overflow-y: auto;
+  overflow-x: hidden;
   padding: 10px 10px 0px;
   height: 460px;
   scrollbar-color: #fff transparent;
@@ -1226,6 +1108,7 @@ textarea._error::placeholder {
 }
 
 .chat-aside__msg {
+  word-break: break-all;
   font-weight: 500;
   font-size: 13px;
   line-height: 125%;
@@ -1556,6 +1439,24 @@ textarea._error::placeholder {
 }
 
 .popup__policy-label a:hover {
+  color: #ff5100;
+}
+
+.popup__google-policy {
+  margin: 0px 0px 10px 0px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  line-height: 120%;
+  font-weight: 300;
+}
+
+.popup__google-policy a {
+  color: #fd7e09;
+  font-weight: 400;
+  transition: all 0.4s ease 0s;
+}
+
+.popup__google-policy a:hover {
   color: #ff5100;
 }
 
@@ -1965,6 +1866,7 @@ textarea._error::placeholder {
   position: relative;
   flex: 1 1 auto;
   overflow-y: auto;
+  overflow-x: hidden;
   padding: 0px 10px 0px 0px;
 }
 
@@ -2036,8 +1938,7 @@ textarea._error::placeholder {
 }
 
 .chat__user-msg {
-  -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   margin: 0px 0px 0px 10px;
   padding: 10px 15px;
   background-color: #191919;
@@ -2047,6 +1948,7 @@ textarea._error::placeholder {
 }
 
 .chat__msg {
+  word-break: break-all;
   font-weight: 500;
   font-size: 20px;
   line-height: 125%;
@@ -2263,28 +2165,32 @@ textarea._error::placeholder {
   max-height: 300px;
   overflow-y: auto;
   overflow-x: hidden;
-  scrollbar-color: #fd7e09 transparent;
-  scrollbar-width: thin;
+  padding: 0 4px 0 0;
 }
 
-.clan__items::-webkit-scrollbar {
+.clan__items .simplebar-track.simplebar-vertical {
   width: 4px;
 }
 
-.clan__items::-webkit-scrollbar-track {
-  background-color: transparent;
+.clan__items .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+  top: 0px;
+  bottom: 0px;
 }
 
-.clan__items::-webkit-scrollbar-thumb {
+.clan__items .simplebar-scrollbar::before {
+  left: 0;
+  right: 0;
+  opacity: 1;
   background-color: #fd7e09;
+  border-radius: 0;
 }
 
-.clan__items::-webkit-scrollbar-thumb:hover {
-  background-color: #ff5100;
+.clan__items .simplebar-scrollbar.simplebar-visible::before {
+  opacity: 1;
 }
 
-.clan__items::-webkit-scrollbar-thumb:active {
-  background-color: #8b2f12;
+.clan__items .simplebar-track {
+  pointer-events: auto;
 }
 
 .clan__item {
@@ -2617,7 +2523,7 @@ textarea._error::placeholder {
 
 .info-tournament__content {
   background-color: rgba(10, 10, 10, 0.9);
-  max-height: 100%;
+  height: 100%;
   padding: 20px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -2808,33 +2714,32 @@ textarea._error::placeholder {
   max-height: 340px;
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 0px 5px 0px 0px;
-  scrollbar-color: #fd7e09 transparent;
-  scrollbar-width: thin;
+  padding: 0px 9px 0px 0px;
 }
 
-.participants-tournament__items > *:not(:last-child) {
-  margin: 0px 0px 10px 0px;
-}
-
-.participants-tournament__items::-webkit-scrollbar {
+.participants-tournament__items .simplebar-track.simplebar-vertical {
   width: 4px;
 }
 
-.participants-tournament__items::-webkit-scrollbar-track {
-  background-color: transparent;
+.participants-tournament__items .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+  top: 0px;
+  bottom: 0px;
 }
 
-.participants-tournament__items::-webkit-scrollbar-thumb {
+.participants-tournament__items .simplebar-scrollbar::before {
+  left: 0;
+  right: 0;
+  opacity: 1;
   background-color: #fd7e09;
+  border-radius: 0;
 }
 
-.participants-tournament__items::-webkit-scrollbar-thumb:hover {
-  background-color: #ff5100;
+.participants-tournament__items .simplebar-scrollbar.simplebar-visible::before {
+  opacity: 1;
 }
 
-.participants-tournament__items::-webkit-scrollbar-thumb:active {
-  background-color: #8b2f12;
+.participants-tournament__items .simplebar-track {
+  pointer-events: auto;
 }
 
 .participants-tournament__item {
@@ -2842,6 +2747,10 @@ textarea._error::placeholder {
   background-color: #191919;
   display: flex;
   align-items: center;
+}
+
+.participants-tournament__item:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 .participants-tournament__avatar {
@@ -2889,9 +2798,7 @@ textarea._error::placeholder {
   max-height: 360px;
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 0px 5px 0px 0px;
-  scrollbar-color: #fd7e09 transparent;
-  scrollbar-width: thin;
+  padding: 0px 9px 0px 0px;
 }
 
 .teams-tournament__items._init .teams-tournament__header::before,
@@ -2924,28 +2831,33 @@ textarea._error::placeholder {
   background-color: #fd7e09;
 }
 
-.teams-tournament__items > *:not(:last-child) {
-  margin: 0px 0px 10px 0px;
-}
-
-.teams-tournament__items::-webkit-scrollbar {
+.teams-tournament__items .simplebar-track.simplebar-vertical {
   width: 4px;
 }
 
-.teams-tournament__items::-webkit-scrollbar-track {
-  background-color: transparent;
+.teams-tournament__items .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+  top: 0px;
+  bottom: 0px;
 }
 
-.teams-tournament__items::-webkit-scrollbar-thumb {
+.teams-tournament__items .simplebar-scrollbar::before {
+  left: 0;
+  right: 0;
+  opacity: 1;
   background-color: #fd7e09;
+  border-radius: 0;
 }
 
-.teams-tournament__items::-webkit-scrollbar-thumb:hover {
-  background-color: #ff5100;
+.teams-tournament__items .simplebar-scrollbar.simplebar-visible::before {
+  opacity: 1;
 }
 
-.teams-tournament__items::-webkit-scrollbar-thumb:active {
-  background-color: #8b2f12;
+.teams-tournament__items .simplebar-track {
+  pointer-events: auto;
+}
+
+.teams-tournament__item:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 .teams-tournament__header {
@@ -3002,7 +2914,6 @@ textarea._error::placeholder {
 .tournament__container {
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   width: 100%;
 }
@@ -3021,7 +2932,6 @@ textarea._error::placeholder {
 }
 
 .tour-table__body {
-  cursor: -webkit-grab;
   cursor: grab;
   touch-action: none;
   transform-origin: 0px 0px;
@@ -3689,8 +3599,7 @@ textarea._error::placeholder {
 
 .profile__wins span._stop::before,
 .profile__wins span._stop::after {
-  -webkit-animation-name: none;
-          animation-name: none;
+  animation-name: none;
   opacity: 0;
 }
 
@@ -3701,8 +3610,7 @@ textarea._error::placeholder {
   width: 100%;
   height: 3px;
   position: absolute;
-  -webkit-animation: animTrophy 1.5s ease-out 0s infinite;
-          animation: animTrophy 1.5s ease-out 0s infinite;
+  animation: animTrophy 1.5s ease-out 0s infinite;
 }
 
 .profile__wins span::after {
@@ -3713,22 +3621,6 @@ textarea._error::placeholder {
 .profile__wins span::before {
   left: 6px;
   transform: rotate(-45deg);
-}
-
-@-webkit-keyframes animTrophy {
-  0% {
-    opacity: 0;
-    top: -15px;
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-    top: 5px;
-  }
 }
 
 @keyframes animTrophy {
@@ -3926,33 +3818,32 @@ textarea._error::placeholder {
   overflow-y: auto;
   overflow-x: hidden;
   max-height: 340px;
-  padding: 0px 5px 0px 0px;
-  scrollbar-color: #fd7e09 transparent;
-  scrollbar-width: thin;
+  padding: 0px 9px 0px 0px;
 }
 
-.tables__items > *:not(:last-child) {
-  margin: 0px 0px 10px 0px;
-}
-
-.tables__items::-webkit-scrollbar {
+.tables__items .simplebar-track.simplebar-vertical {
   width: 4px;
 }
 
-.tables__items::-webkit-scrollbar-track {
-  background-color: transparent;
+.tables__items .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+  top: 0px;
+  bottom: 0px;
 }
 
-.tables__items::-webkit-scrollbar-thumb {
+.tables__items .simplebar-scrollbar::before {
+  left: 0;
+  right: 0;
+  opacity: 1;
   background-color: #fd7e09;
+  border-radius: 0;
 }
 
-.tables__items::-webkit-scrollbar-thumb:hover {
-  background-color: #ff5100;
+.tables__items .simplebar-scrollbar.simplebar-visible::before {
+  opacity: 1;
 }
 
-.tables__items::-webkit-scrollbar-thumb:active {
-  background-color: #8b2f12;
+.tables__items .simplebar-track {
+  pointer-events: auto;
 }
 
 .tables ol.tables__items {
@@ -3974,6 +3865,10 @@ textarea._error::placeholder {
 .tables__item {
   display: flex;
   min-height: 60px;
+}
+
+.tables__item:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 .tables__type {
@@ -4257,12 +4152,12 @@ textarea._error::placeholder {
   font-size: 55px;
 }
 
-.players__item {
-  flex: 0 1 50%;
-}
-
 .players__item:not(:last-child) {
   margin: 0px 0px 40px 0px;
+}
+
+.players__item_del .list-players__items {
+  padding: 0 0 0 0;
 }
 
 .players__name-team {
@@ -4296,11 +4191,13 @@ textarea._error::placeholder {
 }
 
 .players__input-name._loading {
-  background: #191919 url("../img/loading/load.gif") 98% 50%/35px no-repeat;
+  background: #191919 url("../img/loading/load.gif") 2% 50%/35px no-repeat;
+  padding: 0px 0px 0px 55px;
 }
 
 .players__input-name._loaded {
-  background: #191919 url("../img/loading/check.svg") 98% 50%/35px no-repeat;
+  background: #191919 url("../img/loading/check.svg") 2% 50%/35px no-repeat;
+  padding: 0px 0px 0px 55px;
 }
 
 .players__description {
@@ -4442,8 +4339,7 @@ textarea._error::placeholder {
   max-height: 300px;
   overflow-y: auto;
   overflow-x: hidden;
-  scrollbar-color: #fd7e09 transparent;
-  scrollbar-width: thin;
+  padding: 0 4px 0 0;
 }
 
 .list-players__items._active {
@@ -4451,24 +4347,29 @@ textarea._error::placeholder {
   background-color: #171717;
 }
 
-.list-players__items::-webkit-scrollbar {
+.list-players__items .simplebar-track.simplebar-vertical {
   width: 4px;
 }
 
-.list-players__items::-webkit-scrollbar-track {
-  background-color: transparent;
+.list-players__items .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+  top: 0px;
+  bottom: 0px;
 }
 
-.list-players__items::-webkit-scrollbar-thumb {
+.list-players__items .simplebar-scrollbar::before {
+  left: 0;
+  right: 0;
+  opacity: 1;
   background-color: #fd7e09;
+  border-radius: 0;
 }
 
-.list-players__items::-webkit-scrollbar-thumb:hover {
-  background-color: #ff5100;
+.list-players__items .simplebar-scrollbar.simplebar-visible::before {
+  opacity: 1;
 }
 
-.list-players__items::-webkit-scrollbar-thumb:active {
-  background-color: #8b2f12;
+.list-players__items .simplebar-track {
+  pointer-events: auto;
 }
 
 .list-players__item {
@@ -4485,6 +4386,7 @@ textarea._error::placeholder {
   min-height: 300px;
   font-weight: 500;
   font-size: 25px;
+  line-height: 110%;
   padding: 30px;
   background: none;
 }
@@ -4497,6 +4399,7 @@ textarea._error::placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .list-players__checkbox {
@@ -4613,6 +4516,75 @@ textarea._error::placeholder {
   flex: 0 0 50px;
   width: 50px;
   margin: 0px 0px 10px 0px;
+}
+
+.email__container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.email__body {
+  display: flex;
+  flex-direction: column;
+  min-height: 600px;
+  padding: 25px 30px;
+  background-color: #191919;
+  border-radius: 55px;
+}
+
+.email__title {
+  margin: 0px 0px 30px 0px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 110%;
+  color: #fff;
+  margin: 0px 0px 30px 0px;
+}
+
+.email__items {
+  flex: 1 1 auto;
+}
+
+.email__items > *:not(:last-child) {
+  margin: 0px 0px 40px 0px;
+}
+
+.email__message span {
+  font-weight: 700;
+}
+
+.email__message p {
+  font-size: 24px;
+  line-height: 120%;
+}
+
+.email__message p:not(:last-child) {
+  margin: 0px 0px 20px 0px;
+}
+
+.email__note {
+  color: #ffe600;
+  font-size: 24px;
+  line-height: 120%;
+}
+
+.email__button {
+  display: flex;
+  line-height: 110%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 700;
+  background-color: #fd7e09;
+  color: #fff;
+  width: 100%;
+  height: 70px;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 30px;
+  letter-spacing: 1px;
+  word-break: break-all;
+  transition: all 0.4s ease 0s;
 }
 
 @media (min-width: 1025px) {
@@ -4869,6 +4841,10 @@ textarea._error::placeholder {
   .list-players__add:hover::after {
     background-color: #fd7e09;
   }
+
+  .email__button:hover {
+    background-color: #ff5100;
+  }
 }
 
 @media (max-width: 1550px) {
@@ -5075,26 +5051,14 @@ textarea._error::placeholder {
   .icon-header.active::before {
     top: 50%;
     transform: translate(0, -50%);
-    -webkit-animation: rotateBefore 0.3s ease 0.3s forwards;
-            animation: rotateBefore 0.3s ease 0.3s forwards;
+    animation: rotateBefore 0.3s ease 0.3s forwards;
   }
 
   .icon-header.active::after {
     bottom: 50%;
     transform: translate(0, 50%);
-    -webkit-animation: rotateAfter 0.3s ease 0.3s forwards;
-            animation: rotateAfter 0.3s ease 0.3s forwards;
+    animation: rotateAfter 0.3s ease 0.3s forwards;
   }
-
-@-webkit-keyframes rotateBefore {
-    0% {
-      transform: translate(0, -50%) rotate(0deg);
-    }
-
-    100% {
-      transform: translate(0, -50%) rotate(-135deg);
-    }
-}
 
 @keyframes rotateBefore {
     0% {
@@ -5103,16 +5067,6 @@ textarea._error::placeholder {
 
     100% {
       transform: translate(0, -50%) rotate(-135deg);
-    }
-}
-
-@-webkit-keyframes rotateAfter {
-    0% {
-      transform: translate(0, 50%) rotate(0deg);
-    }
-
-    100% {
-      transform: translate(0, 50%) rotate(-225deg);
     }
 }
 
@@ -5133,27 +5087,15 @@ textarea._error::placeholder {
 
   .icon-header.reverse::before {
     top: 0%;
-    -webkit-animation: rotateBeforeReverse 0.3s ease 0s forwards, rotateBeforeReverse2 0.3s ease 0.3s forwards;
-            animation: rotateBeforeReverse 0.3s ease 0s forwards, rotateBeforeReverse2 0.3s ease 0.3s forwards;
+    animation: rotateBeforeReverse 0.3s ease 0s forwards, rotateBeforeReverse2 0.3s ease 0.3s forwards;
     transition: all 0.3s ease 0.3s;
   }
 
   .icon-header.reverse::after {
     bottom: 0%;
-    -webkit-animation: rotateAfterReverse 0.3s ease 0s forwards, rotateAfterReverse2 0.3s ease 0.3s forwards;
-            animation: rotateAfterReverse 0.3s ease 0s forwards, rotateAfterReverse2 0.3s ease 0.3s forwards;
+    animation: rotateAfterReverse 0.3s ease 0s forwards, rotateAfterReverse2 0.3s ease 0.3s forwards;
     transition: all 0.3s ease 0.3s;
   }
-
-@-webkit-keyframes rotateBeforeReverse {
-    0% {
-      transform: translate(0, -50%) rotate(-135deg);
-    }
-
-    100% {
-      transform: translate(0, -50%) rotate(0deg);
-    }
-}
 
 @keyframes rotateBeforeReverse {
     0% {
@@ -5162,16 +5104,6 @@ textarea._error::placeholder {
 
     100% {
       transform: translate(0, -50%) rotate(0deg);
-    }
-}
-
-@-webkit-keyframes rotateAfterReverse {
-    0% {
-      transform: translate(0, 50%) rotate(-225deg);
-    }
-
-    100% {
-      transform: translate(0, 50%) rotate(0deg);
     }
 }
 
@@ -5185,19 +5117,7 @@ textarea._error::placeholder {
     }
 }
 
-@-webkit-keyframes rotateBeforeReverse2 {
-    100% {
-      transform: translate(0, 0%);
-    }
-}
-
 @keyframes rotateBeforeReverse2 {
-    100% {
-      transform: translate(0, 0%);
-    }
-}
-
-@-webkit-keyframes rotateAfterReverse2 {
     100% {
       transform: translate(0, 0%);
     }
@@ -5611,6 +5531,28 @@ textarea._error::placeholder {
   .error__container {
     max-width: 500px;
   }
+
+  .email__body {
+    padding: 20px 25px;
+    border-radius: 45px;
+  }
+
+  .email__title {
+    font-size: 26px;
+  }
+
+  .email__message p {
+    font-size: 22px;
+  }
+
+  .email__note {
+    font-size: 22px;
+  }
+
+  .email__button {
+    font-size: 26px;
+    height: 65px;
+  }
 }
 
 @media (max-width: 1024px) and (max-width: 767px) {
@@ -5791,6 +5733,10 @@ textarea._error::placeholder {
 
   .popup__policy-label {
     font-size: 18px;
+  }
+
+  .popup__google-policy {
+    font-size: 14px;
   }
 
   .popup__checkbox-label {
@@ -6194,8 +6140,8 @@ textarea._error::placeholder {
     max-height: 270px;
   }
 
-  .participants-tournament__items > *:not(:last-child) {
-    margin: 0px 0px 5px 0px;
+  .participants-tournament__item:not(:last-child) {
+    margin-bottom: 5px;
   }
 
   .participants-tournament__item {
@@ -6224,8 +6170,8 @@ textarea._error::placeholder {
     max-height: 290px;
   }
 
-  .teams-tournament__items > *:not(:last-child) {
-    margin: 0px 0px 5px 0px;
+  .teams-tournament__item:not(:last-child) {
+    margin-bottom: 5px;
   }
 
   .teams-tournament__header {
@@ -6402,25 +6348,8 @@ textarea._error::placeholder {
 
   .profile__wins span::before,
   .profile__wins span::after {
-    -webkit-animation: animTrophy 1.8s ease-out 0s infinite;
-            animation: animTrophy 1.8s ease-out 0s infinite;
+    animation: animTrophy 1.8s ease-out 0s infinite;
   }
-
-@-webkit-keyframes animTrophy {
-    0% {
-      opacity: 0;
-      top: -10px;
-    }
-
-    50% {
-      opacity: 1;
-    }
-
-    100% {
-      opacity: 0;
-      top: 5px;
-    }
-}
 
 @keyframes animTrophy {
     0% {
@@ -6461,6 +6390,7 @@ textarea._error::placeholder {
   }
 
   .profile__content {
+    align-self: flex-start;
     font-size: 18px;
     padding: 0;
   }
@@ -6489,8 +6419,8 @@ textarea._error::placeholder {
     max-height: 270px;
   }
 
-  .tables__items > *:not(:last-child) {
-    margin: 0px 0px 5px 0px;
+  .tables__item:not(:last-child) {
+    margin-bottom: 5px;
   }
 
   .tables__item {
@@ -6558,10 +6488,12 @@ textarea._error::placeholder {
   }
 
   .players__input-name._loading {
+    padding: 0px 0px 0px 50px;
     background-size: 30px;
   }
 
   .players__input-name._loaded {
+    padding: 0px 0px 0px 50px;
     background-size: 30px;
   }
 
@@ -6625,6 +6557,38 @@ textarea._error::placeholder {
   .error__replace::before {
     flex: 0 0 45px;
     width: 45px;
+  }
+
+  .email__body {
+    min-height: 100vh;
+    border-radius: 35px;
+    padding: 15px 20px;
+  }
+
+  .email__title {
+    margin: 0px 0px 20px 0px;
+    font-size: 24px;
+  }
+
+  .email__items > *:not(:last-child) {
+    margin: 0px 0px 30px 0px;
+  }
+
+  .email__message p {
+    font-size: 20px;
+  }
+
+  .email__message p:not(:last-child) {
+    margin: 0px 0px 15px 0px;
+  }
+
+  .email__note {
+    font-size: 20px;
+  }
+
+  .email__button {
+    height: 55px;
+    font-size: 24px;
   }
 }
 
@@ -6802,6 +6766,10 @@ textarea._error::placeholder {
     left: 4px;
     width: 16px;
     height: 16px;
+  }
+
+  .popup__google-policy {
+    font-size: 13px;
   }
 
   .popup__remember {
@@ -7350,10 +7318,12 @@ textarea._error::placeholder {
   }
 
   .players__input-name._loading {
+    padding: 0px 0px 0px 45px;
     background-size: 25px;
   }
 
   .players__input-name._loaded {
+    padding: 0px 0px 0px 45px;
     background-size: 25px;
   }
 
@@ -7451,6 +7421,37 @@ textarea._error::placeholder {
     flex: 0 0 40px;
     width: 40px;
   }
+
+  .email__body {
+    border-radius: 25px;
+    padding: 15px;
+  }
+
+  .email__title {
+    font-size: 22px;
+  }
+
+  .email__items > *:not(:last-child) {
+    margin: 0px 0px 20px 0px;
+  }
+
+  .email__message p {
+    font-size: 18px;
+  }
+
+  .email__message p:not(:last-child) {
+    margin: 0px 0px 10px 0px;
+  }
+
+  .email__note {
+    font-size: 18px;
+  }
+
+  .email__button {
+    letter-spacing: 0.5px;
+    height: 50px;
+    font-size: 22px;
+  }
 }
 
 @media (max-width: 469px) {
@@ -7522,6 +7523,10 @@ textarea._error::placeholder {
 
   .privacy__policy {
     font-size: 18px;
+  }
+
+  .email__button {
+    font-size: 20px;
   }
 }
 
