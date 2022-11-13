@@ -159,7 +159,7 @@ if (iconBurger) {
 
 // ========================ADD-CHAT-TO-MENU===============================
 const menuList = document.querySelector('.menu__list');
-const mediaQuery = window.matchMedia('(max-width: 1024px)')
+const mediaQuery = window.matchMedia('(max-width: 1024px)');
 if (menuList) {
 	mediaQuery.addEventListener("change", tabletChange);
 	tabletChange(mediaQuery);
@@ -293,11 +293,6 @@ if (error) {
 	}, 5000);
 }
 
-
-// if (window.matchMedia('(min-width: 1025px)').matches) {
-// 	const simpleBar = new SimpleBar(document.querySelector('.info-tournament__content'));
-// 	simpleBar.recalculate();
-//  }
 ;// CONCATENATED MODULE: ./src/js/modules/popups.js
 const popupLinks = document.querySelectorAll('.popup-link');
 const body = document.querySelector('body');
@@ -476,6 +471,20 @@ if (iconChat) {
 
 // ========================SCROLL-CHAT===============================
 // Основной чат
+// let chatContent = document.querySelector(".chat__content");
+// if (chatContent) {
+// 	if (window.matchMedia('(min-width: 1025px)').matches) {
+// 		chatContent = new SimpleBar(document.querySelector(".chat__content")).getScrollElement();
+// 	}
+// 	scrollChat(chatContent);
+// } 
+// // Кнопка чата
+// const scrollButton = document.querySelector('.chat__scroll-button');
+// if (scrollButton) {
+// 	scrollDown(scrollButton, chatContent);
+// }
+
+//Основной чат
 const chatContent = document.querySelector(".chat__content");
 if (chatContent) scrollChat(chatContent);
 // Кнопка чата

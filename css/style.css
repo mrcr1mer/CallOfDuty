@@ -2193,6 +2193,11 @@ textarea._error::placeholder {
   pointer-events: auto;
 }
 
+.clan__items .simplebar-hover.simplebar-scrollbar::before {
+  transition: all 0.2s ease 0s;
+  background: #ff5100;
+}
+
 .clan__item {
   display: flex;
   justify-content: space-between;
@@ -2742,6 +2747,11 @@ textarea._error::placeholder {
   pointer-events: auto;
 }
 
+.participants-tournament__items .simplebar-hover.simplebar-scrollbar::before {
+  transition: all 0.2s ease 0s;
+  background: #ff5100;
+}
+
 .participants-tournament__item {
   min-height: 60px;
   background-color: #191919;
@@ -2854,6 +2864,11 @@ textarea._error::placeholder {
 
 .teams-tournament__items .simplebar-track {
   pointer-events: auto;
+}
+
+.teams-tournament__items .simplebar-hover.simplebar-scrollbar::before {
+  transition: all 0.2s ease 0s;
+  background: #ff5100;
 }
 
 .teams-tournament__item:not(:last-child) {
@@ -3846,6 +3861,11 @@ textarea._error::placeholder {
   pointer-events: auto;
 }
 
+.tables__items .simplebar-hover.simplebar-scrollbar::before {
+  transition: all 0.2s ease 0s;
+  background: #ff5100;
+}
+
 .tables ol.tables__items {
   list-style: none;
   counter-reset: item;
@@ -4370,6 +4390,11 @@ textarea._error::placeholder {
 
 .list-players__items .simplebar-track {
   pointer-events: auto;
+}
+
+.list-players__items .simplebar-hover.simplebar-scrollbar::before {
+  transition: all 0.2s ease 0s;
+  background: #ff5100;
 }
 
 .list-players__item {
